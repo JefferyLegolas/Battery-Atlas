@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 1,
+  "id": "kion",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "钾离子电池",
+    "en": "Potassium-ion battery",
+    "status": "research",
+    "recharge": "可充电",
+    "voltage": "2.5–4.0 V",
+    "accent": "#9966cc",
+    "id": "kion",
+    "details": [
+      "钾离子在普鲁士蓝、层状氧化物等正极与碳负极之间迁移。",
+      "低成本固定储能与新型离子电池研究。",
+      "钾资源丰富，石墨可直接嵌钾。",
+      "钾离子半径较大，电极体积变化和电解液稳定性仍待改善。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "kion-1",
+      "family": "kion",
+      "cathode": "k-pb",
+      "anode": "ptcdi",
+      "electrolyte": "k-water",
+      "kind": "文献全电池（实验）",
+      "note": "水系研究路线；不是 Group1 非水 18650 产品配方。",
+      "sources": [
+        {
+          "title": "水系钾离子电池研究",
+          "url": "https://www.nature.com/articles/s41560-019-0388-0",
+          "date": null
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "k-pb",
+      "name": "铁掺杂锰基普鲁士蓝",
+      "formula": "KxFeyMn1−y[Fe(CN)6]w·zH2O",
+      "elements": [
+        "K",
+        "Fe",
+        "Mn",
+        "C",
+        "N",
+        "H",
+        "O"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [
+        "K-PB"
+      ],
+      "note": "水系钾电池文献中的组成族。",
+      "components": []
+    },
+    {
+      "id": "ptcdi",
+      "name": "苝四甲酸二酰亚胺",
+      "formula": "C24H10N2O4",
+      "elements": [
+        "C",
+        "H",
+        "N",
+        "O"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [
+        "PTCDI"
+      ],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "k-water",
+      "name": "高浓度三氟甲磺酸钾水溶液",
+      "formula": "KCF3SO3：22 mol / 1 L 水",
+      "elements": [
+        "K",
+        "C",
+        "F",
+        "S",
+        "O",
+        "H"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "原文标记 22 M，按每升水加入 22 mol 盐定义；不是每升最终溶液浓度。",
+      "components": [
+        "盐：KCF3SO3",
+        "溶剂：水"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "kion",
+      "name": "Group1",
+      "stage": "样品 / 早期验证",
+      "basis": "公开发布 18650 钾离子电池；样品发布不等于大规模量产。下方水系论文样例与其非水产品是不同路线。",
+      "sources": [
+        {
+          "url": "https://www.prnewswire.com/news-releases/group1-unveils-first-potassium-ion-battery-in-18650-format-302211876.html",
+          "title": "公司发布 18650 钾离子电池",
+          "date": "2024-08-01"
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": false
+    }
+  ],
+  "performance": {
+    "subject": "多来源参考 · 水系 K-PB / PTCDI 研究电池",
+    "type": "具名样例 + 期刊补充（逐项标明对象）",
+    "note": "不同指标可能来自不同产品、年代或实验，不能拼接成同一电池的完整规格。原样例说明：与 Group1 非水 18650 产品不同；本次未核实该水系全电池的量化性能条件，因此不套用非水产品的指标。",
+    "updatedAt": "2026-09-13",
+    "observations": {
+      "capacity": {
+        "value": "81.6",
+        "unit": "mAh/g",
+        "basis": "KNFHCF-1/2 正极材料测试",
+        "conditions": "首次容量，10 mA/g。来自正极材料实验，不是当前水系 K-PB / PTCDI 方案，更不是整电芯容量。",
+        "sourceIds": [
+          "chong2020"
+        ],
+        "status": "reported",
+        "subject": "K1.90Ni0.5Fe0.5[Fe(CN)6]0.89·0.42H2O 正极",
+        "locator": "摘要：正极测试部分",
+        "updatedAt": "2026-09-13"
+      },
+      "discharge": {
+        "value": "53.4 mAh/g @ 500",
+        "unit": "mA/g",
+        "basis": "正极材料倍率测试",
+        "conditions": "比容量和电流均按正极材料归一化；不是整电芯输出功率。",
+        "sourceIds": [
+          "chong2020"
+        ],
+        "status": "reported",
+        "subject": "KNFHCF-1/2 正极",
+        "locator": "摘要：倍率性能",
+        "updatedAt": "2026-09-13"
+      },
+      "cycleLife": {
+        "value": "超过 1,000",
+        "unit": "次",
+        "basis": "正极材料循环测试",
+        "conditions": "100 mA/g，每圈衰减率 0.0177%；非文中石墨全电池的循环指标，不能外推当前匹配方案。",
+        "sourceIds": [
+          "chong2020"
+        ],
+        "status": "reported",
+        "subject": "KNFHCF-1/2 正极",
+        "locator": "摘要：循环性能",
+        "updatedAt": "2026-09-13"
+      }
+    },
+    "referenceSubject": "水系 K-PB / PTCDI 研究电池"
+  },
+  "literatureUpdate": [
+    {
+      "family": "kion",
+      "metric": "capacity",
+      "source": "chong2020"
+    },
+    {
+      "family": "kion",
+      "metric": "discharge",
+      "source": "chong2020"
+    },
+    {
+      "family": "kion",
+      "metric": "cycleLife",
+      "source": "chong2020"
+    }
+  ],
+  "metricSources": {
+    "chong2020": {
+      "title": "Potassium Nickel Iron Hexacyanoferrate as Ultra-Long-Life Cathode Material for Potassium-Ion Batteries with High Energy Density",
+      "url": "https://doi.org/10.1021/acsnano.0c02047",
+      "doi": "10.1021/acsnano.0c02047",
+      "journal": "ACS · Nano",
+      "date": "2020-07-31",
+      "checkedAt": "2026-09-13",
+      "citationCount": 176,
+      "citationProvider": "Crossref",
+      "citationCheckedAt": "2026-09-13",
+      "citationUrl": "https://api.crossref.org/works/10.1021/acsnano.0c02047"
+    }
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 1,
+  "id": "lco",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "钴酸锂电池",
+    "en": "Lithium cobalt oxide · LCO",
+    "status": "commercial",
+    "recharge": "可充电",
+    "voltage": "3.7 V",
+    "accent": "#ff6b35",
+    "id": "lco",
+    "details": [
+      "LiCoO₂ 层状正极与石墨负极之间可逆迁移锂离子，是成熟的消费电子电池体系。",
+      "手机、笔记本电脑、相机与小型电子设备。",
+      "体积能量密度高、工艺成熟。",
+      "钴成本较高，热稳定性和深度充放电能力受限。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "lco-1",
+      "family": "lco",
+      "cathode": "lco",
+      "anode": "graphite",
+      "electrolyte": "li-emc",
+      "kind": "典型材料方案",
+      "note": "活性材料与基础电解质的检索级描述；未穷举粘结剂、集流体、添加剂或工艺，不是可直接制造的处方。",
+      "sources": [
+        {
+          "title": "LCO / 石墨碳酸酯电解液研究",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0013468616304406",
+          "date": null
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "lco",
+      "name": "钴酸锂",
+      "formula": "LiCoO2",
+      "elements": [
+        "Li",
+        "Co",
+        "O"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [
+        "LCO"
+      ],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "graphite",
+      "name": "石墨",
+      "formula": "C（层状石墨）",
+      "elements": [
+        "C"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [
+        "graphite"
+      ],
+      "note": "与硬碳不同；同为碳元素并不互相替代。",
+      "components": []
+    },
+    {
+      "id": "li-emc",
+      "name": "六氟磷酸锂 / EC–EMC",
+      "formula": "LiPF6 + EC + EMC",
+      "elements": [
+        "Li",
+        "P",
+        "F",
+        "C",
+        "H",
+        "O"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "碳酸酯液态体系；代表性溶剂组合。",
+      "components": [
+        "盐：LiPF6",
+        "溶剂：EC / EMC"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "lco",
+      "name": "Murata 村田",
+      "stage": "公开产品目录",
+      "basis": "2021 年产品目录列出 LCO 软包电芯；可证明生产记录，不等同于确认所有型号仍在售。",
+      "sources": [
+        {
+          "url": "https://www.murata.com/~/media/webrenewal/support/library/catalog/products/k70e.ashx",
+          "title": "锂离子二次电池产品目录",
+          "date": "2021"
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": true
+    }
+  ],
+  "performance": {
+    "subject": "多来源参考 · Murata US253450A10S",
+    "type": "具名样例 + 期刊补充（逐项标明对象）",
+    "note": "不同指标可能来自不同产品、年代或实验，不能拼接成同一电池的完整规格。原样例说明：仅适用于该软包电芯；当前供货状态需另行确认。",
+    "updatedAt": "2026-09-13",
+    "observations": {
+      "capacity": {
+        "value": "425",
+        "unit": "mAh",
+        "basis": "电芯额定容量",
+        "conditions": "室温、0.2ItA 放电、3.0 V 截止；对应额定能量 1.60 Wh。",
+        "sourceIds": [
+          "murata"
+        ],
+        "status": "reported",
+        "subject": "Murata US253450A10S",
+        "updatedAt": "2026-09-11"
+      },
+      "specificEnergy": {
+        "value": "约 184",
+        "unit": "Wh/kg",
+        "basis": "由规格计算的电芯值",
+        "conditions": "1.60 Wh ÷ 0.0087 kg；使用额定能量与典型质量，不是厂商直接保证的比能量。",
+        "sourceIds": [
+          "murata"
+        ],
+        "status": "calculated",
+        "subject": "Murata US253450A10S",
+        "updatedAt": "2026-09-11"
+      },
+      "cycleLife": {
+        "value": "500",
+        "unit": "次",
+        "basis": "电芯测试",
+        "conditions": "容量保持率 80%；23°C，1C CC/CV 充电至 4.2 V，0.5C 放电至 3.0 V。",
+        "sourceIds": [
+          "murata"
+        ],
+        "status": "reported",
+        "subject": "Murata US253450A10S",
+        "updatedAt": "2026-09-11"
+      },
+      "charge": {
+        "value": "2.5",
+        "unit": "小时",
+        "basis": "规格表标准充电",
+        "conditions": "23°C，0.425 A 恒流恒压，4.2 V；仅适用于该型号。",
+        "sourceIds": [
+          "murata"
+        ],
+        "status": "reported",
+        "subject": "Murata US253450A10S",
+        "updatedAt": "2026-09-11"
+      },
+      "temperature": {
+        "value": "−25 至 40",
+        "unit": "°C",
+        "basis": "2011 综述：体系参考",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。原表 operating temperature，未分开充电与放电限制，不能当作安全操作范围。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· C–LC 石墨 / LiCoO2",
+        "locator": "p.3583，Table 1",
+        "updatedAt": "2026-09-13"
+      },
+      "storage": {
+        "value": "2",
+        "unit": "%/月",
+        "basis": "2011 综述：体系参考",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。20°C 下每月自放电比例。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· C–LC 石墨 / LiCoO2",
+        "locator": "p.3583，Table 1",
+        "updatedAt": "2026-09-13"
+      },
+      "energyEfficiency": {
+        "value": "94–99",
+        "unit": "%",
+        "basis": "2011 综述：DC–DC 往返能量效率",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。原表明确为 DC 往返能量效率，不是库仑效率，也不是 AC 并网效率。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· C–LC 石墨 / LiCoO2",
+        "locator": "p.3583，Table 1",
+        "updatedAt": "2026-09-13"
+      }
+    },
+    "referenceSubject": "Murata US253450A10S"
+  },
+  "literatureUpdate": [
+    {
+      "family": "lco",
+      "metric": "temperature",
+      "source": "yang2011"
+    },
+    {
+      "family": "lco",
+      "metric": "storage",
+      "source": "yang2011"
+    },
+    {
+      "family": "lco",
+      "metric": "energyEfficiency",
+      "source": "yang2011"
+    }
+  ],
+  "metricSources": {
+    "murata": {
+      "title": "Murata US253450A10S 电芯规格",
+      "url": "https://www.murata.com/-/media/webrenewal/products/batteries/laminated/standard/pdf/us253450a10s.ashx?la=en",
+      "date": null,
+      "checkedAt": "2026-09-11"
+    },
+    "yang2011": {
+      "title": "Electrochemical Energy Storage for Green Grid",
+      "url": "https://doi.org/10.1021/cr100290v",
+      "doi": "10.1021/cr100290v",
+      "journal": "ACS · Chemical Reviews",
+      "date": "2011-03-04",
+      "checkedAt": "2026-09-13",
+      "citationCount": 5067,
+      "citationProvider": "Crossref",
+      "citationCheckedAt": "2026-09-13",
+      "citationUrl": "https://api.crossref.org/works/10.1021/cr100290v",
+      "fullTextUrl": "https://www.pnnl.gov/sites/default/files/media/file/at/publications/333_926201145617.pdf"
+    }
+  }
+}

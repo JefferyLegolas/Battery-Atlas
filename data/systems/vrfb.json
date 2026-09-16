@@ -1,0 +1,266 @@
+{
+  "schemaVersion": 1,
+  "id": "vrfb",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "全钒液流电池",
+    "en": "Vanadium redox flow battery",
+    "status": "commercial",
+    "recharge": "可充电",
+    "voltage": "1.26 V",
+    "accent": "#00a9a5",
+    "id": "vrfb",
+    "details": [
+      "正负极都使用不同价态的钒离子，跨膜串扰不会引入异种金属污染。",
+      "电网级长时储能、风光配储与微电网。",
+      "循环寿命长、可深度放电，功率和容量可独立设计。",
+      "系统体积较大，钒电解液和泵系统带来初始成本。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "vrfb-1",
+      "family": "vrfb",
+      "cathode": "v-pos",
+      "anode": "v-neg",
+      "electrolyte": "v-acid",
+      "kind": "典型材料方案",
+      "note": "活性材料与基础电解质的检索级描述；未穷举粘结剂、集流体、添加剂或工艺，不是可直接制造的处方。",
+      "sources": [
+        {
+          "title": "Sandia / EPRI 储能技术手册（体系级背景）",
+          "url": "https://sandia.gov/ess-ssl/publications/ESHB%201001834%20reduced%20size.pdf",
+          "date": null
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "v-pos",
+      "name": "正极钒氧离子对",
+      "formula": "VO₂⁺ / VO²⁺（V(V) / V(IV)）",
+      "elements": [
+        "V",
+        "O"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [
+        "五价钒",
+        "四价钒"
+      ],
+      "note": "VO₂⁺ 为五价钒，VO²⁺ 为四价钒；两个上标与下标的含义不同。",
+      "components": []
+    },
+    {
+      "id": "v-neg",
+      "name": "负极钒离子对",
+      "formula": "V3+/V2+",
+      "elements": [
+        "V"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [
+        "三价钒",
+        "二价钒"
+      ],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "v-acid",
+      "name": "硫酸基含钒水系电解液",
+      "formula": "V 盐 / H2SO4 / H2O",
+      "elements": [
+        "V",
+        "S",
+        "O",
+        "H"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "两侧使用不同价态钒，盐浓度依系统而定。",
+      "components": [
+        "钒活性盐",
+        "硫酸",
+        "水"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "vrfb",
+      "name": "Sumitomo Electric 住友电工",
+      "stage": "商业化产品",
+      "basis": "2025 年发布改进型全钒液流电池并宣布接单，具备公开工程应用记录。",
+      "sources": [
+        {
+          "url": "https://sumitomoelectric.com/press/2025/02/prs016",
+          "title": "新型液流电池产品",
+          "date": "2025-02-26"
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": true
+    }
+  ],
+  "performance": {
+    "subject": "多来源参考 · Sumitomo Electric 新型 VRFB",
+    "type": "具名样例 + 期刊补充（逐项标明对象）",
+    "note": "不同指标可能来自不同产品、年代或实验，不能拼接成同一电池的完整规格。原样例说明：2025 年新型系统设计能力，不是每条钒电解液方案的保证。",
+    "updatedAt": "2026-09-13",
+    "observations": {
+      "calendarLife": {
+        "value": "最长 30",
+        "unit": "年",
+        "basis": "系统运行寿命设计",
+        "conditions": "需要采用长寿命材料并适当维护；不是免维护质保年限。",
+        "sourceIds": [
+          "sumitomo"
+        ],
+        "status": "reported",
+        "subject": "Sumitomo Electric 新型 VRFB",
+        "updatedAt": "2026-09-11"
+      },
+      "specificEnergy": {
+        "value": "10–20",
+        "unit": "Wh/kg",
+        "basis": "2011 综述：体系参考",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。原表未细化全部包装 / 辅机质量边界，勿当作指定电芯或整站参数。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· VRB 全钒液流",
+        "locator": "p.3583，Table 1",
+        "updatedAt": "2026-09-13"
+      },
+      "temperature": {
+        "value": "10–40",
+        "unit": "°C",
+        "basis": "2011 综述：体系参考",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。原表 operating temperature，未分开充电与放电限制，不能当作安全操作范围。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· VRB 全钒液流",
+        "locator": "p.3583，Table 1",
+        "updatedAt": "2026-09-13"
+      },
+      "storage": {
+        "value": "3–9",
+        "unit": "%/月",
+        "basis": "2011 综述：体系参考",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。20°C 下每月自放电比例。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· VRB 全钒液流",
+        "locator": "p.3583，Table 1",
+        "updatedAt": "2026-09-13"
+      },
+      "cycleLife": {
+        "value": "5,000",
+        "unit": "次",
+        "basis": "2011 综述：体系参考",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。原表为深循环次数，未统一给出寿命终点和倍率。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· VRB 全钒液流",
+        "locator": "p.3583，Table 1",
+        "updatedAt": "2026-09-13"
+      },
+      "energyEfficiency": {
+        "value": "65–80",
+        "unit": "%",
+        "basis": "2011 综述：DC–DC 往返能量效率",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。原表明确为 DC 往返能量效率，不是库仑效率，也不是 AC 并网效率。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· VRB 全钒液流",
+        "locator": "p.3583，Table 1",
+        "updatedAt": "2026-09-13"
+      },
+      "discharge": {
+        "value": "4–12",
+        "unit": "小时",
+        "basis": "2011 综述：体系参考",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。典型应用放电时长，未绑定单一功率，不能据此推算容量。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· VRB 全钒液流",
+        "locator": "p.3583，Table 1",
+        "updatedAt": "2026-09-13"
+      }
+    },
+    "referenceSubject": "Sumitomo Electric 新型 VRFB"
+  },
+  "literatureUpdate": [
+    {
+      "family": "vrfb",
+      "metric": "specificEnergy",
+      "source": "yang2011"
+    },
+    {
+      "family": "vrfb",
+      "metric": "temperature",
+      "source": "yang2011"
+    },
+    {
+      "family": "vrfb",
+      "metric": "storage",
+      "source": "yang2011"
+    },
+    {
+      "family": "vrfb",
+      "metric": "cycleLife",
+      "source": "yang2011"
+    },
+    {
+      "family": "vrfb",
+      "metric": "energyEfficiency",
+      "source": "yang2011"
+    },
+    {
+      "family": "vrfb",
+      "metric": "discharge",
+      "source": "yang2011"
+    }
+  ],
+  "metricSources": {
+    "sumitomo": {
+      "title": "住友电工新型全钒液流电池",
+      "url": "https://sumitomoelectric.com/press/2025/02/prs016",
+      "date": "2025-02-26",
+      "checkedAt": "2026-09-11"
+    },
+    "yang2011": {
+      "title": "Electrochemical Energy Storage for Green Grid",
+      "url": "https://doi.org/10.1021/cr100290v",
+      "doi": "10.1021/cr100290v",
+      "journal": "ACS · Chemical Reviews",
+      "date": "2011-03-04",
+      "checkedAt": "2026-09-13",
+      "citationCount": 5067,
+      "citationProvider": "Crossref",
+      "citationCheckedAt": "2026-09-13",
+      "citationUrl": "https://api.crossref.org/works/10.1021/cr100290v",
+      "fullTextUrl": "https://www.pnnl.gov/sites/default/files/media/file/at/publications/333_926201145617.pdf"
+    }
+  }
+}

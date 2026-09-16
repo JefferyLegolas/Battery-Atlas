@@ -1,0 +1,232 @@
+{
+  "schemaVersion": 1,
+  "id": "nmc",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "三元锂电池",
+    "en": "Nickel manganese cobalt · NMC",
+    "status": "commercial",
+    "recharge": "可充电",
+    "voltage": "3.6–3.7 V",
+    "accent": "#ff6b35",
+    "id": "nmc",
+    "details": [
+      "以镍、锰、钴组成的层状氧化物储存锂离子，通过三种金属比例平衡容量、稳定性与成本。",
+      "乘用电动车、电动工具与高能量便携设备。",
+      "能量密度较高，配方可针对功率、寿命或成本调节。",
+      "需要完善的热管理；镍钴比例会影响安全性、寿命和成本。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "nmc-1",
+      "family": "nmc",
+      "cathode": "nmc532",
+      "anode": "graphite",
+      "electrolyte": "li-ternary",
+      "kind": "文献全电池（实验）",
+      "note": "活性材料与基础电解质的检索级描述；未穷举粘结剂、集流体、添加剂或工艺，不是可直接制造的处方。",
+      "sources": [
+        {
+          "title": "NMC532 / 石墨电池电解液优化",
+          "url": "https://www.nature.com/articles/s41467-022-32938-1",
+          "date": null
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "nmc532",
+      "name": "三元层状氧化物 NMC532",
+      "formula": "LiNi0.5Mn0.3Co0.2O2",
+      "elements": [
+        "Li",
+        "Ni",
+        "Mn",
+        "Co",
+        "O"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [
+        "NCM532"
+      ],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "graphite",
+      "name": "石墨",
+      "formula": "C（层状石墨）",
+      "elements": [
+        "C"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [
+        "graphite"
+      ],
+      "note": "与硬碳不同；同为碳元素并不互相替代。",
+      "components": []
+    },
+    {
+      "id": "li-ternary",
+      "name": "六氟磷酸锂 / EC–EMC–DMC",
+      "formula": "LiPF6 + EC + EMC + DMC",
+      "elements": [
+        "Li",
+        "P",
+        "F",
+        "C",
+        "H",
+        "O"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "文献优化的溶剂体系族；不是固定比例处方。",
+      "components": [
+        "盐：LiPF6",
+        "溶剂：EC / EMC / DMC"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "nmc",
+      "name": "LG Energy Solution",
+      "stage": "规模化生产",
+      "basis": "官方列有 NCM 正极产品路线，包括 NCM622；不代表采用本页文献的全部配方。",
+      "sources": [
+        {
+          "url": "https://www.lgensol.com/mobile/kr/business/subject-ncm",
+          "title": "NCM 产品路线",
+          "date": null
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": true
+    }
+  ],
+  "performance": {
+    "subject": "多来源参考 · DOE 电网储能 NMC 情景",
+    "type": "具名样例 + 期刊补充（逐项标明对象）",
+    "note": "不同指标可能来自不同产品、年代或实验，不能拼接成同一电池的完整规格。原样例说明：历史模型参数，不是 LG 某型号或本库 NMC532 文献方案的实测。",
+    "updatedAt": "2026-09-13",
+    "observations": {
+      "cycleLife": {
+        "value": "4,000",
+        "unit": "次",
+        "basis": "储能建模输入",
+        "conditions": "表 4.3：80% DOD，调整平均 DOD 70%；模型终点与折算方法详见第 4.1.4 节，不等同于 80% 容量保持率测试。",
+        "sourceIds": [
+          "doe"
+        ],
+        "status": "model",
+        "subject": "DOE 电网储能 NMC 情景",
+        "updatedAt": "2026-09-11"
+      },
+      "specificEnergy": {
+        "value": "126–210",
+        "unit": "Wh/kg",
+        "basis": "2016 综述：电芯文献范围",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。不是整车或储能系统指标。",
+        "sourceIds": [
+          "chemali2016"
+        ],
+        "status": "review",
+        "subject": "Chemali 等（2016）· LiNiMnCo 文献汇总",
+        "locator": "p.1119，Table II",
+        "updatedAt": "2026-09-13"
+      },
+      "energyDensity": {
+        "value": "230–550",
+        "unit": "Wh/L",
+        "basis": "2016 综述：电芯文献范围",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。不是整车或储能系统指标。",
+        "sourceIds": [
+          "chemali2016"
+        ],
+        "status": "review",
+        "subject": "Chemali 等（2016）· LiNiMnCo 文献汇总",
+        "locator": "p.1119，Table II",
+        "updatedAt": "2026-09-13"
+      },
+      "discharge": {
+        "value": "500–2,400",
+        "unit": "W/kg",
+        "basis": "2016 综述：电芯文献范围",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。按质量归一化的比功率；原表未统一连续或脉冲时长，不等于某一电池的额定输出。",
+        "sourceIds": [
+          "chemali2016"
+        ],
+        "status": "review",
+        "subject": "Chemali 等（2016）· LiNiMnCo 文献汇总",
+        "locator": "p.1119，Table II",
+        "updatedAt": "2026-09-13"
+      },
+      "storage": {
+        "value": "0.1–0.71",
+        "unit": "%/天",
+        "basis": "2016 综述：电芯文献范围",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。按每天自放电百分比；SOC、储温未统一披露，不作月损失率换算。",
+        "sourceIds": [
+          "chemali2016"
+        ],
+        "status": "review",
+        "subject": "Chemali 等（2016）· LiNiMnCo 文献汇总",
+        "locator": "p.1119，Table II",
+        "updatedAt": "2026-09-13"
+      }
+    },
+    "referenceSubject": "DOE 电网储能 NMC 情景"
+  },
+  "literatureUpdate": [
+    {
+      "family": "nmc",
+      "metric": "specificEnergy",
+      "source": "chemali2016"
+    },
+    {
+      "family": "nmc",
+      "metric": "energyDensity",
+      "source": "chemali2016"
+    },
+    {
+      "family": "nmc",
+      "metric": "discharge",
+      "source": "chemali2016"
+    },
+    {
+      "family": "nmc",
+      "metric": "storage",
+      "source": "chemali2016"
+    }
+  ],
+  "metricSources": {
+    "doe": {
+      "title": "DOE / PNNL 储能成本与性能评估（2022）",
+      "url": "https://www.energy.gov/sites/default/files/2022-09/2022%20Grid%20Energy%20Storage%20Technology%20Cost%20and%20Performance%20Assessment.pdf",
+      "date": "2022-08",
+      "checkedAt": "2026-09-11"
+    },
+    "chemali2016": {
+      "title": "Electrochemical and Electrostatic Energy Storage and Management Systems for Electric Drive Vehicles: State-of-the-Art Review and Future Trends",
+      "url": "https://doi.org/10.1109/JESTPE.2016.2566583",
+      "doi": "10.1109/JESTPE.2016.2566583",
+      "journal": "IEEE · JESTPE",
+      "date": "2016-05-10",
+      "checkedAt": "2026-09-13",
+      "citationCount": 260,
+      "citationProvider": "Crossref",
+      "citationCheckedAt": "2026-09-13",
+      "citationUrl": "https://api.crossref.org/works/10.1109/JESTPE.2016.2566583",
+      "fullTextUrl": "https://mplab.ee.columbia.edu/sites/mplab.ee.columbia.edu/files/content/Publications/Chemali2016.pdf"
+    }
+  }
+}

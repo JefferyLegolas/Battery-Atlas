@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "id": "zinc-carbon",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "锌碳电池",
+    "en": "Zinc–carbon / Leclanché",
+    "status": "commercial",
+    "recharge": "一次电池",
+    "voltage": "1.5 V",
+    "accent": "#137547",
+    "id": "zinc-carbon",
+    "details": [
+      "锌外壳兼作负极，二氧化锰与碳构成正极集流体系，使用氯化物糊状电解质。",
+      "时钟、遥控器等低功耗一次电池。",
+      "制造简单、价格低。",
+      "容量与防漏性能通常弱于碱性锌锰电池。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "zinc-carbon-1",
+      "family": "zinc-carbon",
+      "cathode": "mno2",
+      "anode": "zn",
+      "electrolyte": "zncl",
+      "kind": "典型材料方案",
+      "note": "活性材料与基础电解质的检索级描述；未穷举粘结剂、集流体、添加剂或工艺，不是可直接制造的处方。",
+      "sources": [
+        {
+          "title": "锌碳电池材料安全资料",
+          "url": "https://energy.panasonic.com/dam/master/pdf/en/psds/dry/2026/MN-PSDS-EN.pdf",
+          "date": null
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "mno2",
+      "name": "二氧化锰复合正极",
+      "formula": "MnO2/C",
+      "elements": [
+        "Mn",
+        "O",
+        "C"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [
+        "二氧化锰",
+        "EMD"
+      ],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "zn",
+      "name": "锌",
+      "formula": "Zn",
+      "elements": [
+        "Zn"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "zncl",
+      "name": "氯化锌水系糊状电解质",
+      "formula": "ZnCl2 / H2O",
+      "elements": [
+        "Zn",
+        "Cl",
+        "H",
+        "O"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "富氯化锌锌碳路线；不与其他铵盐配方合并。",
+      "components": [
+        "ZnCl2",
+        "水",
+        "糊化基体未指定"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "zinc-carbon",
+      "name": "Panasonic 松下",
+      "stage": "商业化产品",
+      "basis": "官方 R6NP 产品页明确标注锌碳电池，作为消费电池生产代表。",
+      "sources": [
+        {
+          "url": "https://www.panasonic.com/au/consumer/household/batteries/extra-heavy-duty-heavy-duty/r6np-4b.html",
+          "title": "R6NP 锌碳电池",
+          "date": null
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": true
+    }
+  ],
+  "performance": {
+    "subject": "Eveready 1250（D 型）",
+    "type": "厂商规格",
+    "note": "锌碳产品背景，不是 Panasonic R6NP 的规格。",
+    "updatedAt": "2026-09-11",
+    "observations": {
+      "capacity": {
+        "value": "8,000",
+        "unit": "mAh",
+        "basis": "电芯平均容量",
+        "conditions": "21°C、25 mA 连续放电至 0.8 V；高负载可用容量会不同。",
+        "sourceIds": [
+          "zinc"
+        ],
+        "status": "reported",
+        "subject": "Eveready 1250（D 型）",
+        "updatedAt": "2026-09-11"
+      },
+      "temperature": {
+        "value": "−18 至 55",
+        "unit": "°C",
+        "basis": "工作温区",
+        "conditions": "仅对应 Eveready 1250 数据表。",
+        "sourceIds": [
+          "zinc"
+        ],
+        "status": "reported",
+        "subject": "Eveready 1250（D 型）",
+        "updatedAt": "2026-09-11"
+      }
+    }
+  },
+  "literatureUpdate": [],
+  "metricSources": {
+    "zinc": {
+      "title": "Eveready 1250 锌碳电池规格",
+      "url": "https://data.energizer.com/pdfs/1250.pdf",
+      "date": null,
+      "checkedAt": "2026-09-11"
+    }
+  }
+}

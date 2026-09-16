@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "id": "nife",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "镍铁电池",
+    "en": "Nickel–iron · NiFe",
+    "status": "commercial",
+    "recharge": "可充电",
+    "voltage": "1.2 V",
+    "accent": "#e0a100",
+    "id": "nife",
+    "details": [
+      "镍基正极与铁负极在氢氧化钾电解液中反应，以极长使用寿命著称。",
+      "矿山、铁路、离网储能及需要耐滥用的场景。",
+      "寿命长、耐过充过放，材料坚固。",
+      "效率较低、自放电和析气明显，体积与质量较大。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "nife-1",
+      "family": "nife",
+      "cathode": "niooh",
+      "anode": "fe",
+      "electrolyte": "koh",
+      "kind": "典型材料方案",
+      "note": "活性材料与基础电解质的检索级描述；未穷举粘结剂、集流体、添加剂或工艺，不是可直接制造的处方。",
+      "sources": [
+        {
+          "title": "Sandia / EPRI 储能技术手册（体系级背景）",
+          "url": "https://sandia.gov/ess-ssl/publications/ESHB%201001834%20reduced%20size.pdf",
+          "date": null
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "niooh",
+      "name": "羟基氧化镍",
+      "formula": "NiOOH",
+      "elements": [
+        "Ni",
+        "O",
+        "H"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "fe",
+      "name": "铁",
+      "formula": "Fe",
+      "elements": [
+        "Fe"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "koh",
+      "name": "氢氧化钾水溶液",
+      "formula": "KOH / H2O",
+      "elements": [
+        "K",
+        "O",
+        "H"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "实际产品可含添加剂，本条仅表示基础电解液。",
+      "components": [
+        "KOH",
+        "水"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "nife",
+      "name": "四川长虹电源",
+      "stage": "商业化产品",
+      "basis": "官网明确列出镍铁袋式电池；列为已核实产品生产商，不声称全球排名。",
+      "sources": [
+        {
+          "url": "https://en.changhongbatteries.com/",
+          "title": "镍铁电池产品",
+          "date": null
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": true
+    }
+  ],
+  "performance": {
+    "subject": "长虹 NF-S",
+    "type": "厂商发布资料",
+    "note": "厂商在行业产品平台发布的型号资料，非第三方寿命认证。",
+    "updatedAt": "2026-09-11",
+    "observations": {
+      "calendarLife": {
+        "value": ">20",
+        "unit": "年",
+        "basis": "产品寿命声明",
+        "conditions": "要求正确使用与维护；不得理解为所有 DOD 下的寿命保证。",
+        "sourceIds": [
+          "nife"
+        ],
+        "status": "reported",
+        "subject": "长虹 NF-S",
+        "updatedAt": "2026-09-11"
+      },
+      "capacity": {
+        "value": "10–1,200",
+        "unit": "Ah",
+        "basis": "产品系列容量",
+        "conditions": "不同型号的额定容量范围。",
+        "sourceIds": [
+          "nife"
+        ],
+        "status": "reported",
+        "subject": "长虹 NF-S",
+        "updatedAt": "2026-09-11"
+      }
+    }
+  },
+  "literatureUpdate": [],
+  "metricSources": {
+    "nife": {
+      "title": "长虹 NF-S 厂商发布产品说明",
+      "url": "https://trends.directindustry.com/sichuan-changhong-battery-co-ltd/project-71984-134312.html",
+      "date": null,
+      "checkedAt": "2026-09-11"
+    }
+  }
+}

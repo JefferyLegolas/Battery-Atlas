@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "id": "solid",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "硫化物固态锂电池",
+    "en": "Sulfide solid-state lithium",
+    "status": "pilot",
+    "recharge": "可充电",
+    "voltage": "3–4 V",
+    "accent": "#f4c52e",
+    "id": "solid",
+    "details": [
+      "以硫化物固体电解质传导锂离子，有望配合锂金属或硅基负极提高比能。",
+      "下一代电动车及高安全、高比能电池。",
+      "离子电导率较高，理论上可减少可燃液体电解液。",
+      "界面阻抗、压力管理、湿气敏感和规模制造仍是难点。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "solid-1",
+      "family": "solid",
+      "cathode": "nmc811",
+      "anode": "silicon",
+      "electrolyte": "lpscl",
+      "kind": "文献全电池（实验）",
+      "note": "高载量微米硅与硫化物电解质研究；界面、压力和电极复合比例需查原文，非三星配方。",
+      "sources": [
+        {
+          "title": "无碳微米硅 / NMC811 硫化物固态全电池",
+          "url": "https://lescmeng.ai/wp-content/uploads/science.abg7217.pdf",
+          "date": null
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "nmc811",
+      "name": "三元层状氧化物 NMC811",
+      "formula": "LiNi0.8Mn0.1Co0.1O2",
+      "elements": [
+        "Li",
+        "Ni",
+        "Mn",
+        "Co",
+        "O"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [
+        "NCM811"
+      ],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "silicon",
+      "name": "微米硅",
+      "formula": "Si",
+      "elements": [
+        "Si"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [
+        "μSi",
+        "silicon"
+      ],
+      "note": "固态论文的微米硅负极；不是硅碳复合材料。",
+      "components": []
+    },
+    {
+      "id": "lpscl",
+      "name": "硫银锗矿型硫化物固体",
+      "formula": "Li6PS5Cl",
+      "elements": [
+        "Li",
+        "P",
+        "S",
+        "Cl"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "固体电解质，不是电解液。",
+      "components": [
+        "Li6PS5Cl"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "solid",
+      "name": "Samsung SDI 三星 SDI",
+      "stage": "试制 / 量产目标",
+      "basis": "已建设 S-Line 试制线；官方目标为 2027 年量产，不能标注为当前成熟量产。固态样例为独立论文，并非其商业配方。",
+      "sources": [
+        {
+          "url": "https://www.samsungsdi.com/business/index.html",
+          "title": "电池业务与固态路线",
+          "date": null
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": false
+    }
+  ],
+  "performance": {
+    "subject": "UCSD 微米硅 / 硫化物全电池",
+    "type": "文献实验",
+    "note": "对应本库 solid-1 研究路线；不代表三星量产规格。",
+    "updatedAt": "2026-09-11",
+    "observations": {
+      "cycleLife": {
+        "value": "500",
+        "unit": "次",
+        "basis": "实验室全电池",
+        "conditions": "室温、容量保持率 80%；压力、载量与电流需结合原论文。",
+        "sourceIds": [
+          "ucsd"
+        ],
+        "status": "reported",
+        "subject": "UCSD 微米硅 / 硫化物全电池",
+        "updatedAt": "2026-09-11"
+      },
+      "temperature": {
+        "value": "室温",
+        "unit": "",
+        "basis": "循环测试条件",
+        "conditions": "不是完整允许工作温区。",
+        "sourceIds": [
+          "ucsd"
+        ],
+        "status": "reported",
+        "subject": "UCSD 微米硅 / 硫化物全电池",
+        "updatedAt": "2026-09-11"
+      }
+    }
+  },
+  "literatureUpdate": [],
+  "metricSources": {
+    "ucsd": {
+      "title": "UC San Diego 硅负极固态全电池研究",
+      "url": "https://today.ucsd.edu/story/meng_science_2021",
+      "date": "2021-09",
+      "checkedAt": "2026-09-11"
+    }
+  }
+}

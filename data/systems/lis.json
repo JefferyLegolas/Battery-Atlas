@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "id": "lis",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "锂硫电池",
+    "en": "Lithium–sulfur · Li–S",
+    "status": "pilot",
+    "recharge": "可充电",
+    "voltage": "2.1 V",
+    "accent": "#f4c52e",
+    "id": "lis",
+    "details": [
+      "硫正极在充放电时经历多步硫化物转化，锂金属负极提供高理论比容量。",
+      "航空、高比能移动电源及下一代动力电池研究。",
+      "硫资源丰富，理论质量能量密度很高。",
+      "多硫化物穿梭、体积变化和锂枝晶仍限制寿命与安全。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "lis-1",
+      "family": "lis",
+      "cathode": "s-carbon",
+      "anode": "lithium",
+      "electrolyte": "li-ether",
+      "kind": "文献全电池（实验）",
+      "note": "活性材料与基础电解质的检索级描述；未穷举粘结剂、集流体、添加剂或工艺，不是可直接制造的处方。",
+      "sources": [
+        {
+          "title": "锂硫正极孔隙率与醚系电解液",
+          "url": "https://www.nature.com/articles/s41467-019-12542-6",
+          "date": null
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "s-carbon",
+      "name": "硫碳复合正极",
+      "formula": "S/C",
+      "elements": [
+        "S",
+        "C"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [
+        "硫",
+        "sulfur"
+      ],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "lithium",
+      "name": "金属锂",
+      "formula": "Li",
+      "elements": [
+        "Li"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "li-ether",
+      "name": "LiTFSI / DOL–DME + LiNO3",
+      "formula": "LiTFSI + DOL + DME + LiNO3",
+      "elements": [
+        "Li",
+        "C",
+        "F",
+        "S",
+        "O",
+        "N",
+        "H"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "文献体系族；电解液用量、浓度等需查原文。",
+      "components": [
+        "盐：LiTFSI",
+        "溶剂：DOL / DME",
+        "添加剂：LiNO3"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "lis",
+      "name": "Lyten",
+      "stage": "早期生产 / 扩产规划",
+      "basis": "公司披露在圣何塞生产锂硫电芯。规划中的大工厂不计作已经投产；列为早期生产代表。",
+      "sources": [
+        {
+          "url": "https://lyten.com/2025/02/12/lyten-secures-domestically-sourced-sulfur-to-supply-its-us-lithium-sulfur-manufacturing-facilities/",
+          "title": "美国锂硫制造与硫供应",
+          "date": "2025-02-12"
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": true
+    }
+  ],
+  "performance": {
+    "subject": "多来源参考 · Lyten 2023 会议电芯",
+    "type": "具名样例 + 期刊补充（逐项标明对象）",
+    "note": "不同指标可能来自不同产品、年代或实验，不能拼接成同一电池的完整规格。原样例说明：不是当前量产保证值，也不是全部锂硫体系的通用水平。",
+    "updatedAt": "2026-09-13",
+    "observations": {
+      "specificEnergy": {
+        "value": "275",
+        "unit": "Wh/kg",
+        "basis": "论文报告电芯",
+        "conditions": "2023 年厂商会议论文所述成果；不把未来目标计作实测值。",
+        "sourceIds": [
+          "lyten"
+        ],
+        "status": "reported",
+        "subject": "Lyten 2023 会议电芯",
+        "updatedAt": "2026-09-11"
+      },
+      "cycleLife": {
+        "value": "80–110",
+        "unit": "次",
+        "basis": "2016 综述：电芯文献范围",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。文中讨论汽车电池约 80% 初始容量的寿命标准，但汇总项并非统一 DOD / 倍率的同条件实测。",
+        "sourceIds": [
+          "chemali2016"
+        ],
+        "status": "review",
+        "subject": "Chemali 等（2016）· Li–S 文献汇总",
+        "locator": "p.1119，Table II",
+        "updatedAt": "2026-09-13"
+      }
+    },
+    "referenceSubject": "Lyten 2023 会议电芯"
+  },
+  "literatureUpdate": [
+    {
+      "family": "lis",
+      "metric": "cycleLife",
+      "source": "chemali2016"
+    }
+  ],
+  "metricSources": {
+    "lyten": {
+      "title": "Lyten：Power Sources Conference 2023 论文",
+      "url": "https://powersourcesconference.com/PowerSources23/docs/15-4.pdf",
+      "date": "2023",
+      "checkedAt": "2026-09-11"
+    },
+    "chemali2016": {
+      "title": "Electrochemical and Electrostatic Energy Storage and Management Systems for Electric Drive Vehicles: State-of-the-Art Review and Future Trends",
+      "url": "https://doi.org/10.1109/JESTPE.2016.2566583",
+      "doi": "10.1109/JESTPE.2016.2566583",
+      "journal": "IEEE · JESTPE",
+      "date": "2016-05-10",
+      "checkedAt": "2026-09-13",
+      "citationCount": 260,
+      "citationProvider": "Crossref",
+      "citationCheckedAt": "2026-09-13",
+      "citationUrl": "https://api.crossref.org/works/10.1109/JESTPE.2016.2566583",
+      "fullTextUrl": "https://mplab.ee.columbia.edu/sites/mplab.ee.columbia.edu/files/content/Publications/Chemali2016.pdf"
+    }
+  }
+}

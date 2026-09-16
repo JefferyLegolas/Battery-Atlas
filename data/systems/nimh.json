@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 1,
+  "id": "nimh",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "镍氢电池",
+    "en": "Nickel–metal hydride · NiMH",
+    "status": "commercial",
+    "recharge": "可充电",
+    "voltage": "1.2 V",
+    "accent": "#e0a100",
+    "id": "nimh",
+    "details": [
+      "正极为羟基氧化镍，负极储氢合金可可逆吸收和释放氢。",
+      "混合动力汽车、家用充电电池与高可靠设备。",
+      "耐过充、功率性能和安全记录良好。",
+      "自放电与质量能量密度通常不及锂离子电池。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "nimh-1",
+      "family": "nimh",
+      "cathode": "niooh",
+      "anode": "mh",
+      "electrolyte": "koh",
+      "kind": "典型材料方案",
+      "note": "活性材料与基础电解质的检索级描述；未穷举粘结剂、集流体、添加剂或工艺，不是可直接制造的处方。",
+      "sources": [
+        {
+          "title": "Sandia / EPRI 储能技术手册（体系级背景）",
+          "url": "https://sandia.gov/ess-ssl/publications/ESHB%201001834%20reduced%20size.pdf",
+          "date": null
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "niooh",
+      "name": "羟基氧化镍",
+      "formula": "NiOOH",
+      "elements": [
+        "Ni",
+        "O",
+        "H"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "mh",
+      "name": "AB5 储氢合金（代表型）",
+      "formula": "LaNi5 基合金 / MH",
+      "elements": [
+        "La",
+        "Ni",
+        "H"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [
+        "金属氢化物",
+        "储氢合金"
+      ],
+      "note": "理想代表基体；实际合金可有其他取代元素，并非丰田专有配方。",
+      "components": []
+    },
+    {
+      "id": "koh",
+      "name": "氢氧化钾水溶液",
+      "formula": "KOH / H2O",
+      "elements": [
+        "K",
+        "O",
+        "H"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "实际产品可含添加剂，本条仅表示基础电解液。",
+      "components": [
+        "KOH",
+        "水"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "nimh",
+      "name": "Toyota Battery 丰田电池",
+      "stage": "规模化生产",
+      "basis": "官网列有 NP2/NP2.5 镍氢产品。企业累计混动车电池数据同时涉及多种化学体系，不用作镍氢独占份额。",
+      "sources": [
+        {
+          "url": "https://www.toyota-battery.com/en/",
+          "title": "产品与企业介绍",
+          "date": null
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": true
+    }
+  ],
+  "performance": {
+    "subject": "多来源参考 · Energizer NH15-2300（AA）",
+    "type": "具名样例 + 期刊补充（逐项标明对象）",
+    "note": "不同指标可能来自不同产品、年代或实验，不能拼接成同一电池的完整规格。原样例说明：消费电芯样例；不是丰田混动车镍氢电池的指标。",
+    "updatedAt": "2026-09-13",
+    "observations": {
+      "capacity": {
+        "value": "2,300",
+        "unit": "mAh",
+        "basis": "电芯额定容量",
+        "conditions": "21°C、460 mA（0.2C）放电。",
+        "sourceIds": [
+          "nimh"
+        ],
+        "status": "reported",
+        "subject": "Energizer NH15-2300（AA）",
+        "updatedAt": "2026-09-11"
+      },
+      "temperature": {
+        "value": "充电 0–40 / 放电 0–50",
+        "unit": "°C",
+        "basis": "规定工作温区",
+        "conditions": "储存另为 −20 至 30°C；极端温度会影响循环寿命。",
+        "sourceIds": [
+          "nimh"
+        ],
+        "status": "reported",
+        "subject": "Energizer NH15-2300（AA）",
+        "updatedAt": "2026-09-11"
+      },
+      "specificEnergy": {
+        "value": "45–80",
+        "unit": "Wh/kg",
+        "basis": "2016 综述：电芯文献范围",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。不是整车或储能系统指标。",
+        "sourceIds": [
+          "chemali2016"
+        ],
+        "status": "review",
+        "subject": "Chemali 等（2016）· NiMH 文献汇总",
+        "locator": "p.1119，Table I",
+        "updatedAt": "2026-09-13"
+      },
+      "energyDensity": {
+        "value": "60–150",
+        "unit": "Wh/L",
+        "basis": "2016 综述：电芯文献范围",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。不是整车或储能系统指标。",
+        "sourceIds": [
+          "chemali2016"
+        ],
+        "status": "review",
+        "subject": "Chemali 等（2016）· NiMH 文献汇总",
+        "locator": "p.1119，Table I",
+        "updatedAt": "2026-09-13"
+      },
+      "cycleLife": {
+        "value": "1,200–2,000",
+        "unit": "次",
+        "basis": "2016 综述：电芯文献范围",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。文中讨论汽车电池约 80% 初始容量的寿命标准，但汇总项并非统一 DOD / 倍率的同条件实测。",
+        "sourceIds": [
+          "chemali2016"
+        ],
+        "status": "review",
+        "subject": "Chemali 等（2016）· NiMH 文献汇总",
+        "locator": "p.1119，Table I",
+        "updatedAt": "2026-09-13"
+      },
+      "discharge": {
+        "value": "80–400",
+        "unit": "W/kg",
+        "basis": "2016 综述：电芯文献范围",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。按质量归一化的比功率；原表未统一连续或脉冲时长，不等于某一电池的额定输出。",
+        "sourceIds": [
+          "chemali2016"
+        ],
+        "status": "review",
+        "subject": "Chemali 等（2016）· NiMH 文献汇总",
+        "locator": "p.1119，Table I",
+        "updatedAt": "2026-09-13"
+      },
+      "storage": {
+        "value": "1–1.43",
+        "unit": "%/天",
+        "basis": "2016 综述：电芯文献范围",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。按每天自放电百分比；SOC、储温未统一披露，不作月损失率换算。",
+        "sourceIds": [
+          "chemali2016"
+        ],
+        "status": "review",
+        "subject": "Chemali 等（2016）· NiMH 文献汇总",
+        "locator": "p.1119，Table I",
+        "updatedAt": "2026-09-13"
+      }
+    },
+    "referenceSubject": "Energizer NH15-2300（AA）"
+  },
+  "literatureUpdate": [
+    {
+      "family": "nimh",
+      "metric": "specificEnergy",
+      "source": "chemali2016"
+    },
+    {
+      "family": "nimh",
+      "metric": "energyDensity",
+      "source": "chemali2016"
+    },
+    {
+      "family": "nimh",
+      "metric": "cycleLife",
+      "source": "chemali2016"
+    },
+    {
+      "family": "nimh",
+      "metric": "discharge",
+      "source": "chemali2016"
+    },
+    {
+      "family": "nimh",
+      "metric": "storage",
+      "source": "chemali2016"
+    }
+  ],
+  "metricSources": {
+    "nimh": {
+      "title": "Energizer NH15-2300 镍氢电芯规格",
+      "url": "https://data.energizer.com/pdfs/nh15-2300.pdf",
+      "date": null,
+      "checkedAt": "2026-09-11"
+    },
+    "chemali2016": {
+      "title": "Electrochemical and Electrostatic Energy Storage and Management Systems for Electric Drive Vehicles: State-of-the-Art Review and Future Trends",
+      "url": "https://doi.org/10.1109/JESTPE.2016.2566583",
+      "doi": "10.1109/JESTPE.2016.2566583",
+      "journal": "IEEE · JESTPE",
+      "date": "2016-05-10",
+      "checkedAt": "2026-09-13",
+      "citationCount": 260,
+      "citationProvider": "Crossref",
+      "citationCheckedAt": "2026-09-13",
+      "citationUrl": "https://api.crossref.org/works/10.1109/JESTPE.2016.2566583",
+      "fullTextUrl": "https://mplab.ee.columbia.edu/sites/mplab.ee.columbia.edu/files/content/Publications/Chemali2016.pdf"
+    }
+  }
+}

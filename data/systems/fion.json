@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "id": "fion",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "氟离子电池",
+    "en": "Fluoride-ion battery",
+    "status": "research",
+    "recharge": "可充电",
+    "voltage": "研究范围",
+    "accent": "#9966cc",
+    "id": "fion",
+    "details": [
+      "以氟离子作为电荷载体，既有转化反应也有嵌入型路线；本库样例采用镍酸镧嵌入型正极与铅/氟化铅负极。",
+      "高能量密度固态电池的长期研究方向。",
+      "多电子转化带来较高理论能量密度潜力。",
+      "室温离子电导、可逆界面和材料体积变化尚未解决。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "fion-1",
+      "family": "fion",
+      "cathode": "lno",
+      "anode": "pb-pbf2",
+      "electrolyte": "labaf",
+      "kind": "文献全电池（实验）",
+      "note": "高温实验条件下的氟离子全电池；不代表室温商品电池。",
+      "sources": [
+        {
+          "title": "镍酸镧正极固态氟离子电池",
+          "url": "https://www.nature.com/articles/s43246-020-0030-5",
+          "date": null
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "lno",
+      "name": "富氧镍酸镧",
+      "formula": "La2NiO4.13",
+      "elements": [
+        "La",
+        "Ni",
+        "O"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "pb-pbf2",
+      "name": "铅 / 氟化铅复合负极",
+      "formula": "Pb/PbF2",
+      "elements": [
+        "Pb",
+        "F"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "labaf",
+      "name": "掺钡氟化镧固体",
+      "formula": "La0.9Ba0.1F2.9",
+      "elements": [
+        "La",
+        "Ba",
+        "F"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "高温固态氟离子导体。",
+      "components": [
+        "La0.9Ba0.1F2.9"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "fion",
+      "name": "未确认量产生产商",
+      "stage": "研究体系",
+      "basis": "Honda Research Institute 曾联合高校公开氟离子研究，属于研发参与者；不能据此称为量产厂家，也非下方固态论文配方的生产方。",
+      "sources": [
+        {
+          "url": "https://www.prnewswire.com/news-releases/honda-research-institute-and-university-researchers-develop-breakthrough-battery-chemistry-300761502.html",
+          "title": "Honda 与高校氟离子研究公告",
+          "date": "2018-12-06"
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": false
+    }
+  ],
+  "performance": {
+    "subject": "多来源参考 · La2NiO4.13 氟离子全电池",
+    "type": "具名样例 + 期刊补充（逐项标明对象）",
+    "note": "不同指标可能来自不同产品、年代或实验，不能拼接成同一电池的完整规格。原样例说明：本库 fion-1 固态路线，高温实验，不等于 Honda 室温液态路线。",
+    "updatedAt": "2026-09-13",
+    "observations": {
+      "cycleLife": {
+        "value": ">220",
+        "unit": "次",
+        "basis": "实验全电池",
+        "conditions": "限制正极充电比容量为 30 mAh/g 的循环条件；不能与满容量循环比较。",
+        "sourceIds": [
+          "f"
+        ],
+        "status": "reported",
+        "subject": "La2NiO4.13 氟离子全电池",
+        "updatedAt": "2026-09-11"
+      },
+      "coulombicEfficiency": {
+        "value": "95–99",
+        "unit": "%",
+        "basis": "平均库仑效率范围",
+        "conditions": "论文不同截止容量条件的平均值；不是往返能量效率。",
+        "sourceIds": [
+          "f"
+        ],
+        "status": "reported",
+        "subject": "La2NiO4.13 氟离子全电池",
+        "updatedAt": "2026-09-11"
+      },
+      "capacity": {
+        "value": "120",
+        "unit": "mAh/g",
+        "basis": "Sn / BaSnF4 / BiF3 实验电池比容量",
+        "conditions": "首次放电，室温。摘要未明确全部归一化质量边界；不能解释为整电芯比容量，且 Sn 基电池存在容量衰减。",
+        "sourceIds": [
+          "mohammad2018"
+        ],
+        "status": "reported",
+        "subject": "Sn / BaSnF4 / BiF3 固态氟离子电池",
+        "locator": "摘要：Sn 基电池首次放电",
+        "updatedAt": "2026-09-13"
+      },
+      "temperature": {
+        "value": "25",
+        "unit": "°C",
+        "basis": "实验测试温度点",
+        "conditions": "论文测试点为 25、60、100、150°C；此项仅记录室温验证，不代表连续工作温区或安全限值。与原有 La2NiO4.13 样例不同。",
+        "sourceIds": [
+          "mohammad2018"
+        ],
+        "status": "reported",
+        "subject": "Sn / BaSnF4 / BiF3 固态氟离子电池",
+        "locator": "摘要：测试温度",
+        "updatedAt": "2026-09-13"
+      }
+    },
+    "referenceSubject": "La2NiO4.13 氟离子全电池"
+  },
+  "literatureUpdate": [
+    {
+      "family": "fion",
+      "metric": "capacity",
+      "source": "mohammad2018"
+    },
+    {
+      "family": "fion",
+      "metric": "temperature",
+      "source": "mohammad2018"
+    }
+  ],
+  "metricSources": {
+    "f": {
+      "title": "镍酸镧正极全固态氟离子电池",
+      "url": "https://www.nature.com/articles/s43246-020-0030-5",
+      "date": "2020-05-15",
+      "checkedAt": "2026-09-11"
+    },
+    "mohammad2018": {
+      "title": "Room-Temperature, Rechargeable Solid-State Fluoride-Ion Batteries",
+      "url": "https://doi.org/10.1021/acsaem.8b00864",
+      "doi": "10.1021/acsaem.8b00864",
+      "journal": "ACS · Applied Energy Materials",
+      "date": "2018-08-20",
+      "checkedAt": "2026-09-13",
+      "citationCount": 137,
+      "citationProvider": "Crossref",
+      "citationCheckedAt": "2026-09-13",
+      "citationUrl": "https://api.crossref.org/works/10.1021/acsaem.8b00864"
+    }
+  }
+}

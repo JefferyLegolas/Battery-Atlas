@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 1,
+  "id": "alion",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "铝离子电池",
+    "en": "Aluminium-ion battery",
+    "status": "research",
+    "recharge": "可充电",
+    "voltage": "约 2.0 V",
+    "accent": "#9966cc",
+    "id": "alion",
+    "details": [
+      "铝在负极可发生沉积/溶解，含氯铝酸根离子的电解液与石墨等正极协同储能。",
+      "快速充电与低成本储能研究。",
+      "铝资源丰富，理论体积容量高。",
+      "适配正极有限，腐蚀性电解液和实际能量密度仍需突破。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "alion-1",
+      "family": "alion",
+      "cathode": "graphitic-foam",
+      "anode": "al",
+      "electrolyte": "al-ionic",
+      "kind": "文献全电池（实验）",
+      "note": "活性材料与基础电解质的检索级描述；未穷举粘结剂、集流体、添加剂或工艺，不是可直接制造的处方。",
+      "sources": [
+        {
+          "title": "石墨泡沫 / 铝离子液体全电池",
+          "url": "https://www.nature.com/articles/nature14340",
+          "date": null
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "graphitic-foam",
+      "name": "石墨泡沫正极",
+      "formula": "C（石墨泡沫）",
+      "elements": [
+        "C"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "al",
+      "name": "铝",
+      "formula": "Al",
+      "elements": [
+        "Al"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "al-ionic",
+      "name": "氯铝酸离子液体",
+      "formula": "AlCl3 / [EMIm]Cl",
+      "elements": [
+        "Al",
+        "Cl",
+        "C",
+        "H",
+        "N"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "原文优化摩尔比 1.3:1；不是普通水溶液。",
+      "components": [
+        "AlCl3",
+        "1-乙基-3-甲基咪唑氯盐"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "alion",
+      "name": "GMG",
+      "stage": "研发 / 原型验证",
+      "basis": "公开石墨烯铝离子电池开发进度；不标注为成熟量产厂家。本页经典石墨泡沫论文不是 GMG 的配方。",
+      "sources": [
+        {
+          "url": "https://graphenemg.com/graphene-products/graphene-aluminium-ion-battery/",
+          "title": "石墨烯铝离子电池开发",
+          "date": null
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": false
+    }
+  ],
+  "performance": {
+    "subject": "铝 / 石墨泡沫全电池（2015）",
+    "type": "文献实验",
+    "note": "本库 alion-1 研究路线，非 GMG 产品实测。",
+    "updatedAt": "2026-09-11",
+    "observations": {
+      "capacity": {
+        "value": "约 70",
+        "unit": "mAh/g",
+        "basis": "正极活性材料比容量",
+        "conditions": "不是整电芯 Ah，也不是 Wh/kg。",
+        "sourceIds": [
+          "al"
+        ],
+        "status": "reported",
+        "subject": "铝 / 石墨泡沫全电池（2015）",
+        "updatedAt": "2026-09-11"
+      },
+      "cycleLife": {
+        "value": ">7,500",
+        "unit": "次",
+        "basis": "实验全电池",
+        "conditions": "论文报告无明显容量衰减；按原文载量和电流条件解读。",
+        "sourceIds": [
+          "al"
+        ],
+        "status": "reported",
+        "subject": "铝 / 石墨泡沫全电池（2015）",
+        "updatedAt": "2026-09-11"
+      },
+      "coulombicEfficiency": {
+        "value": "约 98",
+        "unit": "%",
+        "basis": "实验电量效率",
+        "conditions": "不能当作往返能量效率。",
+        "sourceIds": [
+          "al"
+        ],
+        "status": "reported",
+        "subject": "铝 / 石墨泡沫全电池（2015）",
+        "updatedAt": "2026-09-11"
+      },
+      "charge": {
+        "value": "约 1",
+        "unit": "分钟",
+        "basis": "实验快充",
+        "conditions": "约 4,000 mA/g 电流密度，按正极材料质量归一化；不能外推整车充电。",
+        "sourceIds": [
+          "al"
+        ],
+        "status": "reported",
+        "subject": "铝 / 石墨泡沫全电池（2015）",
+        "updatedAt": "2026-09-11"
+      }
+    }
+  },
+  "literatureUpdate": [],
+  "metricSources": {
+    "al": {
+      "title": "铝 / 石墨泡沫全电池原始论文",
+      "url": "https://www.nature.com/articles/nature14340",
+      "date": "2015-04-06",
+      "checkedAt": "2026-09-11"
+    }
+  }
+}

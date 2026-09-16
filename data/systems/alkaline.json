@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "id": "alkaline",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "碱性锌锰电池",
+    "en": "Alkaline zinc–manganese",
+    "status": "commercial",
+    "recharge": "一次电池",
+    "voltage": "1.5 V",
+    "accent": "#137547",
+    "id": "alkaline",
+    "details": [
+      "锌在碱性电解液中被氧化，二氧化锰在正极被还原，通常设计为一次电池。",
+      "遥控器、玩具、手电筒及日常低功耗设备。",
+      "价格低、储存期长、使用方便。",
+      "普通型号不可充电，大电流和低温性能有限。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "alkaline-1",
+      "family": "alkaline",
+      "cathode": "mno2",
+      "anode": "zn",
+      "electrolyte": "koh",
+      "kind": "典型材料方案",
+      "note": "活性材料与基础电解质的检索级描述；未穷举粘结剂、集流体、添加剂或工艺，不是可直接制造的处方。",
+      "sources": [
+        {
+          "title": "碱性锌锰电池化学体系",
+          "url": "https://energizer.com/about-batteries/battery-chemistry/",
+          "date": null
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "mno2",
+      "name": "二氧化锰复合正极",
+      "formula": "MnO2/C",
+      "elements": [
+        "Mn",
+        "O",
+        "C"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [
+        "二氧化锰",
+        "EMD"
+      ],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "zn",
+      "name": "锌",
+      "formula": "Zn",
+      "elements": [
+        "Zn"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "koh",
+      "name": "氢氧化钾水溶液",
+      "formula": "KOH / H2O",
+      "elements": [
+        "K",
+        "O",
+        "H"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "实际产品可含添加剂，本条仅表示基础电解液。",
+      "components": [
+        "KOH",
+        "水"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "alkaline",
+      "name": "Energizer 劲量",
+      "stage": "商业化产品",
+      "basis": "官方公开碱性锌锰电池化学体系和产品技术资料。",
+      "sources": [
+        {
+          "url": "https://energizer.com/about-batteries/battery-chemistry/",
+          "title": "电池化学体系",
+          "date": null
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": true
+    }
+  ],
+  "performance": {
+    "subject": "Energizer E91（AA）",
+    "type": "厂商规格",
+    "note": "一次电池样例，不能充电。",
+    "updatedAt": "2026-09-11",
+    "observations": {
+      "temperature": {
+        "value": "−18 至 55",
+        "unit": "°C",
+        "basis": "工作温区",
+        "conditions": "E91 产品数据表，不适用于所有碱性型号。",
+        "sourceIds": [
+          "e91"
+        ],
+        "status": "reported",
+        "subject": "Energizer E91（AA）",
+        "updatedAt": "2026-09-11"
+      },
+      "storage": {
+        "value": "10",
+        "unit": "年",
+        "basis": "货架寿命",
+        "conditions": "21°C 条件；不能换算成统一的月自放电率。",
+        "sourceIds": [
+          "e91"
+        ],
+        "status": "reported",
+        "subject": "Energizer E91（AA）",
+        "updatedAt": "2026-09-11"
+      }
+    }
+  },
+  "literatureUpdate": [],
+  "metricSources": {
+    "e91": {
+      "title": "Energizer E91 碱性 AA 电池规格",
+      "url": "https://data.energizer.com/pdfs/e91.pdf",
+      "date": null,
+      "checkedAt": "2026-09-11"
+    }
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "id": "nca",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "镍钴铝锂电池",
+    "en": "Nickel cobalt aluminium · NCA",
+    "status": "commercial",
+    "recharge": "可充电",
+    "voltage": "3.6 V",
+    "accent": "#ff6b35",
+    "id": "nca",
+    "details": [
+      "高镍层状氧化物提供容量，钴改善结构与导电性，铝帮助提高循环稳定性。",
+      "长续航电动车及高比能圆柱电芯。",
+      "高能量密度与较好的功率性能。",
+      "对水分、温度和充电窗口敏感，制造与管理要求高。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "nca-1",
+      "family": "nca",
+      "cathode": "nca",
+      "anode": "graphite",
+      "electrolyte": "li-ternary-vc",
+      "kind": "文献全电池（实验）",
+      "note": "NCA 80/15/5 / 石墨软包电池研究；非松下商业产品配方认证。",
+      "sources": [
+        {
+          "title": "NCA 正极软包电池电阻增长研究",
+          "url": "https://doi.org/10.1149/2.0361910jes",
+          "date": "2019"
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "nca",
+      "name": "镍钴铝酸锂 NCA 80/15/5",
+      "formula": "LiNi0.80Co0.15Al0.05O2",
+      "elements": [
+        "Li",
+        "Ni",
+        "Co",
+        "Al",
+        "O"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [
+        "NCA"
+      ],
+      "note": "论文使用的固定比例 NCA，不代表所有商业 NCA 产品。",
+      "components": []
+    },
+    {
+      "id": "graphite",
+      "name": "石墨",
+      "formula": "C（层状石墨）",
+      "elements": [
+        "C"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [
+        "graphite"
+      ],
+      "note": "与硬碳不同；同为碳元素并不互相替代。",
+      "components": []
+    },
+    {
+      "id": "li-ternary-vc",
+      "name": "LiPF6 / EC–EMC–DMC + VC",
+      "formula": "1.2 M LiPF6 / EC:EMC:DMC (25:5:70) + 2 wt% VC",
+      "elements": [
+        "Li",
+        "P",
+        "F",
+        "C",
+        "H",
+        "O"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "NCA 文献中采用的电解液；比例为体积比。",
+      "components": [
+        "盐：LiPF6",
+        "溶剂：EC / EMC / DMC",
+        "添加剂：碳酸亚乙烯酯 VC"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "nca",
+      "name": "Panasonic Energy",
+      "stage": "规模化生产（历史路线证据）",
+      "basis": "官方技术文章确认汽车电池采用 NCA 正极；路线证据发表于 2021 年，具体在售型号配方需另行核验。",
+      "sources": [
+        {
+          "url": "https://news.panasonic.com/global/stories/993",
+          "title": "汽车电池业务与 NCA 技术",
+          "date": "2021"
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": true
+    }
+  ],
+  "performance": {
+    "subject": "多来源参考 · Panasonic NCR18650B（NASA 收录样例）",
+    "type": "具名样例 + 期刊补充（逐项标明对象）",
+    "note": "不同指标可能来自不同产品、年代或实验，不能拼接成同一电池的完整规格。原样例说明：仅用于 NCA 产品背景；不是本库 NCA 80/15/5 实验配方实测。",
+    "updatedAt": "2026-09-13",
+    "observations": {
+      "specificEnergy": {
+        "value": "243",
+        "unit": "Wh/kg",
+        "basis": "电芯",
+        "conditions": "NASA 电源报告表中列出的 NCR18650B；历史型号，不代表目前行业上限。",
+        "sourceIds": [
+          "nasa"
+        ],
+        "status": "reported",
+        "subject": "Panasonic NCR18650B（NASA 收录样例）",
+        "updatedAt": "2026-09-11"
+      },
+      "capacity": {
+        "value": "3.35",
+        "unit": "Ah",
+        "basis": "电芯典型容量",
+        "conditions": "NASA 报告条目为 3350 mAh。",
+        "sourceIds": [
+          "nasa"
+        ],
+        "status": "reported",
+        "subject": "Panasonic NCR18650B（NASA 收录样例）",
+        "updatedAt": "2026-09-11"
+      },
+      "energyDensity": {
+        "value": "500–670",
+        "unit": "Wh/L",
+        "basis": "2016 综述：电芯文献范围",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。不是整车或储能系统指标。",
+        "sourceIds": [
+          "chemali2016"
+        ],
+        "status": "review",
+        "subject": "Chemali 等（2016）· LiNiCoAlO2 文献汇总",
+        "locator": "p.1119，Table II",
+        "updatedAt": "2026-09-13"
+      },
+      "cycleLife": {
+        "value": "1,000–1,280",
+        "unit": "次",
+        "basis": "2016 综述：电芯文献范围",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。文中讨论汽车电池约 80% 初始容量的寿命标准，但汇总项并非统一 DOD / 倍率的同条件实测。",
+        "sourceIds": [
+          "chemali2016"
+        ],
+        "status": "review",
+        "subject": "Chemali 等（2016）· LiNiCoAlO2 文献汇总",
+        "locator": "p.1119，Table II",
+        "updatedAt": "2026-09-13"
+      },
+      "discharge": {
+        "value": "700–800",
+        "unit": "W/kg",
+        "basis": "2016 综述：电芯文献范围",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。按质量归一化的比功率；原表未统一连续或脉冲时长，不等于某一电池的额定输出。",
+        "sourceIds": [
+          "chemali2016"
+        ],
+        "status": "review",
+        "subject": "Chemali 等（2016）· LiNiCoAlO2 文献汇总",
+        "locator": "p.1119，Table II",
+        "updatedAt": "2026-09-13"
+      },
+      "storage": {
+        "value": "0.1–0.57",
+        "unit": "%/天",
+        "basis": "2016 综述：电芯文献范围",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。按每天自放电百分比；SOC、储温未统一披露，不作月损失率换算。",
+        "sourceIds": [
+          "chemali2016"
+        ],
+        "status": "review",
+        "subject": "Chemali 等（2016）· LiNiCoAlO2 文献汇总",
+        "locator": "p.1119，Table II",
+        "updatedAt": "2026-09-13"
+      }
+    },
+    "referenceSubject": "Panasonic NCR18650B（NASA 收录样例）"
+  },
+  "literatureUpdate": [
+    {
+      "family": "nca",
+      "metric": "energyDensity",
+      "source": "chemali2016"
+    },
+    {
+      "family": "nca",
+      "metric": "cycleLife",
+      "source": "chemali2016"
+    },
+    {
+      "family": "nca",
+      "metric": "discharge",
+      "source": "chemali2016"
+    },
+    {
+      "family": "nca",
+      "metric": "storage",
+      "source": "chemali2016"
+    }
+  ],
+  "metricSources": {
+    "nasa": {
+      "title": "NASA 小卫星电源技术状态报告",
+      "url": "https://www.nasa.gov/smallsat-institute/sst-soa/power-subsystems/",
+      "date": null,
+      "checkedAt": "2026-09-11"
+    },
+    "chemali2016": {
+      "title": "Electrochemical and Electrostatic Energy Storage and Management Systems for Electric Drive Vehicles: State-of-the-Art Review and Future Trends",
+      "url": "https://doi.org/10.1109/JESTPE.2016.2566583",
+      "doi": "10.1109/JESTPE.2016.2566583",
+      "journal": "IEEE · JESTPE",
+      "date": "2016-05-10",
+      "checkedAt": "2026-09-13",
+      "citationCount": 260,
+      "citationProvider": "Crossref",
+      "citationCheckedAt": "2026-09-13",
+      "citationUrl": "https://api.crossref.org/works/10.1109/JESTPE.2016.2566583",
+      "fullTextUrl": "https://mplab.ee.columbia.edu/sites/mplab.ee.columbia.edu/files/content/Publications/Chemali2016.pdf"
+    }
+  }
+}

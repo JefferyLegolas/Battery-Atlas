@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-09-13",
+  "count": 27,
+  "literatureUpdate": {
+    "date": "2026-09-13",
+    "addedCount": 56,
+    "families": 16,
+    "sources": 6,
+    "selectionPolicy": "优先 ACS / IEEE 高引用文献，按缺口相关性及可核实程度筛选；引用数取 Crossref 快照，不等于数据质量保证。历史综述与具名产品分开标注；不补推理论值、当前价格或未知测试条件。"
+  },
+  "systems": [
+    {
+      "id": "lfp",
+      "name": "磷酸铁锂电池",
+      "file": "systems/lfp.json"
+    },
+    {
+      "id": "nmc",
+      "name": "三元锂电池",
+      "file": "systems/nmc.json"
+    },
+    {
+      "id": "nca",
+      "name": "镍钴铝锂电池",
+      "file": "systems/nca.json"
+    },
+    {
+      "id": "lco",
+      "name": "钴酸锂电池",
+      "file": "systems/lco.json"
+    },
+    {
+      "id": "lmo",
+      "name": "锰酸锂电池",
+      "file": "systems/lmo.json"
+    },
+    {
+      "id": "lto",
+      "name": "钛酸锂电池",
+      "file": "systems/lto.json"
+    },
+    {
+      "id": "lis",
+      "name": "锂硫电池",
+      "file": "systems/lis.json"
+    },
+    {
+      "id": "solid",
+      "name": "硫化物固态锂电池",
+      "file": "systems/solid.json"
+    },
+    {
+      "id": "naoxide",
+      "name": "层状氧化物钠离子电池",
+      "file": "systems/naoxide.json"
+    },
+    {
+      "id": "nawhite",
+      "name": "普鲁士白钠离子电池",
+      "file": "systems/nawhite.json"
+    },
+    {
+      "id": "nas",
+      "name": "高温钠硫电池",
+      "file": "systems/nas.json"
+    },
+    {
+      "id": "kion",
+      "name": "钾离子电池",
+      "file": "systems/kion.json"
+    },
+    {
+      "id": "lead",
+      "name": "铅酸电池",
+      "file": "systems/lead.json"
+    },
+    {
+      "id": "alkaline",
+      "name": "碱性锌锰电池",
+      "file": "systems/alkaline.json"
+    },
+    {
+      "id": "zinc-carbon",
+      "name": "锌碳电池",
+      "file": "systems/zinc-carbon.json"
+    },
+    {
+      "id": "zinc-air",
+      "name": "锌空气电池",
+      "file": "systems/zinc-air.json"
+    },
+    {
+      "id": "znbr",
+      "name": "锌溴液流电池",
+      "file": "systems/znbr.json"
+    },
+    {
+      "id": "vrfb",
+      "name": "全钒液流电池",
+      "file": "systems/vrfb.json"
+    },
+    {
+      "id": "iron-flow",
+      "name": "全铁液流电池",
+      "file": "systems/iron-flow.json"
+    },
+    {
+      "id": "nimh",
+      "name": "镍氢电池",
+      "file": "systems/nimh.json"
+    },
+    {
+      "id": "nicd",
+      "name": "镍镉电池",
+      "file": "systems/nicd.json"
+    },
+    {
+      "id": "nife",
+      "name": "镍铁电池",
+      "file": "systems/nife.json"
+    },
+    {
+      "id": "agzn",
+      "name": "银锌电池",
+      "file": "systems/agzn.json"
+    },
+    {
+      "id": "alion",
+      "name": "铝离子电池",
+      "file": "systems/alion.json"
+    },
+    {
+      "id": "mgion",
+      "name": "镁离子电池",
+      "file": "systems/mgion.json"
+    },
+    {
+      "id": "caion",
+      "name": "钙离子电池",
+      "file": "systems/caion.json"
+    },
+    {
+      "id": "fion",
+      "name": "氟离子电池",
+      "file": "systems/fion.json"
+    }
+  ]
+}

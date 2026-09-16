@@ -1,0 +1,283 @@
+{
+  "schemaVersion": 1,
+  "id": "lead",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "铅酸电池",
+    "en": "Lead–acid battery",
+    "status": "commercial",
+    "recharge": "可充电",
+    "voltage": "2.0 V",
+    "accent": "#607d8b",
+    "id": "lead",
+    "details": [
+      "二氧化铅正极与铅负极在硫酸中可逆生成硫酸铅，是历史最悠久的充电电池之一。",
+      "汽车启停、UPS、通信备用电源与低速车辆。",
+      "成本低、回收体系成熟、可提供大启动电流。",
+      "质量大、能量密度低，铅具有毒性且深循环寿命有限。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "lead-1",
+      "family": "lead",
+      "cathode": "pbo2",
+      "anode": "pb",
+      "electrolyte": "sulfuric",
+      "kind": "典型材料方案",
+      "note": "活性材料与基础电解质的检索级描述；未穷举粘结剂、集流体、添加剂或工艺，不是可直接制造的处方。",
+      "sources": [
+        {
+          "title": "铅酸电池基本反应",
+          "url": "https://www.sandia.gov/labnews/2021/08/02/better-batteries-for-grid-scale-energy-storage/",
+          "date": null
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "pbo2",
+      "name": "二氧化铅",
+      "formula": "PbO2",
+      "elements": [
+        "Pb",
+        "O"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "pb",
+      "name": "铅",
+      "formula": "Pb",
+      "elements": [
+        "Pb"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "sulfuric",
+      "name": "硫酸水溶液",
+      "formula": "H2SO4 / H2O",
+      "elements": [
+        "H",
+        "S",
+        "O"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "浓度依产品或荷电状态变化。",
+      "components": [
+        "硫酸",
+        "水"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "lead",
+      "name": "Clarios 柯锐世",
+      "stage": "规模化生产",
+      "basis": "官方产品组合包含 AGM 与富液式铅酸，面向汽车低压电源；列为行业代表，不将全部低压电池份额误作铅酸份额。",
+      "sources": [
+        {
+          "url": "https://www.clarios.com/products/products-overview",
+          "title": "AGM 与富液式产品",
+          "date": null
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": true
+    }
+  ],
+  "performance": {
+    "subject": "多来源参考 · DOE 铅酸储能情景",
+    "type": "具名样例 + 期刊补充（逐项标明对象）",
+    "note": "不同指标可能来自不同产品、年代或实验，不能拼接成同一电池的完整规格。原样例说明：不是 Clarios 启停电池规格；模型终点与工况已单独标注。",
+    "updatedAt": "2026-09-13",
+    "observations": {
+      "cycleLife": {
+        "value": "1,370",
+        "unit": "次",
+        "basis": "10 小时储能情景",
+        "conditions": "报告表 4.5，调整 DOD 80%；可用能量降至额定 80% 的寿命定义。",
+        "sourceIds": [
+          "doe"
+        ],
+        "status": "model",
+        "subject": "DOE 铅酸储能情景",
+        "updatedAt": "2026-09-11"
+      },
+      "calendarLife": {
+        "value": "12",
+        "unit": "年",
+        "basis": "储能评估假设",
+        "conditions": "报告为 2021 成本基年采用的假设，不是汽车启动电池质保。",
+        "sourceIds": [
+          "doe"
+        ],
+        "status": "model",
+        "subject": "DOE 铅酸储能情景",
+        "updatedAt": "2026-09-11"
+      },
+      "energyDensity": {
+        "value": "50–80",
+        "unit": "Wh/L",
+        "basis": "2016 综述：电芯文献范围",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。不是整车或储能系统指标。",
+        "sourceIds": [
+          "chemali2016"
+        ],
+        "status": "review",
+        "subject": "Chemali 等（2016）· Lead Acid 文献汇总",
+        "locator": "p.1119，Table I",
+        "updatedAt": "2026-09-13"
+      },
+      "discharge": {
+        "value": "75–150",
+        "unit": "W/kg",
+        "basis": "2016 综述：电芯文献范围",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。按质量归一化的比功率；原表未统一连续或脉冲时长，不等于某一电池的额定输出。",
+        "sourceIds": [
+          "chemali2016"
+        ],
+        "status": "review",
+        "subject": "Chemali 等（2016）· Lead Acid 文献汇总",
+        "locator": "p.1119，Table I",
+        "updatedAt": "2026-09-13"
+      },
+      "specificEnergy": {
+        "value": "25–40",
+        "unit": "Wh/kg",
+        "basis": "2011 综述：体系参考",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。原表未细化全部包装 / 辅机质量边界，勿当作指定电芯或整站参数。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· LAB 铅酸",
+        "locator": "p.3583，Table 1",
+        "updatedAt": "2026-09-13"
+      },
+      "temperature": {
+        "value": "−40 至 60",
+        "unit": "°C",
+        "basis": "2011 综述：体系参考",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。原表 operating temperature，未分开充电与放电限制，不能当作安全操作范围。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· LAB 铅酸",
+        "locator": "p.3583，Table 1",
+        "updatedAt": "2026-09-13"
+      },
+      "storage": {
+        "value": "4–50",
+        "unit": "%/月",
+        "basis": "2011 综述：体系参考",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。20°C 下每月自放电比例。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· LAB 铅酸",
+        "locator": "p.3583，Table 1",
+        "updatedAt": "2026-09-13"
+      },
+      "energyEfficiency": {
+        "value": "50–75",
+        "unit": "%",
+        "basis": "2011 综述：DC–DC 往返能量效率",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。原表明确为 DC 往返能量效率，不是库仑效率，也不是 AC 并网效率。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· LAB 铅酸",
+        "locator": "p.3583，Table 1",
+        "updatedAt": "2026-09-13"
+      }
+    },
+    "referenceSubject": "DOE 铅酸储能情景"
+  },
+  "literatureUpdate": [
+    {
+      "family": "lead",
+      "metric": "energyDensity",
+      "source": "chemali2016"
+    },
+    {
+      "family": "lead",
+      "metric": "discharge",
+      "source": "chemali2016"
+    },
+    {
+      "family": "lead",
+      "metric": "specificEnergy",
+      "source": "yang2011"
+    },
+    {
+      "family": "lead",
+      "metric": "temperature",
+      "source": "yang2011"
+    },
+    {
+      "family": "lead",
+      "metric": "storage",
+      "source": "yang2011"
+    },
+    {
+      "family": "lead",
+      "metric": "energyEfficiency",
+      "source": "yang2011"
+    }
+  ],
+  "metricSources": {
+    "doe": {
+      "title": "DOE / PNNL 储能成本与性能评估（2022）",
+      "url": "https://www.energy.gov/sites/default/files/2022-09/2022%20Grid%20Energy%20Storage%20Technology%20Cost%20and%20Performance%20Assessment.pdf",
+      "date": "2022-08",
+      "checkedAt": "2026-09-11"
+    },
+    "chemali2016": {
+      "title": "Electrochemical and Electrostatic Energy Storage and Management Systems for Electric Drive Vehicles: State-of-the-Art Review and Future Trends",
+      "url": "https://doi.org/10.1109/JESTPE.2016.2566583",
+      "doi": "10.1109/JESTPE.2016.2566583",
+      "journal": "IEEE · JESTPE",
+      "date": "2016-05-10",
+      "checkedAt": "2026-09-13",
+      "citationCount": 260,
+      "citationProvider": "Crossref",
+      "citationCheckedAt": "2026-09-13",
+      "citationUrl": "https://api.crossref.org/works/10.1109/JESTPE.2016.2566583",
+      "fullTextUrl": "https://mplab.ee.columbia.edu/sites/mplab.ee.columbia.edu/files/content/Publications/Chemali2016.pdf"
+    },
+    "yang2011": {
+      "title": "Electrochemical Energy Storage for Green Grid",
+      "url": "https://doi.org/10.1021/cr100290v",
+      "doi": "10.1021/cr100290v",
+      "journal": "ACS · Chemical Reviews",
+      "date": "2011-03-04",
+      "checkedAt": "2026-09-13",
+      "citationCount": 5067,
+      "citationProvider": "Crossref",
+      "citationCheckedAt": "2026-09-13",
+      "citationUrl": "https://api.crossref.org/works/10.1021/cr100290v",
+      "fullTextUrl": "https://www.pnnl.gov/sites/default/files/media/file/at/publications/333_926201145617.pdf"
+    }
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 1,
+  "id": "lmo",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "锰酸锂电池",
+    "en": "Lithium manganese oxide · LMO",
+    "status": "commercial",
+    "recharge": "可充电",
+    "voltage": "4.0 V",
+    "accent": "#ff6b35",
+    "id": "lmo",
+    "details": [
+      "尖晶石 LiMn₂O₄ 提供三维锂离子通道，适合较高倍率充放电。",
+      "电动工具、混合动力车辆及与其他正极混用的动力电池。",
+      "倍率性能好、成本相对较低。",
+      "高温下锰溶出会加速容量衰减。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "lmo-1",
+      "family": "lmo",
+      "cathode": "lmo",
+      "anode": "graphite",
+      "electrolyte": "li-carbonate",
+      "kind": "典型材料方案",
+      "note": "技术报告确认 LMO 系 / 石墨 / 碳酸酯路线；EC–DMC 作为典型碳酸酯方案，不能视为 LEV50N 完整公开处方。",
+      "sources": [
+        {
+          "title": "LEV50N 锰酸锂系 / 石墨技术背景",
+          "url": "https://www.gs-yuasa.com/en/technology/technical_report/pdf/vol9/009_01_026.pdf",
+          "date": null
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "lmo",
+      "name": "锰酸锂",
+      "formula": "LiMn2O4",
+      "elements": [
+        "Li",
+        "Mn",
+        "O"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [
+        "LMO"
+      ],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "graphite",
+      "name": "石墨",
+      "formula": "C（层状石墨）",
+      "elements": [
+        "C"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [
+        "graphite"
+      ],
+      "note": "与硬碳不同；同为碳元素并不互相替代。",
+      "components": []
+    },
+    {
+      "id": "li-carbonate",
+      "name": "六氟磷酸锂 / EC–DMC",
+      "formula": "LiPF6 + EC + DMC",
+      "elements": [
+        "Li",
+        "P",
+        "F",
+        "C",
+        "H",
+        "O"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "碳酸酯液态体系；浓度、溶剂比例与添加剂未限定。",
+      "components": [
+        "盐：LiPF6",
+        "溶剂：碳酸乙烯酯 EC",
+        "溶剂：碳酸二甲酯 DMC"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "lmo",
+      "name": "GS Yuasa 汤浅",
+      "stage": "历史量产路线 / 当前型号待核实",
+      "basis": "LEV50N 技术报告披露锰酸锂系正极、石墨负极；该报告是历史产品证据，不作为当前纯 LMO 市场排名。",
+      "sources": [
+        {
+          "url": "https://www.gs-yuasa.com/en/technology/technical_report/pdf/vol9/009_01_026.pdf",
+          "title": "LEV50N 技术报告",
+          "date": "2012-06"
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": true
+    }
+  ],
+  "performance": {
+    "subject": "GS Yuasa LEV50N",
+    "type": "厂商测试报告",
+    "note": "2012 年历史电芯，正极为改良锰酸锂系；不代表全部 LMO 产品。",
+    "updatedAt": "2026-09-11",
+    "observations": {
+      "specificEnergy": {
+        "value": "110",
+        "unit": "Wh/kg",
+        "basis": "50 Ah 电芯",
+        "conditions": "技术报告摘要给出的电芯比能量。",
+        "sourceIds": [
+          "yuasa"
+        ],
+        "status": "reported",
+        "subject": "GS Yuasa LEV50N",
+        "updatedAt": "2026-09-11"
+      },
+      "capacity": {
+        "value": "50",
+        "unit": "Ah",
+        "basis": "电芯",
+        "conditions": "LEV50N 标称容量。",
+        "sourceIds": [
+          "yuasa"
+        ],
+        "status": "reported",
+        "subject": "GS Yuasa LEV50N",
+        "updatedAt": "2026-09-11"
+      },
+      "cycleLife": {
+        "value": "700",
+        "unit": "次",
+        "basis": "电芯测试",
+        "conditions": "45°C、100% DOD；容量保持率 90%。这是已报告测试点，不是报废终点。",
+        "sourceIds": [
+          "yuasa"
+        ],
+        "status": "reported",
+        "subject": "GS Yuasa LEV50N",
+        "updatedAt": "2026-09-11"
+      },
+      "discharge": {
+        "value": "6",
+        "unit": "C",
+        "basis": "电芯倍率测试",
+        "conditions": "25°C 下容量为 0.2C 放电容量的 96%，不是能量效率。",
+        "sourceIds": [
+          "yuasa"
+        ],
+        "status": "reported",
+        "subject": "GS Yuasa LEV50N",
+        "updatedAt": "2026-09-11"
+      },
+      "temperature": {
+        "value": "−25",
+        "unit": "°C",
+        "basis": "低温放电测试点",
+        "conditions": "1C 放电容量为 25°C 条件的 94%；不是允许的充电温度。",
+        "sourceIds": [
+          "yuasa"
+        ],
+        "status": "reported",
+        "subject": "GS Yuasa LEV50N",
+        "updatedAt": "2026-09-11"
+      },
+      "charge": {
+        "value": "约 30",
+        "unit": "分钟",
+        "basis": "电芯充电测试",
+        "conditions": "2C 充电约达到 80% 容量。",
+        "sourceIds": [
+          "yuasa"
+        ],
+        "status": "reported",
+        "subject": "GS Yuasa LEV50N",
+        "updatedAt": "2026-09-11"
+      }
+    }
+  },
+  "literatureUpdate": [],
+  "metricSources": {
+    "yuasa": {
+      "title": "GS Yuasa LEV50N 技术报告",
+      "url": "https://www.gs-yuasa.com/en/technology/technical_report/pdf/vol9/009_01_026.pdf",
+      "date": "2012-06",
+      "checkedAt": "2026-09-11"
+    }
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 1,
+  "id": "lfp",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "磷酸铁锂电池",
+    "en": "Lithium iron phosphate · LFP",
+    "status": "commercial",
+    "recharge": "可充电",
+    "voltage": "3.2 V",
+    "accent": "#d7ff43",
+    "id": "lfp",
+    "details": [
+      "锂离子在磷酸铁锂正极与石墨负极之间往返嵌入和脱出，橄榄石结构让材料具有较好的热稳定性。",
+      "储能系统、电动汽车、商用车与备用电源。",
+      "循环寿命长、热稳定性好，铁和磷资源相对丰富。",
+      "低温性能和单位质量能量密度通常低于高镍三元体系。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "lfp-1",
+      "family": "lfp",
+      "cathode": "lfp",
+      "anode": "graphite",
+      "electrolyte": "li-carbonate",
+      "kind": "典型材料方案",
+      "note": "活性材料与基础电解质的检索级描述；未穷举粘结剂、集流体、添加剂或工艺，不是可直接制造的处方。",
+      "sources": [
+        {
+          "title": "LFP / 石墨电池电解液研究",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1452398123175596",
+          "date": null
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "lfp",
+      "name": "磷酸铁锂",
+      "formula": "LiFePO4",
+      "elements": [
+        "Li",
+        "Fe",
+        "P",
+        "O"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [
+        "LFP"
+      ],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "graphite",
+      "name": "石墨",
+      "formula": "C（层状石墨）",
+      "elements": [
+        "C"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [
+        "graphite"
+      ],
+      "note": "与硬碳不同；同为碳元素并不互相替代。",
+      "components": []
+    },
+    {
+      "id": "li-carbonate",
+      "name": "六氟磷酸锂 / EC–DMC",
+      "formula": "LiPF6 + EC + DMC",
+      "elements": [
+        "Li",
+        "P",
+        "F",
+        "C",
+        "H",
+        "O"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "碳酸酯液态体系；浓度、溶剂比例与添加剂未限定。",
+      "components": [
+        "盐：LiPF6",
+        "溶剂：碳酸乙烯酯 EC",
+        "溶剂：碳酸二甲酯 DMC"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "lfp",
+      "name": "宁德时代 CATL",
+      "stage": "规模化生产",
+      "basis": "公开神行磷酸铁锂产品，列为该路线的行业代表；本库不提供未经统一口径核验的市场排名。",
+      "sources": [
+        {
+          "url": "https://www.catl.com/en/news/6239.html",
+          "title": "神行 PLUS 磷酸铁锂产品",
+          "date": "2024-04-25"
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": true
+    }
+  ],
+  "performance": {
+    "subject": "多来源参考 · CATL 神行 PLUS",
+    "type": "具名样例 + 期刊补充（逐项标明对象）",
+    "note": "不同指标可能来自不同产品、年代或实验，不能拼接成同一电池的完整规格。原样例说明：系统级指标，不是本库 LFP / 石墨典型材料方案的保证值。",
+    "updatedAt": "2026-09-13",
+    "observations": {
+      "specificEnergy": {
+        "value": "205",
+        "unit": "Wh/kg",
+        "basis": "电池系统",
+        "conditions": "2024 年发布值；不是电芯比能量。",
+        "sourceIds": [
+          "catl"
+        ],
+        "status": "reported",
+        "subject": "CATL 神行 PLUS",
+        "updatedAt": "2026-09-11"
+      },
+      "charge": {
+        "value": "4",
+        "unit": "C",
+        "basis": "产品宣称的充电倍率",
+        "conditions": "原发布资料未完整披露温度与 SOC 窗口，不据此计算全程充电时间。",
+        "sourceIds": [
+          "catl"
+        ],
+        "status": "reported",
+        "subject": "CATL 神行 PLUS",
+        "updatedAt": "2026-09-11"
+      },
+      "energyDensity": {
+        "value": "250–500",
+        "unit": "Wh/L",
+        "basis": "2016 综述：电芯文献范围",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。不是整车或储能系统指标。",
+        "sourceIds": [
+          "chemali2016"
+        ],
+        "status": "review",
+        "subject": "Chemali 等（2016）· LiFePO4 文献汇总",
+        "locator": "p.1119，Table II",
+        "updatedAt": "2026-09-13"
+      },
+      "cycleLife": {
+        "value": "1,000–2,000",
+        "unit": "次",
+        "basis": "2016 综述：电芯文献范围",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。文中讨论汽车电池约 80% 初始容量的寿命标准，但汇总项并非统一 DOD / 倍率的同条件实测。",
+        "sourceIds": [
+          "chemali2016"
+        ],
+        "status": "review",
+        "subject": "Chemali 等（2016）· LiFePO4 文献汇总",
+        "locator": "p.1119，Table II",
+        "updatedAt": "2026-09-13"
+      },
+      "discharge": {
+        "value": "250–1,600",
+        "unit": "W/kg",
+        "basis": "2016 综述：电芯文献范围",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。按质量归一化的比功率；原表未统一连续或脉冲时长，不等于某一电池的额定输出。",
+        "sourceIds": [
+          "chemali2016"
+        ],
+        "status": "review",
+        "subject": "Chemali 等（2016）· LiFePO4 文献汇总",
+        "locator": "p.1119，Table II",
+        "updatedAt": "2026-09-13"
+      },
+      "storage": {
+        "value": "0.1–1.29",
+        "unit": "%/天",
+        "basis": "2016 综述：电芯文献范围",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。按每天自放电百分比；SOC、储温未统一披露，不作月损失率换算。",
+        "sourceIds": [
+          "chemali2016"
+        ],
+        "status": "review",
+        "subject": "Chemali 等（2016）· LiFePO4 文献汇总",
+        "locator": "p.1119，Table II",
+        "updatedAt": "2026-09-13"
+      }
+    },
+    "referenceSubject": "CATL 神行 PLUS"
+  },
+  "literatureUpdate": [
+    {
+      "family": "lfp",
+      "metric": "energyDensity",
+      "source": "chemali2016"
+    },
+    {
+      "family": "lfp",
+      "metric": "cycleLife",
+      "source": "chemali2016"
+    },
+    {
+      "family": "lfp",
+      "metric": "discharge",
+      "source": "chemali2016"
+    },
+    {
+      "family": "lfp",
+      "metric": "storage",
+      "source": "chemali2016"
+    }
+  ],
+  "metricSources": {
+    "catl": {
+      "title": "CATL 神行 PLUS 发布资料",
+      "url": "https://www.catl.com/news/7945.html",
+      "date": "2024-04-25",
+      "checkedAt": "2026-09-11"
+    },
+    "chemali2016": {
+      "title": "Electrochemical and Electrostatic Energy Storage and Management Systems for Electric Drive Vehicles: State-of-the-Art Review and Future Trends",
+      "url": "https://doi.org/10.1109/JESTPE.2016.2566583",
+      "doi": "10.1109/JESTPE.2016.2566583",
+      "journal": "IEEE · JESTPE",
+      "date": "2016-05-10",
+      "checkedAt": "2026-09-13",
+      "citationCount": 260,
+      "citationProvider": "Crossref",
+      "citationCheckedAt": "2026-09-13",
+      "citationUrl": "https://api.crossref.org/works/10.1109/JESTPE.2016.2566583",
+      "fullTextUrl": "https://mplab.ee.columbia.edu/sites/mplab.ee.columbia.edu/files/content/Publications/Chemali2016.pdf"
+    }
+  }
+}

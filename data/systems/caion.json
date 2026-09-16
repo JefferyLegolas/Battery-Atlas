@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "id": "caion",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "钙离子电池",
+    "en": "Calcium-ion battery",
+    "status": "research",
+    "recharge": "可充电",
+    "voltage": "研究范围",
+    "accent": "#9966cc",
+    "id": "caion",
+    "details": [
+      "钙离子电池有多种实验路线；本库采用已报道的聚蒽醌正极、钙锡合金负极与含钙盐电解液的全电池示例。",
+      "后锂电池与低成本储能研究。",
+      "钙资源丰富，可探索多电子储能。",
+      "钝化、离子传输和可逆性仍需改善，目前无法确认成熟量产生产商。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "caion-1",
+      "family": "caion",
+      "cathode": "paq",
+      "anode": "casn",
+      "electrolyte": "ca-ether",
+      "kind": "文献全电池（实验）",
+      "note": "活性材料与基础电解质的检索级描述；未穷举粘结剂、集流体、添加剂或工艺，不是可直接制造的处方。",
+      "sources": [
+        {
+          "title": "室温钙锡合金全电池",
+          "url": "https://www.nature.com/articles/s41467-022-31261-z",
+          "date": null
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "paq",
+      "name": "1,4-聚蒽醌",
+      "formula": "14PAQ",
+      "elements": [
+        "C",
+        "H",
+        "O"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [
+        "聚蒽醌"
+      ],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "casn",
+      "name": "钙锡合金",
+      "formula": "Ca–Sn",
+      "elements": [
+        "Ca",
+        "Sn"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [
+        "CaSn"
+      ],
+      "note": "合金化相随充放电改变，不等同于纯钙金属。",
+      "components": []
+    },
+    {
+      "id": "ca-ether",
+      "name": "氟代烷氧基硼酸钙 / DME",
+      "formula": "Ca[B(hfip)4]2 / DME",
+      "elements": [
+        "Ca",
+        "B",
+        "C",
+        "H",
+        "F",
+        "O"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "hfip 为六氟异丙氧基；具体制备见文献。",
+      "components": [
+        "Ca[B(hfip)4]2",
+        "DME"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "caion",
+      "name": "未确认量产生产商",
+      "stage": "研究体系",
+      "basis": "本次核查未确认量产生产商。保留钙锡合金全电池文献，不强行指定行业龙头。",
+      "sources": [
+        {
+          "url": "https://www.nature.com/articles/s41467-022-31261-z",
+          "title": "室温钙锡合金全电池研究",
+          "date": "2022"
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": false
+    }
+  ],
+  "performance": {
+    "subject": "多来源参考 · Ca–Sn / 14PAQ 全电池",
+    "type": "具名样例 + 期刊补充（逐项标明对象）",
+    "note": "不同指标可能来自不同产品、年代或实验，不能拼接成同一电池的完整规格。原样例说明：本库 caion-1 路线；未以理论容量代替实际电芯能量密度。",
+    "updatedAt": "2026-09-13",
+    "observations": {
+      "temperature": {
+        "value": "室温",
+        "unit": "",
+        "basis": "原文测试环境",
+        "conditions": "室温验证不代表已确定宽温工作范围。",
+        "sourceIds": [
+          "ca"
+        ],
+        "status": "reported",
+        "subject": "Ca–Sn / 14PAQ 全电池",
+        "updatedAt": "2026-09-11"
+      },
+      "cycleLife": {
+        "value": "1,000",
+        "unit": "次",
+        "basis": "水系 PNDIE / 铜六氰合铁酸盐实验电池",
+        "conditions": "综述 §2.1 引文 97，5C 循环；作者警告高倍率可能掩盖副反应和溶解问题。不属于现有 Ca–Sn / 14PAQ 样例，未作为量产寿命。",
+        "sourceIds": [
+          "ponrouch2019"
+        ],
+        "status": "review",
+        "subject": "水系 PNDIE / 铜六氰合铁酸盐电池",
+        "locator": "§2.1，有机负极讨论，ref.97",
+        "updatedAt": "2026-09-13"
+      }
+    },
+    "referenceSubject": "Ca–Sn / 14PAQ 全电池"
+  },
+  "literatureUpdate": [
+    {
+      "family": "caion",
+      "metric": "cycleLife",
+      "source": "ponrouch2019"
+    }
+  ],
+  "metricSources": {
+    "ca": {
+      "title": "钙锡合金 / 聚蒽醌室温全电池研究",
+      "url": "https://www.nature.com/articles/s41467-022-31261-z",
+      "date": "2022-07-04",
+      "checkedAt": "2026-09-11"
+    },
+    "ponrouch2019": {
+      "title": "Achievements, Challenges, and Prospects of Calcium Batteries",
+      "url": "https://doi.org/10.1021/acs.chemrev.9b00339",
+      "doi": "10.1021/acs.chemrev.9b00339",
+      "journal": "ACS · Chemical Reviews",
+      "date": "2019",
+      "checkedAt": "2026-09-13",
+      "citationCount": 406,
+      "citationProvider": "Crossref",
+      "citationCheckedAt": "2026-09-13",
+      "citationUrl": "https://api.crossref.org/works/10.1021/acs.chemrev.9b00339"
+    }
+  }
+}

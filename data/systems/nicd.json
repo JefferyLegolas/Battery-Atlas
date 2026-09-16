@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 1,
+  "id": "nicd",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "镍镉电池",
+    "en": "Nickel–cadmium · NiCd",
+    "status": "commercial",
+    "recharge": "可充电",
+    "voltage": "1.2 V",
+    "accent": "#e0a100",
+    "id": "nicd",
+    "details": [
+      "镍基正极与镉负极在碱性电解液中可逆反应，能够承受较高倍率和苛刻环境。",
+      "航空、铁路、应急照明及部分工业设备。",
+      "耐用、低温和大电流性能好。",
+      "镉有毒，存在记忆效应，许多消费用途受到环保限制。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "nicd-1",
+      "family": "nicd",
+      "cathode": "niooh",
+      "anode": "cd",
+      "electrolyte": "koh",
+      "kind": "典型材料方案",
+      "note": "活性材料与基础电解质的检索级描述；未穷举粘结剂、集流体、添加剂或工艺，不是可直接制造的处方。",
+      "sources": [
+        {
+          "title": "Sandia / EPRI 储能技术手册（体系级背景）",
+          "url": "https://sandia.gov/ess-ssl/publications/ESHB%201001834%20reduced%20size.pdf",
+          "date": null
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "niooh",
+      "name": "羟基氧化镍",
+      "formula": "NiOOH",
+      "elements": [
+        "Ni",
+        "O",
+        "H"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "cd",
+      "name": "镉",
+      "formula": "Cd",
+      "elements": [
+        "Cd"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "koh",
+      "name": "氢氧化钾水溶液",
+      "formula": "KOH / H2O",
+      "elements": [
+        "K",
+        "O",
+        "H"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "实际产品可含添加剂，本条仅表示基础电解液。",
+      "components": [
+        "KOH",
+        "水"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "nicd",
+      "name": "Saft 帅福得",
+      "stage": "商业化产品",
+      "basis": "Uptimax 官方产品手册披露工业镍镉电池，作为工业后备电源代表。",
+      "sources": [
+        {
+          "url": "https://saft4u.saft.com/fr/download_file/4775ce18-d94c-4d57-9eaf-edd16c174784/English",
+          "title": "Uptimax 镍镉电池手册",
+          "date": null
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": true
+    }
+  ],
+  "performance": {
+    "subject": "多来源参考 · Saft Uptimax",
+    "type": "具名样例 + 期刊补充（逐项标明对象）",
+    "note": "不同指标可能来自不同产品、年代或实验，不能拼接成同一电池的完整规格。原样例说明：工业后备电源产品，不代表高倍率密封镍镉电芯。",
+    "updatedAt": "2026-09-13",
+    "observations": {
+      "calendarLife": {
+        "value": ">20",
+        "unit": "年",
+        "basis": "产品运行寿命说明",
+        "conditions": "后备电源应用；寿命依温度、维护和使用条件，非循环次数。",
+        "sourceIds": [
+          "saft"
+        ],
+        "status": "reported",
+        "subject": "Saft Uptimax",
+        "updatedAt": "2026-09-11"
+      },
+      "specificEnergy": {
+        "value": "30–45",
+        "unit": "Wh/kg",
+        "basis": "2011 综述：体系参考",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。原表未细化全部包装 / 辅机质量边界，勿当作指定电芯或整站参数。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· NCB 镍镉",
+        "locator": "p.3583，Table 1",
+        "updatedAt": "2026-09-13"
+      },
+      "temperature": {
+        "value": "−10 至 45",
+        "unit": "°C",
+        "basis": "2011 综述：体系参考",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。原表 operating temperature，未分开充电与放电限制，不能当作安全操作范围。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· NCB 镍镉",
+        "locator": "p.3583，Table 1",
+        "updatedAt": "2026-09-13"
+      },
+      "storage": {
+        "value": "5–20",
+        "unit": "%/月",
+        "basis": "2011 综述：体系参考",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。20°C 下每月自放电比例。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· NCB 镍镉",
+        "locator": "p.3583，Table 1",
+        "updatedAt": "2026-09-13"
+      },
+      "cycleLife": {
+        "value": "2,000",
+        "unit": "次",
+        "basis": "2011 综述：体系参考",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。原表为深循环次数，未统一给出寿命终点和倍率。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· NCB 镍镉",
+        "locator": "p.3583，Table 1",
+        "updatedAt": "2026-09-13"
+      },
+      "energyEfficiency": {
+        "value": "55–70",
+        "unit": "%",
+        "basis": "2011 综述：DC–DC 往返能量效率",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。原表明确为 DC 往返能量效率，不是库仑效率，也不是 AC 并网效率。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· NCB 镍镉",
+        "locator": "p.3583，Table 1",
+        "updatedAt": "2026-09-13"
+      },
+      "discharge": {
+        "value": "最长 4",
+        "unit": "小时",
+        "basis": "2011 综述：体系参考",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。典型应用放电时长，未绑定单一功率，不能据此推算容量。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· NCB 镍镉",
+        "locator": "p.3583，Table 1",
+        "updatedAt": "2026-09-13"
+      }
+    },
+    "referenceSubject": "Saft Uptimax"
+  },
+  "literatureUpdate": [
+    {
+      "family": "nicd",
+      "metric": "specificEnergy",
+      "source": "yang2011"
+    },
+    {
+      "family": "nicd",
+      "metric": "temperature",
+      "source": "yang2011"
+    },
+    {
+      "family": "nicd",
+      "metric": "storage",
+      "source": "yang2011"
+    },
+    {
+      "family": "nicd",
+      "metric": "cycleLife",
+      "source": "yang2011"
+    },
+    {
+      "family": "nicd",
+      "metric": "energyEfficiency",
+      "source": "yang2011"
+    },
+    {
+      "family": "nicd",
+      "metric": "discharge",
+      "source": "yang2011"
+    }
+  ],
+  "metricSources": {
+    "saft": {
+      "title": "Saft Uptimax 工业镍镉产品说明",
+      "url": "https://saft4u.saft.com/fr/product/uptimax",
+      "date": null,
+      "checkedAt": "2026-09-11"
+    },
+    "yang2011": {
+      "title": "Electrochemical Energy Storage for Green Grid",
+      "url": "https://doi.org/10.1021/cr100290v",
+      "doi": "10.1021/cr100290v",
+      "journal": "ACS · Chemical Reviews",
+      "date": "2011-03-04",
+      "checkedAt": "2026-09-13",
+      "citationCount": 5067,
+      "citationProvider": "Crossref",
+      "citationCheckedAt": "2026-09-13",
+      "citationUrl": "https://api.crossref.org/works/10.1021/cr100290v",
+      "fullTextUrl": "https://www.pnnl.gov/sites/default/files/media/file/at/publications/333_926201145617.pdf"
+    }
+  }
+}

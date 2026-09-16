@@ -1,0 +1,220 @@
+{
+  "schemaVersion": 1,
+  "id": "nas",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "高温钠硫电池",
+    "en": "Sodium–sulfur · NaS",
+    "status": "commercial",
+    "recharge": "可充电",
+    "voltage": "2.1 V",
+    "accent": "#7b5cff",
+    "id": "nas",
+    "details": [
+      "液态钠与液态硫由 β-氧化铝固体电解质隔开，在高温下进行可逆反应。",
+      "电网调峰与大规模固定式储能。",
+      "能量密度较高、循环效率好，适合长时运行。",
+      "需要持续高温和严格密封，热失控与材料腐蚀需重点管理。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "nas-1",
+      "family": "nas",
+      "cathode": "s-liquid",
+      "anode": "na-liquid",
+      "electrolyte": "beta",
+      "kind": "典型材料方案",
+      "note": "活性材料与基础电解质的检索级描述；未穷举粘结剂、集流体、添加剂或工艺，不是可直接制造的处方。",
+      "sources": [
+        {
+          "title": "Sandia / EPRI 储能技术手册（体系级背景）",
+          "url": "https://sandia.gov/ess-ssl/publications/ESHB%201001834%20reduced%20size.pdf",
+          "date": null
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "s-liquid",
+      "name": "熔融硫",
+      "formula": "S（液态）",
+      "elements": [
+        "S"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "na-liquid",
+      "name": "熔融钠",
+      "formula": "Na（液态）",
+      "elements": [
+        "Na"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "beta",
+      "name": "钠 β-氧化铝固体",
+      "formula": "Na–β-Al2O3",
+      "elements": [
+        "Na",
+        "Al",
+        "O"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "钠离子传导陶瓷，组成不是固定简单分子。",
+      "components": [
+        "钠 β-氧化铝"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "nas",
+      "name": "NGK 日本碍子",
+      "stage": "已停止新生产",
+      "basis": "历史商业化代表。2025 年 10 月宣布停止 NAS 新生产，库存最终交付计划至 2027 年 1 月；保留维护，不列为持续新生产企业。",
+      "sources": [
+        {
+          "url": "https://www.ngk-insulators.com/en/news/2025/20251031_1.pdf",
+          "title": "NAS 电池业务终止公告",
+          "date": "2025-10-31"
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": true
+    }
+  ],
+  "performance": {
+    "subject": "多来源参考 · NAS MODEL L24（2024 历史资料）",
+    "type": "具名样例 + 期刊补充（逐项标明对象）",
+    "note": "不同指标可能来自不同产品、年代或实验，不能拼接成同一电池的完整规格。原样例说明：NGK 已在 2025 年宣布停止新生产；这里只保留技术性能背景。",
+    "updatedAt": "2026-09-13",
+    "observations": {
+      "discharge": {
+        "value": "200 kW × 6 h",
+        "unit": "",
+        "basis": "单个 L24 单元 / DC 侧",
+        "conditions": "联合发布稿脚注的连续放电配置，不表示任意功率都可持续六小时。",
+        "sourceIds": [
+          "nas"
+        ],
+        "status": "reported",
+        "subject": "NAS MODEL L24（2024 历史资料）",
+        "updatedAt": "2026-09-11"
+      },
+      "specificEnergy": {
+        "value": "150–240",
+        "unit": "Wh/kg",
+        "basis": "2011 综述：体系参考",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。原表未细化全部包装 / 辅机质量边界，勿当作指定电芯或整站参数。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· Na–S 高温钠硫",
+        "locator": "p.3583，Table 1",
+        "updatedAt": "2026-09-13"
+      },
+      "temperature": {
+        "value": "300–350",
+        "unit": "°C",
+        "basis": "2011 综述：体系参考",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。这是电池内部高温工作条件，不是外界环境温区；需要热管理。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· Na–S 高温钠硫",
+        "locator": "p.3583，Table 1",
+        "updatedAt": "2026-09-13"
+      },
+      "cycleLife": {
+        "value": "4,000",
+        "unit": "次",
+        "basis": "2011 综述：体系参考",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。原表为深循环次数，未统一给出寿命终点和倍率。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· Na–S 高温钠硫",
+        "locator": "p.3583，Table 1",
+        "updatedAt": "2026-09-13"
+      },
+      "energyEfficiency": {
+        "value": "75–90",
+        "unit": "%",
+        "basis": "2011 综述：DC–DC 往返能量效率",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。原表明确为 DC 往返能量效率，不是库仑效率，也不是 AC 并网效率。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· Na–S 高温钠硫",
+        "locator": "p.3583，Table 1",
+        "updatedAt": "2026-09-13"
+      }
+    },
+    "referenceSubject": "NAS MODEL L24（2024 历史资料）"
+  },
+  "literatureUpdate": [
+    {
+      "family": "nas",
+      "metric": "specificEnergy",
+      "source": "yang2011"
+    },
+    {
+      "family": "nas",
+      "metric": "temperature",
+      "source": "yang2011"
+    },
+    {
+      "family": "nas",
+      "metric": "cycleLife",
+      "source": "yang2011"
+    },
+    {
+      "family": "nas",
+      "metric": "energyEfficiency",
+      "source": "yang2011"
+    }
+  ],
+  "metricSources": {
+    "nas": {
+      "title": "BASF / NGK NAS L24 联合发布资料",
+      "url": "https://www.basf.com/dam/jcr%3A0078d52d-91d5-37ac-8a8b-fec9b0f592d0/basf/www/global/documents/en/news-and-media/news-releases/2024/06/P216e_BASF_NGK_%20NAS%20Model%20L24.pdf",
+      "date": "2024-06-10",
+      "checkedAt": "2026-09-11"
+    },
+    "yang2011": {
+      "title": "Electrochemical Energy Storage for Green Grid",
+      "url": "https://doi.org/10.1021/cr100290v",
+      "doi": "10.1021/cr100290v",
+      "journal": "ACS · Chemical Reviews",
+      "date": "2011-03-04",
+      "checkedAt": "2026-09-13",
+      "citationCount": 5067,
+      "citationProvider": "Crossref",
+      "citationCheckedAt": "2026-09-13",
+      "citationUrl": "https://api.crossref.org/works/10.1021/cr100290v",
+      "fullTextUrl": "https://www.pnnl.gov/sites/default/files/media/file/at/publications/333_926201145617.pdf"
+    }
+  }
+}

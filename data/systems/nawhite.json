@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 1,
+  "id": "nawhite",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "普鲁士白钠离子电池",
+    "en": "Prussian white sodium-ion",
+    "status": "commercial",
+    "recharge": "可充电",
+    "voltage": "3.0–3.3 V",
+    "accent": "#7b5cff",
+    "id": "nawhite",
+    "details": [
+      "开放框架的普鲁士白正极让钠离子快速嵌入，硬碳负责负极储钠。",
+      "储能系统、低温应用与中低续航交通工具。",
+      "倍率与低温性能有潜力，铁基材料成本较低。",
+      "结晶水、空位和材料一致性会影响容量与循环。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "nawhite-1",
+      "family": "nawhite",
+      "cathode": "pw",
+      "anode": "hard-carbon",
+      "electrolyte": "na-carbonate",
+      "kind": "文献全电池（实验）",
+      "note": "活性材料与基础电解质的检索级描述；未穷举粘结剂、集流体、添加剂或工艺，不是可直接制造的处方。",
+      "sources": [
+        {
+          "title": "普鲁士白 / 硬碳参考电解液",
+          "url": "https://www.nature.com/articles/s42004-025-01515-0",
+          "date": null
+        }
+      ]
+    },
+    {
+      "id": "nawhite-2",
+      "family": "nawhite",
+      "cathode": "pw",
+      "anode": "hard-carbon",
+      "electrolyte": "na-bob",
+      "kind": "文献全电池（实验）",
+      "note": "活性材料与基础电解质的检索级描述；未穷举粘结剂、集流体、添加剂或工艺，不是可直接制造的处方。",
+      "sources": [
+        {
+          "title": "NaBOB / TEP 添加剂全电池研究",
+          "url": "https://www.nature.com/articles/s42004-025-01515-0",
+          "date": null
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "pw",
+      "name": "普鲁士白（富钠铁基）",
+      "formula": "NaxFe[Fe(CN)6]·yH2O",
+      "elements": [
+        "Na",
+        "Fe",
+        "C",
+        "N",
+        "H",
+        "O"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [
+        "Prussian white",
+        "PW"
+      ],
+      "note": "x、y 及空位含量随样品变化；并非纯元素混合物。",
+      "components": []
+    },
+    {
+      "id": "hard-carbon",
+      "name": "硬碳",
+      "formula": "C（非石墨化碳）",
+      "elements": [
+        "C"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [
+        "HC",
+        "hard carbon"
+      ],
+      "note": "非石墨化结构；不等同于石墨或软碳。",
+      "components": []
+    },
+    {
+      "id": "na-carbonate",
+      "name": "NaPF6 / EC–DEC",
+      "formula": "1 M NaPF6 / EC–DEC",
+      "elements": [
+        "Na",
+        "P",
+        "F",
+        "C",
+        "H",
+        "O"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "普鲁士白文献参考体系。",
+      "components": [
+        "盐：NaPF6",
+        "溶剂：EC / DEC"
+      ]
+    },
+    {
+      "id": "na-bob",
+      "name": "NaBOB / TEP + PES",
+      "formula": "0.35 M NaBOB / TEP + 3 wt% PES",
+      "elements": [
+        "Na",
+        "B",
+        "C",
+        "O",
+        "H",
+        "P",
+        "S"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "PES 为丙烯磺酸内酯添加剂；见原文实验条件。",
+      "components": [
+        "盐：NaBOB",
+        "溶剂：磷酸三乙酯 TEP",
+        "添加剂：PES"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "nawhite",
+      "name": "Altris",
+      "stage": "材料开发 / 电芯试制",
+      "basis": "开发普鲁士白正极，并有参考电芯试制与产业验证；不是已核实的规模量产电芯龙头。",
+      "sources": [
+        {
+          "url": "https://altris.se/technology/",
+          "title": "普鲁士白、硬碳与电芯试制技术",
+          "date": null
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": false
+    }
+  ],
+  "performance": {
+    "subject": "Altris 工业参考电芯",
+    "type": "厂商试制资料",
+    "note": "参考电芯指标；不等于本库两条 PW / 硬碳文献方案的数值。",
+    "updatedAt": "2026-09-11",
+    "observations": {
+      "specificEnergy": {
+        "value": ">160",
+        "unit": "Wh/kg",
+        "basis": "参考电芯",
+        "conditions": "官网展示；具体型号、批次和检测条件需向厂商获取。",
+        "sourceIds": [
+          "altris"
+        ],
+        "status": "reported",
+        "subject": "Altris 工业参考电芯",
+        "updatedAt": "2026-09-11"
+      },
+      "capacity": {
+        "value": "50–300",
+        "unit": "Ah",
+        "basis": "参考电芯系列",
+        "conditions": "不同容量型号，不是单颗电芯可变容量。",
+        "sourceIds": [
+          "altris"
+        ],
+        "status": "reported",
+        "subject": "Altris 工业参考电芯",
+        "updatedAt": "2026-09-11"
+      },
+      "cycleLife": {
+        "value": ">8,000",
+        "unit": "次",
+        "basis": "官网指标",
+        "conditions": "容量保持终点、DOD 和温度未在摘要中明确，不用于严格排名。",
+        "sourceIds": [
+          "altris"
+        ],
+        "status": "reported",
+        "subject": "Altris 工业参考电芯",
+        "updatedAt": "2026-09-11"
+      }
+    }
+  },
+  "literatureUpdate": [],
+  "metricSources": {
+    "altris": {
+      "title": "Altris 工业参考电芯技术介绍",
+      "url": "https://altris.se/",
+      "date": null,
+      "checkedAt": "2026-09-11"
+    }
+  }
+}

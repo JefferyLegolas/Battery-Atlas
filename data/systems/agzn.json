@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "id": "agzn",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "银锌电池",
+    "en": "Silver–zinc battery",
+    "status": "commercial",
+    "recharge": "一次 / 可充电",
+    "voltage": "1.6–1.8 V",
+    "accent": "#9ca7ad",
+    "id": "agzn",
+    "details": [
+      "银氧化物正极与锌负极提供较高且平稳的工作电压。",
+      "航天、军用、医疗和对体积能量密度敏感的设备。",
+      "功率高、体积能量密度优秀。",
+      "银成本高，锌电极形变会限制充电循环寿命。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "agzn-1",
+      "family": "agzn",
+      "cathode": "ag2o",
+      "anode": "zn",
+      "electrolyte": "koh",
+      "kind": "典型材料方案",
+      "note": "活性材料与基础电解质的检索级描述；未穷举粘结剂、集流体、添加剂或工艺，不是可直接制造的处方。",
+      "sources": [
+        {
+          "title": "Sandia / EPRI 储能技术手册（体系级背景）",
+          "url": "https://sandia.gov/ess-ssl/publications/ESHB%201001834%20reduced%20size.pdf",
+          "date": null
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "ag2o",
+      "name": "氧化银",
+      "formula": "Ag2O",
+      "elements": [
+        "Ag",
+        "O"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "zn",
+      "name": "锌",
+      "formula": "Zn",
+      "elements": [
+        "Zn"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "koh",
+      "name": "氢氧化钾水溶液",
+      "formula": "KOH / H2O",
+      "elements": [
+        "K",
+        "O",
+        "H"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "实际产品可含添加剂，本条仅表示基础电解液。",
+      "components": [
+        "KOH",
+        "水"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "agzn",
+      "name": "EaglePicher",
+      "stage": "专业领域产品",
+      "basis": "官方电池化学目录及 GAP4470 产品资料列有银锌体系，应用于特种电源。",
+      "sources": [
+        {
+          "url": "https://www.eaglepicher.com/technology/battery-chemistries/",
+          "title": "银锌电池化学技术",
+          "date": null
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": true
+    }
+  ],
+  "performance": {
+    "subject": "EaglePicher GAP-4470",
+    "type": "厂商储备电池规格",
+    "note": "自动激活储备电池组示例；不是普通可充电银锌单体。",
+    "updatedAt": "2026-09-11",
+    "observations": {
+      "temperature": {
+        "value": "−65 至 160",
+        "unit": "°F",
+        "basis": "规格表列明温区",
+        "conditions": "约 −54 至 71°C；产品配有加热器，必须联同激活和预热要求解读。",
+        "sourceIds": [
+          "ag"
+        ],
+        "status": "reported",
+        "subject": "EaglePicher GAP-4470",
+        "updatedAt": "2026-09-11"
+      },
+      "discharge": {
+        "value": "40",
+        "unit": "A",
+        "basis": "1A 分段输出",
+        "conditions": "该分段为 28 V、8.1 Ah；其他分段独立，不把分段参数相加作单体指标。",
+        "sourceIds": [
+          "ag"
+        ],
+        "status": "reported",
+        "subject": "EaglePicher GAP-4470",
+        "updatedAt": "2026-09-11"
+      }
+    }
+  },
+  "literatureUpdate": [],
+  "metricSources": {
+    "ag": {
+      "title": "EaglePicher GAP-4470 银锌储备电池规格",
+      "url": "https://www.eaglepicher.com/sites/default/files/4470.PDF",
+      "date": null,
+      "checkedAt": "2026-09-11"
+    }
+  }
+}

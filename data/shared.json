@@ -1,0 +1,975 @@
+{
+  "schemaVersion": 1,
+  "elements": [
+    {
+      "symbol": "H",
+      "name": "氢",
+      "z": 1
+    },
+    {
+      "symbol": "He",
+      "name": "氦",
+      "z": 2
+    },
+    {
+      "symbol": "Li",
+      "name": "锂",
+      "z": 3
+    },
+    {
+      "symbol": "Be",
+      "name": "铍",
+      "z": 4
+    },
+    {
+      "symbol": "B",
+      "name": "硼",
+      "z": 5
+    },
+    {
+      "symbol": "C",
+      "name": "碳",
+      "z": 6
+    },
+    {
+      "symbol": "N",
+      "name": "氮",
+      "z": 7
+    },
+    {
+      "symbol": "O",
+      "name": "氧",
+      "z": 8
+    },
+    {
+      "symbol": "F",
+      "name": "氟",
+      "z": 9
+    },
+    {
+      "symbol": "Ne",
+      "name": "氖",
+      "z": 10
+    },
+    {
+      "symbol": "Na",
+      "name": "钠",
+      "z": 11
+    },
+    {
+      "symbol": "Mg",
+      "name": "镁",
+      "z": 12
+    },
+    {
+      "symbol": "Al",
+      "name": "铝",
+      "z": 13
+    },
+    {
+      "symbol": "Si",
+      "name": "硅",
+      "z": 14
+    },
+    {
+      "symbol": "P",
+      "name": "磷",
+      "z": 15
+    },
+    {
+      "symbol": "S",
+      "name": "硫",
+      "z": 16
+    },
+    {
+      "symbol": "Cl",
+      "name": "氯",
+      "z": 17
+    },
+    {
+      "symbol": "Ar",
+      "name": "氩",
+      "z": 18
+    },
+    {
+      "symbol": "K",
+      "name": "钾",
+      "z": 19
+    },
+    {
+      "symbol": "Ca",
+      "name": "钙",
+      "z": 20
+    },
+    {
+      "symbol": "Sc",
+      "name": "钪",
+      "z": 21
+    },
+    {
+      "symbol": "Ti",
+      "name": "钛",
+      "z": 22
+    },
+    {
+      "symbol": "V",
+      "name": "钒",
+      "z": 23
+    },
+    {
+      "symbol": "Cr",
+      "name": "铬",
+      "z": 24
+    },
+    {
+      "symbol": "Mn",
+      "name": "锰",
+      "z": 25
+    },
+    {
+      "symbol": "Fe",
+      "name": "铁",
+      "z": 26
+    },
+    {
+      "symbol": "Co",
+      "name": "钴",
+      "z": 27
+    },
+    {
+      "symbol": "Ni",
+      "name": "镍",
+      "z": 28
+    },
+    {
+      "symbol": "Cu",
+      "name": "铜",
+      "z": 29
+    },
+    {
+      "symbol": "Zn",
+      "name": "锌",
+      "z": 30
+    },
+    {
+      "symbol": "Ga",
+      "name": "镓",
+      "z": 31
+    },
+    {
+      "symbol": "Ge",
+      "name": "锗",
+      "z": 32
+    },
+    {
+      "symbol": "As",
+      "name": "砷",
+      "z": 33
+    },
+    {
+      "symbol": "Se",
+      "name": "硒",
+      "z": 34
+    },
+    {
+      "symbol": "Br",
+      "name": "溴",
+      "z": 35
+    },
+    {
+      "symbol": "Kr",
+      "name": "氪",
+      "z": 36
+    },
+    {
+      "symbol": "Rb",
+      "name": "铷",
+      "z": 37
+    },
+    {
+      "symbol": "Sr",
+      "name": "锶",
+      "z": 38
+    },
+    {
+      "symbol": "Y",
+      "name": "钇",
+      "z": 39
+    },
+    {
+      "symbol": "Zr",
+      "name": "锆",
+      "z": 40
+    },
+    {
+      "symbol": "Nb",
+      "name": "铌",
+      "z": 41
+    },
+    {
+      "symbol": "Mo",
+      "name": "钼",
+      "z": 42
+    },
+    {
+      "symbol": "Tc",
+      "name": "锝",
+      "z": 43
+    },
+    {
+      "symbol": "Ru",
+      "name": "钌",
+      "z": 44
+    },
+    {
+      "symbol": "Rh",
+      "name": "铑",
+      "z": 45
+    },
+    {
+      "symbol": "Pd",
+      "name": "钯",
+      "z": 46
+    },
+    {
+      "symbol": "Ag",
+      "name": "银",
+      "z": 47
+    },
+    {
+      "symbol": "Cd",
+      "name": "镉",
+      "z": 48
+    },
+    {
+      "symbol": "In",
+      "name": "铟",
+      "z": 49
+    },
+    {
+      "symbol": "Sn",
+      "name": "锡",
+      "z": 50
+    },
+    {
+      "symbol": "Sb",
+      "name": "锑",
+      "z": 51
+    },
+    {
+      "symbol": "Te",
+      "name": "碲",
+      "z": 52
+    },
+    {
+      "symbol": "I",
+      "name": "碘",
+      "z": 53
+    },
+    {
+      "symbol": "Xe",
+      "name": "氙",
+      "z": 54
+    },
+    {
+      "symbol": "Cs",
+      "name": "铯",
+      "z": 55
+    },
+    {
+      "symbol": "Ba",
+      "name": "钡",
+      "z": 56
+    },
+    {
+      "symbol": "La",
+      "name": "镧",
+      "z": 57
+    },
+    {
+      "symbol": "Ce",
+      "name": "铈",
+      "z": 58
+    },
+    {
+      "symbol": "Pr",
+      "name": "镨",
+      "z": 59
+    },
+    {
+      "symbol": "Nd",
+      "name": "钕",
+      "z": 60
+    },
+    {
+      "symbol": "Pm",
+      "name": "钷",
+      "z": 61
+    },
+    {
+      "symbol": "Sm",
+      "name": "钐",
+      "z": 62
+    },
+    {
+      "symbol": "Eu",
+      "name": "铕",
+      "z": 63
+    },
+    {
+      "symbol": "Gd",
+      "name": "钆",
+      "z": 64
+    },
+    {
+      "symbol": "Tb",
+      "name": "铽",
+      "z": 65
+    },
+    {
+      "symbol": "Dy",
+      "name": "镝",
+      "z": 66
+    },
+    {
+      "symbol": "Ho",
+      "name": "钬",
+      "z": 67
+    },
+    {
+      "symbol": "Er",
+      "name": "铒",
+      "z": 68
+    },
+    {
+      "symbol": "Tm",
+      "name": "铥",
+      "z": 69
+    },
+    {
+      "symbol": "Yb",
+      "name": "镱",
+      "z": 70
+    },
+    {
+      "symbol": "Lu",
+      "name": "镥",
+      "z": 71
+    },
+    {
+      "symbol": "Hf",
+      "name": "铪",
+      "z": 72
+    },
+    {
+      "symbol": "Ta",
+      "name": "钽",
+      "z": 73
+    },
+    {
+      "symbol": "W",
+      "name": "钨",
+      "z": 74
+    },
+    {
+      "symbol": "Re",
+      "name": "铼",
+      "z": 75
+    },
+    {
+      "symbol": "Os",
+      "name": "锇",
+      "z": 76
+    },
+    {
+      "symbol": "Ir",
+      "name": "铱",
+      "z": 77
+    },
+    {
+      "symbol": "Pt",
+      "name": "铂",
+      "z": 78
+    },
+    {
+      "symbol": "Au",
+      "name": "金",
+      "z": 79
+    },
+    {
+      "symbol": "Hg",
+      "name": "汞",
+      "z": 80
+    },
+    {
+      "symbol": "Tl",
+      "name": "铊",
+      "z": 81
+    },
+    {
+      "symbol": "Pb",
+      "name": "铅",
+      "z": 82
+    },
+    {
+      "symbol": "Bi",
+      "name": "铋",
+      "z": 83
+    },
+    {
+      "symbol": "Po",
+      "name": "钋",
+      "z": 84
+    },
+    {
+      "symbol": "At",
+      "name": "砹",
+      "z": 85
+    },
+    {
+      "symbol": "Rn",
+      "name": "氡",
+      "z": 86
+    },
+    {
+      "symbol": "Fr",
+      "name": "钫",
+      "z": 87
+    },
+    {
+      "symbol": "Ra",
+      "name": "镭",
+      "z": 88
+    },
+    {
+      "symbol": "Ac",
+      "name": "锕",
+      "z": 89
+    },
+    {
+      "symbol": "Th",
+      "name": "钍",
+      "z": 90
+    },
+    {
+      "symbol": "Pa",
+      "name": "镤",
+      "z": 91
+    },
+    {
+      "symbol": "U",
+      "name": "铀",
+      "z": 92
+    },
+    {
+      "symbol": "Np",
+      "name": "镎",
+      "z": 93
+    },
+    {
+      "symbol": "Pu",
+      "name": "钚",
+      "z": 94
+    },
+    {
+      "symbol": "Am",
+      "name": "镅",
+      "z": 95
+    },
+    {
+      "symbol": "Cm",
+      "name": "锔",
+      "z": 96
+    },
+    {
+      "symbol": "Bk",
+      "name": "锫",
+      "z": 97
+    },
+    {
+      "symbol": "Cf",
+      "name": "锎",
+      "z": 98
+    },
+    {
+      "symbol": "Es",
+      "name": "锿",
+      "z": 99
+    },
+    {
+      "symbol": "Fm",
+      "name": "镄",
+      "z": 100
+    },
+    {
+      "symbol": "Md",
+      "name": "钔",
+      "z": 101
+    },
+    {
+      "symbol": "No",
+      "name": "锘",
+      "z": 102
+    },
+    {
+      "symbol": "Lr",
+      "name": "铹",
+      "z": 103
+    },
+    {
+      "symbol": "Rf",
+      "name": "𬬻",
+      "z": 104
+    },
+    {
+      "symbol": "Db",
+      "name": "𬭊",
+      "z": 105
+    },
+    {
+      "symbol": "Sg",
+      "name": "𬭳",
+      "z": 106
+    },
+    {
+      "symbol": "Bh",
+      "name": "𬭛",
+      "z": 107
+    },
+    {
+      "symbol": "Hs",
+      "name": "𬭶",
+      "z": 108
+    },
+    {
+      "symbol": "Mt",
+      "name": "鿏",
+      "z": 109
+    },
+    {
+      "symbol": "Ds",
+      "name": "𫟼",
+      "z": 110
+    },
+    {
+      "symbol": "Rg",
+      "name": "𬬭",
+      "z": 111
+    },
+    {
+      "symbol": "Cn",
+      "name": "鿔",
+      "z": 112
+    },
+    {
+      "symbol": "Nh",
+      "name": "鿭",
+      "z": 113
+    },
+    {
+      "symbol": "Fl",
+      "name": "𫓧",
+      "z": 114
+    },
+    {
+      "symbol": "Mc",
+      "name": "镆",
+      "z": 115
+    },
+    {
+      "symbol": "Lv",
+      "name": "𫟷",
+      "z": 116
+    },
+    {
+      "symbol": "Ts",
+      "name": "鿬",
+      "z": 117
+    },
+    {
+      "symbol": "Og",
+      "name": "鿫",
+      "z": 118
+    }
+  ],
+  "materialOrder": [
+    "lfp",
+    "nmc532",
+    "nmc811",
+    "nca",
+    "lco",
+    "lmo",
+    "lto",
+    "graphite",
+    "hard-carbon",
+    "silicon",
+    "si-carbon",
+    "s-carbon",
+    "lithium",
+    "nfm",
+    "pw",
+    "s-liquid",
+    "na-liquid",
+    "k-pb",
+    "ptcdi",
+    "pbo2",
+    "pb",
+    "mno2",
+    "zn",
+    "air",
+    "br",
+    "v-pos",
+    "v-neg",
+    "fe-pos",
+    "fe-neg",
+    "niooh",
+    "mh",
+    "cd",
+    "fe",
+    "ag2o",
+    "graphitic-foam",
+    "al",
+    "mo6s8",
+    "mg",
+    "paq",
+    "casn",
+    "lno",
+    "pb-pbf2",
+    "li-carbonate",
+    "li-ternary",
+    "li-emc",
+    "li-ether",
+    "lpscl",
+    "na-glyme",
+    "na-carbonate",
+    "na-bob",
+    "beta",
+    "k-water",
+    "sulfuric",
+    "koh",
+    "zncl",
+    "znbr",
+    "v-acid",
+    "fe-chloride",
+    "al-ionic",
+    "mg-ether",
+    "ca-ether",
+    "labaf",
+    "li-ternary-vc"
+  ],
+  "unassignedMaterials": [
+    {
+      "id": "si-carbon",
+      "name": "硅碳复合材料（待收录方案）",
+      "formula": "Si/C",
+      "elements": [
+        "Si",
+        "C"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [
+        "Si-C",
+        "硅碳"
+      ],
+      "note": "可检索的材料条目；本版尚未收录其完整三元方案，选中将显示无匹配。",
+      "components": []
+    }
+  ],
+  "metricDefinitions": [
+    {
+      "id": "specificEnergy",
+      "label": "重量能量密度",
+      "definition": "Wh/kg；必须区分电芯、模组、系统与活性物质。"
+    },
+    {
+      "id": "energyDensity",
+      "label": "体积能量密度",
+      "definition": "Wh/L；外壳、辅机和系统边界会影响结果。"
+    },
+    {
+      "id": "capacity",
+      "label": "容量 / 比容量",
+      "definition": "Ah 是电池容量；mAh/g 是材料比容量，不能直接比较。"
+    },
+    {
+      "id": "cycleLife",
+      "label": "循环寿命 / 耐久",
+      "definition": "同时查看容量保持率、放电深度 DOD、倍率和温度。实验运行小时数不等于循环次数。"
+    },
+    {
+      "id": "calendarLife",
+      "label": "日历寿命",
+      "definition": "随时间老化的使用寿命；设计寿命、质保和实测寿命并不相同。"
+    },
+    {
+      "id": "energyEfficiency",
+      "label": "往返能量效率",
+      "definition": "放电能量 ÷ 充电能量；DC–DC 与含逆变器的 AC–AC 不能混用。"
+    },
+    {
+      "id": "coulombicEfficiency",
+      "label": "库仑效率",
+      "definition": "放电电量 ÷ 充电电量；不等同于往返能量效率。"
+    },
+    {
+      "id": "temperature",
+      "label": "温度条件",
+      "definition": "区分充电、放电、储存与实验温度；不是安全极限。"
+    },
+    {
+      "id": "charge",
+      "label": "充电能力",
+      "definition": "充电时间需配合起止 SOC、温度与充电策略；1C 不是保证一小时充满。"
+    },
+    {
+      "id": "discharge",
+      "label": "放电 / 输出能力",
+      "definition": "连续输出、脉冲功率与实验电流密度不能混用。"
+    },
+    {
+      "id": "storage",
+      "label": "储存 / 自放电",
+      "definition": "货架寿命不是每月自放电率；启封与储存温度很重要。"
+    },
+    {
+      "id": "cost",
+      "label": "成本口径",
+      "definition": "电芯采购价、系统安装成本和全寿命度电成本 LCOS 不同。历史数据不是当前报价。"
+    }
+  ],
+  "metricSources": {
+    "catl": {
+      "title": "CATL 神行 PLUS 发布资料",
+      "url": "https://www.catl.com/news/7945.html",
+      "date": "2024-04-25",
+      "checkedAt": "2026-09-11"
+    },
+    "doe": {
+      "title": "DOE / PNNL 储能成本与性能评估（2022）",
+      "url": "https://www.energy.gov/sites/default/files/2022-09/2022%20Grid%20Energy%20Storage%20Technology%20Cost%20and%20Performance%20Assessment.pdf",
+      "date": "2022-08",
+      "checkedAt": "2026-09-11"
+    },
+    "nasa": {
+      "title": "NASA 小卫星电源技术状态报告",
+      "url": "https://www.nasa.gov/smallsat-institute/sst-soa/power-subsystems/",
+      "date": null,
+      "checkedAt": "2026-09-11"
+    },
+    "murata": {
+      "title": "Murata US253450A10S 电芯规格",
+      "url": "https://www.murata.com/-/media/webrenewal/products/batteries/laminated/standard/pdf/us253450a10s.ashx?la=en",
+      "date": null,
+      "checkedAt": "2026-09-11"
+    },
+    "yuasa": {
+      "title": "GS Yuasa LEV50N 技术报告",
+      "url": "https://www.gs-yuasa.com/en/technology/technical_report/pdf/vol9/009_01_026.pdf",
+      "date": "2012-06",
+      "checkedAt": "2026-09-11"
+    },
+    "toshiba": {
+      "title": "东芝 SCiB 大容量电芯规格",
+      "url": "https://www.global.toshiba/jp/products-solutions/battery/scib/product-next/product/cell/high-energy.html",
+      "date": null,
+      "checkedAt": "2026-09-11"
+    },
+    "lyten": {
+      "title": "Lyten：Power Sources Conference 2023 论文",
+      "url": "https://powersourcesconference.com/PowerSources23/docs/15-4.pdf",
+      "date": "2023",
+      "checkedAt": "2026-09-11"
+    },
+    "ucsd": {
+      "title": "UC San Diego 硅负极固态全电池研究",
+      "url": "https://today.ucsd.edu/story/meng_science_2021",
+      "date": "2021-09",
+      "checkedAt": "2026-09-11"
+    },
+    "hina": {
+      "title": "HiNa 商用车钠离子电池发布资料",
+      "url": "https://www.hinabattery.com/en/index.php?id=70",
+      "date": "2025-03-28",
+      "checkedAt": "2026-09-11"
+    },
+    "altris": {
+      "title": "Altris 工业参考电芯技术介绍",
+      "url": "https://altris.se/",
+      "date": null,
+      "checkedAt": "2026-09-11"
+    },
+    "nas": {
+      "title": "BASF / NGK NAS L24 联合发布资料",
+      "url": "https://www.basf.com/dam/jcr%3A0078d52d-91d5-37ac-8a8b-fec9b0f592d0/basf/www/global/documents/en/news-and-media/news-releases/2024/06/P216e_BASF_NGK_%20NAS%20Model%20L24.pdf",
+      "date": "2024-06-10",
+      "checkedAt": "2026-09-11"
+    },
+    "potassium": {
+      "title": "水系钾离子全电池原始论文",
+      "url": "https://www.nature.com/articles/s41560-019-0388-0",
+      "date": "2019",
+      "checkedAt": "2026-09-11"
+    },
+    "e91": {
+      "title": "Energizer E91 碱性 AA 电池规格",
+      "url": "https://data.energizer.com/pdfs/e91.pdf",
+      "date": null,
+      "checkedAt": "2026-09-11"
+    },
+    "zinc": {
+      "title": "Eveready 1250 锌碳电池规格",
+      "url": "https://data.energizer.com/pdfs/1250.pdf",
+      "date": null,
+      "checkedAt": "2026-09-11"
+    },
+    "air": {
+      "title": "Energizer 扁平锌空气电池手册 v1.2",
+      "url": "https://data.energizer.com/pdfs/zincairprismatichandbook.pdf",
+      "date": null,
+      "checkedAt": "2026-09-11"
+    },
+    "primus": {
+      "title": "DOE Primus EnergyFarm 示范项目说明",
+      "url": "https://www.energy.gov/oe/articles/arra-sgdp-primus-power-corporation-wind-firming-energyfarm",
+      "date": null,
+      "checkedAt": "2026-09-11"
+    },
+    "sumitomo": {
+      "title": "住友电工新型全钒液流电池",
+      "url": "https://sumitomoelectric.com/press/2025/02/prs016",
+      "date": "2025-02-26",
+      "checkedAt": "2026-09-11"
+    },
+    "ess": {
+      "title": "ESS Energy Warehouse 规格表（历史产品）",
+      "url": "https://essinc.com/wp-content/uploads/2021/06/ESSDatasheet_EnergyWarehouse_3-19-21.pdf",
+      "date": "2021-03-19",
+      "checkedAt": "2026-09-11"
+    },
+    "nimh": {
+      "title": "Energizer NH15-2300 镍氢电芯规格",
+      "url": "https://data.energizer.com/pdfs/nh15-2300.pdf",
+      "date": null,
+      "checkedAt": "2026-09-11"
+    },
+    "saft": {
+      "title": "Saft Uptimax 工业镍镉产品说明",
+      "url": "https://saft4u.saft.com/fr/product/uptimax",
+      "date": null,
+      "checkedAt": "2026-09-11"
+    },
+    "nife": {
+      "title": "长虹 NF-S 厂商发布产品说明",
+      "url": "https://trends.directindustry.com/sichuan-changhong-battery-co-ltd/project-71984-134312.html",
+      "date": null,
+      "checkedAt": "2026-09-11"
+    },
+    "ag": {
+      "title": "EaglePicher GAP-4470 银锌储备电池规格",
+      "url": "https://www.eaglepicher.com/sites/default/files/4470.PDF",
+      "date": null,
+      "checkedAt": "2026-09-11"
+    },
+    "al": {
+      "title": "铝 / 石墨泡沫全电池原始论文",
+      "url": "https://www.nature.com/articles/nature14340",
+      "date": "2015-04-06",
+      "checkedAt": "2026-09-11"
+    },
+    "mg": {
+      "title": "Mg / Mo6S8 全电池电解液研究",
+      "url": "https://pubs.rsc.org/os/content/articlelanding/2023/ee/d2ee03235j",
+      "date": "2022-12-07",
+      "checkedAt": "2026-09-11"
+    },
+    "ca": {
+      "title": "钙锡合金 / 聚蒽醌室温全电池研究",
+      "url": "https://www.nature.com/articles/s41467-022-31261-z",
+      "date": "2022-07-04",
+      "checkedAt": "2026-09-11"
+    },
+    "f": {
+      "title": "镍酸镧正极全固态氟离子电池",
+      "url": "https://www.nature.com/articles/s43246-020-0030-5",
+      "date": "2020-05-15",
+      "checkedAt": "2026-09-11"
+    },
+    "yang2011": {
+      "title": "Electrochemical Energy Storage for Green Grid",
+      "url": "https://doi.org/10.1021/cr100290v",
+      "doi": "10.1021/cr100290v",
+      "journal": "ACS · Chemical Reviews",
+      "date": "2011-03-04",
+      "checkedAt": "2026-09-13",
+      "citationCount": 5067,
+      "citationProvider": "Crossref",
+      "citationCheckedAt": "2026-09-13",
+      "citationUrl": "https://api.crossref.org/works/10.1021/cr100290v",
+      "fullTextUrl": "https://www.pnnl.gov/sites/default/files/media/file/at/publications/333_926201145617.pdf"
+    },
+    "chemali2016": {
+      "title": "Electrochemical and Electrostatic Energy Storage and Management Systems for Electric Drive Vehicles: State-of-the-Art Review and Future Trends",
+      "url": "https://doi.org/10.1109/JESTPE.2016.2566583",
+      "doi": "10.1109/JESTPE.2016.2566583",
+      "journal": "IEEE · JESTPE",
+      "date": "2016-05-10",
+      "checkedAt": "2026-09-13",
+      "citationCount": 260,
+      "citationProvider": "Crossref",
+      "citationCheckedAt": "2026-09-13",
+      "citationUrl": "https://api.crossref.org/works/10.1109/JESTPE.2016.2566583",
+      "fullTextUrl": "https://mplab.ee.columbia.edu/sites/mplab.ee.columbia.edu/files/content/Publications/Chemali2016.pdf"
+    },
+    "sun2016": {
+      "title": "Layered TiS2 Positive Electrode for Mg Batteries",
+      "url": "https://doi.org/10.1021/acsenergylett.6b00145",
+      "doi": "10.1021/acsenergylett.6b00145",
+      "journal": "ACS · Energy Letters",
+      "date": "2016-06-23",
+      "checkedAt": "2026-09-13",
+      "citationCount": 373,
+      "citationProvider": "Crossref",
+      "citationCheckedAt": "2026-09-13",
+      "citationUrl": "https://api.crossref.org/works/10.1021/acsenergylett.6b00145"
+    },
+    "ponrouch2019": {
+      "title": "Achievements, Challenges, and Prospects of Calcium Batteries",
+      "url": "https://doi.org/10.1021/acs.chemrev.9b00339",
+      "doi": "10.1021/acs.chemrev.9b00339",
+      "journal": "ACS · Chemical Reviews",
+      "date": "2019",
+      "checkedAt": "2026-09-13",
+      "citationCount": 406,
+      "citationProvider": "Crossref",
+      "citationCheckedAt": "2026-09-13",
+      "citationUrl": "https://api.crossref.org/works/10.1021/acs.chemrev.9b00339"
+    },
+    "chong2020": {
+      "title": "Potassium Nickel Iron Hexacyanoferrate as Ultra-Long-Life Cathode Material for Potassium-Ion Batteries with High Energy Density",
+      "url": "https://doi.org/10.1021/acsnano.0c02047",
+      "doi": "10.1021/acsnano.0c02047",
+      "journal": "ACS · Nano",
+      "date": "2020-07-31",
+      "checkedAt": "2026-09-13",
+      "citationCount": 176,
+      "citationProvider": "Crossref",
+      "citationCheckedAt": "2026-09-13",
+      "citationUrl": "https://api.crossref.org/works/10.1021/acsnano.0c02047"
+    },
+    "mohammad2018": {
+      "title": "Room-Temperature, Rechargeable Solid-State Fluoride-Ion Batteries",
+      "url": "https://doi.org/10.1021/acsaem.8b00864",
+      "doi": "10.1021/acsaem.8b00864",
+      "journal": "ACS · Applied Energy Materials",
+      "date": "2018-08-20",
+      "checkedAt": "2026-09-13",
+      "citationCount": 137,
+      "citationProvider": "Crossref",
+      "citationCheckedAt": "2026-09-13",
+      "citationUrl": "https://api.crossref.org/works/10.1021/acsaem.8b00864"
+    }
+  },
+  "metricsUpdatedAt": "2026-09-13"
+}

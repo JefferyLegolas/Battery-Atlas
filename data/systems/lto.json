@@ -1,0 +1,269 @@
+{
+  "schemaVersion": 1,
+  "id": "lto",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "钛酸锂电池",
+    "en": "Lithium titanate · LTO",
+    "status": "commercial",
+    "recharge": "可充电",
+    "voltage": "2.3 V",
+    "accent": "#2156ff",
+    "id": "lto",
+    "details": [
+      "负极以零应变特征明显的钛酸锂代替石墨，锂离子嵌入时体积变化小。",
+      "快充公交、轨道交通、低温设备与高功率储能。",
+      "快充、长寿命且安全性突出。",
+      "工作电压较低，导致整电池能量密度偏低。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "lto-1",
+      "family": "lto",
+      "cathode": "lmo",
+      "anode": "lto",
+      "electrolyte": "li-carbonate",
+      "kind": "典型材料方案",
+      "note": "LMO / LTO 搭配与基础 EC–DMC 电解液；增强添加剂路线未收录，不对应东芝产品处方。",
+      "sources": [
+        {
+          "title": "LiMn2O4 / Li4Ti5O12 快充电池与碳酸酯参考电解液（预印本）",
+          "url": "https://www.cambridge.org/engage/chemrxiv/article-details/6582e7529138d231611c00d8",
+          "date": "2023"
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "lmo",
+      "name": "锰酸锂",
+      "formula": "LiMn2O4",
+      "elements": [
+        "Li",
+        "Mn",
+        "O"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [
+        "LMO"
+      ],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "lto",
+      "name": "钛酸锂",
+      "formula": "Li4Ti5O12",
+      "elements": [
+        "Li",
+        "Ti",
+        "O"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [
+        "LTO"
+      ],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "li-carbonate",
+      "name": "六氟磷酸锂 / EC–DMC",
+      "formula": "LiPF6 + EC + DMC",
+      "elements": [
+        "Li",
+        "P",
+        "F",
+        "C",
+        "H",
+        "O"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "碳酸酯液态体系；浓度、溶剂比例与添加剂未限定。",
+      "components": [
+        "盐：LiPF6",
+        "溶剂：碳酸乙烯酯 EC",
+        "溶剂：碳酸二甲酯 DMC"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "lto",
+      "name": "Toshiba 东芝",
+      "stage": "商业化产品",
+      "basis": "SCiB 产品采用钛酸锂负极，官方持续发布应用模块；勿与新一代铌钛氧化物负极混淆。",
+      "sources": [
+        {
+          "url": "https://asia.toshiba.com/press-release/english/toshiba-launches-new-scib-module-with-double-the-heat-dissipation-performance-for-ev-buses-electric-ships-and-stationary-applications/",
+          "title": "SCiB 模块与 LTO 负极",
+          "date": "2025"
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": true
+    }
+  ],
+  "performance": {
+    "subject": "多来源参考 · Toshiba SCiB 20 Ah",
+    "type": "具名样例 + 期刊补充（逐项标明对象）",
+    "note": "不同指标可能来自不同产品、年代或实验，不能拼接成同一电池的完整规格。原样例说明：指标对应 SCiB 20 Ah，而非本库 LMO / LTO 典型处方。",
+    "updatedAt": "2026-09-13",
+    "observations": {
+      "specificEnergy": {
+        "value": "89",
+        "unit": "Wh/kg",
+        "basis": "20 Ah 电芯",
+        "conditions": "官网给定值；不是电池系统。",
+        "sourceIds": [
+          "toshiba"
+        ],
+        "status": "reported",
+        "subject": "Toshiba SCiB 20 Ah",
+        "updatedAt": "2026-09-11"
+      },
+      "energyDensity": {
+        "value": "176",
+        "unit": "Wh/L",
+        "basis": "20 Ah 电芯",
+        "conditions": "官网给定体积比能量。",
+        "sourceIds": [
+          "toshiba"
+        ],
+        "status": "reported",
+        "subject": "Toshiba SCiB 20 Ah",
+        "updatedAt": "2026-09-11"
+      },
+      "capacity": {
+        "value": "20",
+        "unit": "Ah",
+        "basis": "电芯",
+        "conditions": "标称电压 2.3 V。",
+        "sourceIds": [
+          "toshiba"
+        ],
+        "status": "reported",
+        "subject": "Toshiba SCiB 20 Ah",
+        "updatedAt": "2026-09-11"
+      },
+      "cycleLife": {
+        "value": "20,000",
+        "unit": "次",
+        "basis": "大容量系列循环测试",
+        "conditions": "官方报告仍保持 70% 以上容量；完整倍率、DOD 见原始循环曲线，不能等同于 80% 保持率寿命。",
+        "sourceIds": [
+          "toshiba"
+        ],
+        "status": "reported",
+        "subject": "Toshiba SCiB 20 Ah",
+        "updatedAt": "2026-09-11"
+      },
+      "temperature": {
+        "value": "−30",
+        "unit": "°C",
+        "basis": "官方低温能力说明",
+        "conditions": "可充放电的低温例示；使用上限和电流需依型号设计资料。",
+        "sourceIds": [
+          "toshiba"
+        ],
+        "status": "reported",
+        "subject": "Toshiba SCiB 20 Ah",
+        "updatedAt": "2026-09-11"
+      },
+      "charge": {
+        "value": "6",
+        "unit": "分钟",
+        "basis": "20 Ah 电芯",
+        "conditions": "官方称可充入约 80% 以上容量；须采用配套充电条件。",
+        "sourceIds": [
+          "toshiba"
+        ],
+        "status": "reported",
+        "subject": "Toshiba SCiB 20 Ah",
+        "updatedAt": "2026-09-11"
+      },
+      "discharge": {
+        "value": "1,200",
+        "unit": "W",
+        "basis": "10 秒脉冲输出（计算值）",
+        "conditions": "20 Ah 电芯，SOC 50%、25°C，由内阻计算；不是连续额定输出。",
+        "sourceIds": [
+          "toshiba"
+        ],
+        "status": "calculated",
+        "subject": "Toshiba SCiB 20 Ah",
+        "updatedAt": "2026-09-11"
+      },
+      "storage": {
+        "value": "2",
+        "unit": "%/月",
+        "basis": "2011 综述：体系参考",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。20°C 下每月自放电比例。仅对应 LTO/LFP 配对，不代表现有 SCiB 型号。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· LT–LFP Li4Ti5O12 / LiFePO4",
+        "locator": "p.3583，Table 1",
+        "updatedAt": "2026-09-13"
+      },
+      "energyEfficiency": {
+        "value": "94–99",
+        "unit": "%",
+        "basis": "2011 综述：DC–DC 往返能量效率",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。原表明确为 DC 往返能量效率，不是库仑效率，也不是 AC 并网效率。仅对应 LTO/LFP 配对，不代表现有 SCiB 型号。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· LT–LFP Li4Ti5O12 / LiFePO4",
+        "locator": "p.3583，Table 1",
+        "updatedAt": "2026-09-13"
+      }
+    },
+    "referenceSubject": "Toshiba SCiB 20 Ah"
+  },
+  "literatureUpdate": [
+    {
+      "family": "lto",
+      "metric": "storage",
+      "source": "yang2011"
+    },
+    {
+      "family": "lto",
+      "metric": "energyEfficiency",
+      "source": "yang2011"
+    }
+  ],
+  "metricSources": {
+    "toshiba": {
+      "title": "东芝 SCiB 大容量电芯规格",
+      "url": "https://www.global.toshiba/jp/products-solutions/battery/scib/product-next/product/cell/high-energy.html",
+      "date": null,
+      "checkedAt": "2026-09-11"
+    },
+    "yang2011": {
+      "title": "Electrochemical Energy Storage for Green Grid",
+      "url": "https://doi.org/10.1021/cr100290v",
+      "doi": "10.1021/cr100290v",
+      "journal": "ACS · Chemical Reviews",
+      "date": "2011-03-04",
+      "checkedAt": "2026-09-13",
+      "citationCount": 5067,
+      "citationProvider": "Crossref",
+      "citationCheckedAt": "2026-09-13",
+      "citationUrl": "https://api.crossref.org/works/10.1021/cr100290v",
+      "fullTextUrl": "https://www.pnnl.gov/sites/default/files/media/file/at/publications/333_926201145617.pdf"
+    }
+  }
+}

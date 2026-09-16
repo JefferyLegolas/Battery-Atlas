@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "id": "naoxide",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "层状氧化物钠离子电池",
+    "en": "Layered oxide sodium-ion",
+    "status": "commercial",
+    "recharge": "可充电",
+    "voltage": "3.0–3.4 V",
+    "accent": "#7b5cff",
+    "id": "naoxide",
+    "details": [
+      "钠离子在过渡金属层状氧化物与硬碳之间往返迁移，工作机制类似锂离子电池。",
+      "低成本储能、两轮车与入门级动力应用。",
+      "钠资源丰富，可沿用部分锂电制造经验。",
+      "能量密度通常低于锂离子体系，材料结构稳定性需优化。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "naoxide-1",
+      "family": "naoxide",
+      "cathode": "nfm",
+      "anode": "hard-carbon",
+      "electrolyte": "na-glyme",
+      "kind": "文献全电池（实验）",
+      "note": "活性材料与基础电解质的检索级描述；未穷举粘结剂、集流体、添加剂或工艺，不是可直接制造的处方。",
+      "sources": [
+        {
+          "title": "硬碳 / NFM 钠离子软包电池",
+          "url": "https://www.nature.com/articles/s41467-026-69237-y",
+          "date": null
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "nfm",
+      "name": "层状钠镍铁锰氧化物",
+      "formula": "NaNi1/3Fe1/3Mn1/3O2",
+      "elements": [
+        "Na",
+        "Ni",
+        "Fe",
+        "Mn",
+        "O"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [
+        "NFM",
+        "O3"
+      ],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "hard-carbon",
+      "name": "硬碳",
+      "formula": "C（非石墨化碳）",
+      "elements": [
+        "C"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [
+        "HC",
+        "hard carbon"
+      ],
+      "note": "非石墨化结构；不等同于石墨或软碳。",
+      "components": []
+    },
+    {
+      "id": "na-glyme",
+      "name": "NaPF6 / G2–2-MeTHF",
+      "formula": "0.8 M NaPF6 / G2:2-MeTHF (7:3)",
+      "elements": [
+        "Na",
+        "P",
+        "F",
+        "C",
+        "H",
+        "O"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "2026 年文献的醚系电解液。",
+      "components": [
+        "盐：NaPF6",
+        "溶剂：二甘醚 G2",
+        "溶剂：2-甲基四氢呋喃"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "naoxide",
+      "name": "HiNa 中科海钠",
+      "stage": "示范项目供货",
+      "basis": "官方披露为 2024 年投运的百兆瓦时级钠离子储能项目供货；其铜基层状氧化物路线与本库 NFM 文献方案不可视作同一配方。",
+      "sources": [
+        {
+          "url": "https://hinabattery.com/en/index.php?id=67",
+          "title": "钠离子储能系统投运",
+          "date": "2024-07-01"
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": true
+    }
+  ],
+  "performance": {
+    "subject": "HiNa 商用车钠电池方案（2025）",
+    "type": "厂商产品披露",
+    "note": "层状氧化物企业产品背景，不是本库 NFM / 硬碳实验配方。",
+    "updatedAt": "2026-09-11",
+    "observations": {
+      "specificEnergy": {
+        "value": ">165",
+        "unit": "Wh/kg",
+        "basis": "产品所用电芯",
+        "conditions": "2025 年厂商发布值，未作为独立复测结果。",
+        "sourceIds": [
+          "hina"
+        ],
+        "status": "reported",
+        "subject": "HiNa 商用车钠电池方案（2025）",
+        "updatedAt": "2026-09-11"
+      },
+      "cycleLife": {
+        "value": ">8,000",
+        "unit": "次",
+        "basis": "厂商快充循环声明",
+        "conditions": "发布文未完整披露容量终点、DOD 与温度，不可直接和其他寿命横比。",
+        "sourceIds": [
+          "hina"
+        ],
+        "status": "reported",
+        "subject": "HiNa 商用车钠电池方案（2025）",
+        "updatedAt": "2026-09-11"
+      },
+      "charge": {
+        "value": "20–25",
+        "unit": "分钟",
+        "basis": "厂商充电声明",
+        "conditions": "称完成 100% 充电；起始 SOC 和测试细节未完整披露。",
+        "sourceIds": [
+          "hina"
+        ],
+        "status": "reported",
+        "subject": "HiNa 商用车钠电池方案（2025）",
+        "updatedAt": "2026-09-11"
+      },
+      "temperature": {
+        "value": "−40 至 45",
+        "unit": "°C",
+        "basis": "放电性能宣称",
+        "conditions": "商用车方案发布说明；不是充电允许温区。",
+        "sourceIds": [
+          "hina"
+        ],
+        "status": "reported",
+        "subject": "HiNa 商用车钠电池方案（2025）",
+        "updatedAt": "2026-09-11"
+      }
+    }
+  },
+  "literatureUpdate": [],
+  "metricSources": {
+    "hina": {
+      "title": "HiNa 商用车钠离子电池发布资料",
+      "url": "https://www.hinabattery.com/en/index.php?id=70",
+      "date": "2025-03-28",
+      "checkedAt": "2026-09-11"
+    }
+  }
+}

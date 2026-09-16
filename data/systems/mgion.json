@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "id": "mgion",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "镁离子电池",
+    "en": "Magnesium-ion battery",
+    "status": "research",
+    "recharge": "可充电",
+    "voltage": "1–3 V",
+    "accent": "#9966cc",
+    "id": "mgion",
+    "details": [
+      "二价镁离子在正极中嵌入与脱出，金属镁负极具有较高体积容量。",
+      "后锂离子高安全储能研究。",
+      "镁资源丰富，金属负极理论体积容量高。",
+      "二价离子传输和界面钝化是难点；镁并非在所有条件下都不会形成枝晶。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "mgion-1",
+      "family": "mgion",
+      "cathode": "mo6s8",
+      "anode": "mg",
+      "electrolyte": "mg-ether",
+      "kind": "文献全电池（实验）",
+      "note": "活性材料与基础电解质的检索级描述；未穷举粘结剂、集流体、添加剂或工艺，不是可直接制造的处方。",
+      "sources": [
+        {
+          "title": "镁金属全电池非亲核电解液",
+          "url": "https://pubs.rsc.org/st/content/articlelanding/2023/ee/d2ee03235j",
+          "date": null
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "mo6s8",
+      "name": "Chevrel 相硫化钼",
+      "formula": "Mo6S8",
+      "elements": [
+        "Mo",
+        "S"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "mg",
+      "name": "金属镁",
+      "formula": "Mg",
+      "elements": [
+        "Mg"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "mg-ether",
+      "name": "镁双盐 / DME–THF",
+      "formula": "Mg(TFSI)2–MgCl2 / DME–THF",
+      "elements": [
+        "Mg",
+        "C",
+        "F",
+        "S",
+        "N",
+        "O",
+        "Cl",
+        "H"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "非亲核醚系文献配方族。",
+      "components": [
+        "Mg(TFSI)2",
+        "MgCl2",
+        "DME / THF"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "mgion",
+      "name": "未确认量产生产商",
+      "stage": "研究体系",
+      "basis": "本次公开资料核查未确认该路线的量产生产商；下列来源为材料研究证据，不是厂商或全球不存在生产商的证明。",
+      "sources": [
+        {
+          "url": "https://pubs.rsc.org/st/content/articlelanding/2023/ee/d2ee03235j",
+          "title": "镁金属全电池电解液研究",
+          "date": "2023"
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": false
+    }
+  ],
+  "performance": {
+    "subject": "多来源参考 · Mg / Mo6S8 醚系全电池",
+    "type": "具名样例 + 期刊补充（逐项标明对象）",
+    "note": "不同指标可能来自不同产品、年代或实验，不能拼接成同一电池的完整规格。原样例说明：本库 mgion-1 路线；不把 Mg 对称电池的 4,000 小时算作全电池寿命。",
+    "updatedAt": "2026-09-13",
+    "observations": {
+      "cycleLife": {
+        "value": ">2,300",
+        "unit": "小时",
+        "basis": "全电池运行时长",
+        "conditions": "原文报告的耐久时间，不是 2,300 次循环。",
+        "sourceIds": [
+          "mg"
+        ],
+        "status": "reported",
+        "subject": "Mg / Mo6S8 醚系全电池",
+        "updatedAt": "2026-09-11"
+      },
+      "coulombicEfficiency": {
+        "value": "99.96",
+        "unit": "%",
+        "basis": "全电池平均库仑效率",
+        "conditions": "电量效率，不是能量效率。",
+        "sourceIds": [
+          "mg"
+        ],
+        "status": "reported",
+        "subject": "Mg / Mo6S8 醚系全电池",
+        "updatedAt": "2026-09-11"
+      },
+      "capacity": {
+        "value": "115",
+        "unit": "mAh/g",
+        "basis": "TiS2 正极比容量（Mg 全电池）",
+        "conditions": "论文摘要报告稳定比容量；不是 Mo6S8 体系、不是整电芯 Ah。摘要未给出完整倍率和温度，本条不补推这些条件。",
+        "sourceIds": [
+          "sun2016"
+        ],
+        "status": "reported",
+        "subject": "Mg / 层状 TiS2 实验全电池",
+        "locator": "摘要",
+        "updatedAt": "2026-09-13"
+      }
+    },
+    "referenceSubject": "Mg / Mo6S8 醚系全电池"
+  },
+  "literatureUpdate": [
+    {
+      "family": "mgion",
+      "metric": "capacity",
+      "source": "sun2016"
+    }
+  ],
+  "metricSources": {
+    "mg": {
+      "title": "Mg / Mo6S8 全电池电解液研究",
+      "url": "https://pubs.rsc.org/os/content/articlelanding/2023/ee/d2ee03235j",
+      "date": "2022-12-07",
+      "checkedAt": "2026-09-11"
+    },
+    "sun2016": {
+      "title": "Layered TiS2 Positive Electrode for Mg Batteries",
+      "url": "https://doi.org/10.1021/acsenergylett.6b00145",
+      "doi": "10.1021/acsenergylett.6b00145",
+      "journal": "ACS · Energy Letters",
+      "date": "2016-06-23",
+      "checkedAt": "2026-09-13",
+      "citationCount": 373,
+      "citationProvider": "Crossref",
+      "citationCheckedAt": "2026-09-13",
+      "citationUrl": "https://api.crossref.org/works/10.1021/acsenergylett.6b00145"
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "id": "iron-flow",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "全铁液流电池",
+    "en": "All-iron flow battery",
+    "status": "pilot",
+    "recharge": "可充电",
+    "voltage": "约 1.2 V",
+    "accent": "#00a9a5",
+    "id": "iron-flow",
+    "details": [
+      "铁离子在正极发生价态变化，负极通过铁的沉积和溶解储能。",
+      "低成本、长时固定储能。",
+      "铁资源丰富、成本与供应链风险较低。",
+      "析氢、铁沉积形貌和电解液平衡会影响效率与寿命。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "iron-flow-1",
+      "family": "iron-flow",
+      "cathode": "fe-pos",
+      "anode": "fe-neg",
+      "electrolyte": "fe-chloride",
+      "kind": "典型材料方案",
+      "note": "活性材料与基础电解质的检索级描述；未穷举粘结剂、集流体、添加剂或工艺，不是可直接制造的处方。",
+      "sources": [
+        {
+          "title": "全铁液流电池电解液再平衡专利（基础配方背景）",
+          "url": "https://patents.google.com/patent/CN114824369A/en",
+          "date": "2022"
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "fe-pos",
+      "name": "铁离子氧化还原对",
+      "formula": "Fe3+/Fe2+",
+      "elements": [
+        "Fe"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "fe-neg",
+      "name": "铁沉积 / 溶解电极",
+      "formula": "Fe/Fe2+",
+      "elements": [
+        "Fe"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "fe-chloride",
+      "name": "氯化亚铁 / 盐酸水系",
+      "formula": "FeCl2 / HCl / H2O",
+      "elements": [
+        "Fe",
+        "Cl",
+        "H",
+        "O"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "代表性氯化物体系，工程添加剂未指定。",
+      "components": [
+        "FeCl2",
+        "HCl",
+        "水"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "iron-flow",
+      "name": "ESS Inc.",
+      "stage": "早期商业化 / 工程验证",
+      "basis": "公开全铁液流产品；2026 年季度资料包含项目调试信息，不能把规划产能当作实际交付量。",
+      "sources": [
+        {
+          "url": "https://essinc.com/solutions/horizon/",
+          "title": "Horizon 全铁液流产品",
+          "date": null
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": true
+    }
+  ],
+  "performance": {
+    "subject": "ESS Energy Warehouse（2021）",
+    "type": "厂商历史规格",
+    "note": "旧型号技术背景，不自动适用于 Horizon 或 Energy Base。",
+    "updatedAt": "2026-09-11",
+    "observations": {
+      "energyEfficiency": {
+        "value": "70–75",
+        "unit": "%",
+        "basis": "DC–DC 往返能量效率",
+        "conditions": "2021-03-19 产品数据表；不能直接视为含逆变器、变压器的 AC–AC 效率。",
+        "sourceIds": [
+          "ess"
+        ],
+        "status": "reported",
+        "subject": "ESS Energy Warehouse（2021）",
+        "updatedAt": "2026-09-11"
+      }
+    }
+  },
+  "literatureUpdate": [],
+  "metricSources": {
+    "ess": {
+      "title": "ESS Energy Warehouse 规格表（历史产品）",
+      "url": "https://essinc.com/wp-content/uploads/2021/06/ESSDatasheet_EnergyWarehouse_3-19-21.pdf",
+      "date": "2021-03-19",
+      "checkedAt": "2026-09-11"
+    }
+  }
+}

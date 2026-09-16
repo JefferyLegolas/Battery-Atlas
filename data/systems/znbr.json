@@ -1,0 +1,224 @@
+{
+  "schemaVersion": 1,
+  "id": "znbr",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "锌溴液流电池",
+    "en": "Zinc–bromine flow battery",
+    "status": "pilot",
+    "recharge": "可充电",
+    "voltage": "1.8 V",
+    "accent": "#00a9a5",
+    "id": "znbr",
+    "details": [
+      "充电时锌沉积在负极，溴在正极电解液中生成并被络合；电解液通过外部回路循环。",
+      "中长时固定储能与工商业削峰。",
+      "能量与功率可分别扩展，原料相对易得。",
+      "溴具有腐蚀性，锌枝晶、泵耗和系统复杂度需控制。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "znbr-1",
+      "family": "znbr",
+      "cathode": "br",
+      "anode": "zn",
+      "electrolyte": "znbr",
+      "kind": "典型材料方案",
+      "note": "活性材料与基础电解质的检索级描述；未穷举粘结剂、集流体、添加剂或工艺，不是可直接制造的处方。",
+      "sources": [
+        {
+          "title": "Sandia / EPRI 储能技术手册（体系级背景）",
+          "url": "https://sandia.gov/ess-ssl/publications/ESHB%201001834%20reduced%20size.pdf",
+          "date": null
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "br",
+      "name": "溴 / 溴离子活性液",
+      "formula": "Br2/Br−",
+      "elements": [
+        "Br"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [
+        "溴"
+      ],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "zn",
+      "name": "锌",
+      "formula": "Zn",
+      "elements": [
+        "Zn"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "znbr",
+      "name": "溴化锌水溶液",
+      "formula": "ZnBr2 / H2O",
+      "elements": [
+        "Zn",
+        "Br",
+        "H",
+        "O"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "工程体系另有溴络合剂等，本条未披露添加剂处方。",
+      "components": [
+        "ZnBr2",
+        "水"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "znbr",
+      "name": "Primus Power",
+      "stage": "公开示范 / 当前供货待核实",
+      "basis": "NI 的客户案例披露 EnergyPod 锌溴液流系统。仅作为已公开工程参与者，不据此判断当前在售或行业第一。",
+      "sources": [
+        {
+          "url": "https://www.ni.com/en/solutions/energy/case-studies/mobilizing-a-global-energy-storage-fleet-of-zinc-bromide-flow-batteries.html",
+          "title": "锌溴液流电池工程案例",
+          "date": null
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": true
+    }
+  ],
+  "performance": {
+    "subject": "多来源参考 · DOE Primus EnergyFarm 历史项目说明",
+    "type": "具名样例 + 期刊补充（逐项标明对象）",
+    "note": "不同指标可能来自不同产品、年代或实验，不能拼接成同一电池的完整规格。原样例说明：说明书的设计规模，不构成投运或当前供货证明。",
+    "updatedAt": "2026-09-13",
+    "observations": {
+      "discharge": {
+        "value": "250 kW / 750 kWh",
+        "unit": "",
+        "basis": "EnergyPod 设计增量",
+        "conditions": "历史项目说明里的模块与储能配置，不是单颗电芯功率。",
+        "sourceIds": [
+          "primus"
+        ],
+        "status": "planned",
+        "subject": "DOE Primus EnergyFarm 历史项目说明",
+        "updatedAt": "2026-09-11"
+      },
+      "specificEnergy": {
+        "value": "65",
+        "unit": "Wh/kg",
+        "basis": "2011 综述：锌溴液流体系",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。仅采用原表非括号值；括号内 429 是理论比能量，不作实测值使用。质量边界未在表中细化。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· ZBB 锌溴液流",
+        "locator": "p.3590，Table 2",
+        "updatedAt": "2026-09-13"
+      },
+      "storage": {
+        "value": "12–15",
+        "unit": "%/月",
+        "basis": "2011 综述：锌溴液流体系",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。20°C 下每月自放电；非休眠断流状态的保证值。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· ZBB 锌溴液流",
+        "locator": "p.3590，Table 2",
+        "updatedAt": "2026-09-13"
+      },
+      "cycleLife": {
+        "value": "2,000",
+        "unit": "次",
+        "basis": "2011 综述：锌溴液流体系",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。表下注：通常为约 20–80% SOC 区间循环；并非保证 100% DOD 寿命。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· ZBB 锌溴液流",
+        "locator": "p.3590，Table 2",
+        "updatedAt": "2026-09-13"
+      },
+      "energyEfficiency": {
+        "value": "65–75",
+        "unit": "%",
+        "basis": "2011 综述：锌溴液流体系",
+        "conditions": "历史综述汇总，不代表当前产品保证值；原表未统一给出载量、温度和各测试条件，不能和具名产品直接排名。DC 往返能量效率，不包含统一 AC 并网边界。",
+        "sourceIds": [
+          "yang2011"
+        ],
+        "status": "review",
+        "subject": "Yang 等（2011）· ZBB 锌溴液流",
+        "locator": "p.3590，Table 2",
+        "updatedAt": "2026-09-13"
+      }
+    },
+    "referenceSubject": "DOE Primus EnergyFarm 历史项目说明"
+  },
+  "literatureUpdate": [
+    {
+      "family": "znbr",
+      "metric": "specificEnergy",
+      "source": "yang2011"
+    },
+    {
+      "family": "znbr",
+      "metric": "storage",
+      "source": "yang2011"
+    },
+    {
+      "family": "znbr",
+      "metric": "cycleLife",
+      "source": "yang2011"
+    },
+    {
+      "family": "znbr",
+      "metric": "energyEfficiency",
+      "source": "yang2011"
+    }
+  ],
+  "metricSources": {
+    "primus": {
+      "title": "DOE Primus EnergyFarm 示范项目说明",
+      "url": "https://www.energy.gov/oe/articles/arra-sgdp-primus-power-corporation-wind-firming-energyfarm",
+      "date": null,
+      "checkedAt": "2026-09-11"
+    },
+    "yang2011": {
+      "title": "Electrochemical Energy Storage for Green Grid",
+      "url": "https://doi.org/10.1021/cr100290v",
+      "doi": "10.1021/cr100290v",
+      "journal": "ACS · Chemical Reviews",
+      "date": "2011-03-04",
+      "checkedAt": "2026-09-13",
+      "citationCount": 5067,
+      "citationProvider": "Crossref",
+      "citationCheckedAt": "2026-09-13",
+      "citationUrl": "https://api.crossref.org/works/10.1021/cr100290v",
+      "fullTextUrl": "https://www.pnnl.gov/sites/default/files/media/file/at/publications/333_926201145617.pdf"
+    }
+  }
+}

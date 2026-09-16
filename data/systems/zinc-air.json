@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "id": "zinc-air",
+  "reviewedAt": "2026-09-09",
+  "family": {
+    "name": "锌空气电池",
+    "en": "Zinc–air battery",
+    "status": "commercial",
+    "recharge": "多为一次电池",
+    "voltage": "1.4 V",
+    "accent": "#137547",
+    "id": "zinc-air",
+    "details": [
+      "负极消耗锌，正极从空气中获取氧气参与反应，因此正极活性物质无需全部储存在电池内。",
+      "助听器、医疗设备及金属空气电池研究。",
+      "质量能量密度高、材料成本较低。",
+      "性能受空气湿度和二氧化碳影响，充电型的空气电极寿命仍是瓶颈。"
+    ]
+  },
+  "profiles": [
+    {
+      "id": "zinc-air-1",
+      "family": "zinc-air",
+      "cathode": "air",
+      "anode": "zn",
+      "electrolyte": "koh",
+      "kind": "典型材料方案",
+      "note": "活性材料与基础电解质的检索级描述；未穷举粘结剂、集流体、添加剂或工艺，不是可直接制造的处方。",
+      "sources": [
+        {
+          "title": "Sandia / EPRI 储能技术手册（体系级背景）",
+          "url": "https://sandia.gov/ess-ssl/publications/ESHB%201001834%20reduced%20size.pdf",
+          "date": null
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "air",
+      "name": "空气氧电极",
+      "formula": "O2 / 催化多孔碳",
+      "elements": [
+        "O",
+        "C"
+      ],
+      "roles": [
+        "cathode"
+      ],
+      "aliases": [
+        "氧气",
+        "air"
+      ],
+      "note": "氧气为活性物质，碳为支撑；催化剂依产品而定，未穷举。",
+      "components": []
+    },
+    {
+      "id": "zn",
+      "name": "锌",
+      "formula": "Zn",
+      "elements": [
+        "Zn"
+      ],
+      "roles": [
+        "anode"
+      ],
+      "aliases": [],
+      "note": "",
+      "components": []
+    },
+    {
+      "id": "koh",
+      "name": "氢氧化钾水溶液",
+      "formula": "KOH / H2O",
+      "elements": [
+        "K",
+        "O",
+        "H"
+      ],
+      "roles": [
+        "electrolyte"
+      ],
+      "aliases": [],
+      "note": "实际产品可含添加剂，本条仅表示基础电解液。",
+      "components": [
+        "KOH",
+        "水"
+      ]
+    }
+  ],
+  "manufacturers": [
+    {
+      "family": "zinc-air",
+      "name": "VARTA 瓦尔塔",
+      "stage": "商业化产品",
+      "basis": "2025/26 消费电池目录包含助听器锌空气电池；此处为 VARTA 消费电池，不混同 Clarios 汽车品牌业务。",
+      "sources": [
+        {
+          "url": "https://www.varta-ag.com/fileadmin/varta/consumer/downloads/general-catalogue/en/9018212241_EN_GC_AW2025-26_v01_SS-LQ_w-o-SHD.pdf",
+          "title": "消费电池目录",
+          "date": "2025/26"
+        }
+      ],
+      "reviewedAt": "2026-09-09",
+      "ranking": "代表性参与者，非统一市场排名",
+      "isProducer": true
+    }
+  ],
+  "performance": {
+    "subject": "Energizer 扁平锌空气手册样例",
+    "type": "厂商历史资料",
+    "note": "不是 VARTA 助听器电池参数；不代表各尺寸锌空气电池。",
+    "updatedAt": "2026-09-11",
+    "observations": {
+      "specificEnergy": {
+        "value": "307",
+        "unit": "Wh/kg",
+        "basis": "手册对比样例",
+        "conditions": "v1.2 手册所列历史电池值；不是材料理论比能量。",
+        "sourceIds": [
+          "air"
+        ],
+        "status": "reported",
+        "subject": "Energizer 扁平锌空气手册样例",
+        "updatedAt": "2026-09-11"
+      },
+      "energyDensity": {
+        "value": "890",
+        "unit": "Wh/L",
+        "basis": "手册对比样例",
+        "conditions": "与重量比能量取自同一手册；请结合原文放电和包装条件。",
+        "sourceIds": [
+          "air"
+        ],
+        "status": "reported",
+        "subject": "Energizer 扁平锌空气手册样例",
+        "updatedAt": "2026-09-11"
+      }
+    }
+  },
+  "literatureUpdate": [],
+  "metricSources": {
+    "air": {
+      "title": "Energizer 扁平锌空气电池手册 v1.2",
+      "url": "https://data.energizer.com/pdfs/zincairprismatichandbook.pdf",
+      "date": null,
+      "checkedAt": "2026-09-11"
+    }
+  }
+}

@@ -28,7 +28,7 @@ Battery Atlas 不是按电池名称反向查材料的普通目录，而是把材
 - **收藏功能**：收藏保存在当前浏览器中，无需账户。
 - **分享链接**：生成包含当前电池或材料筛选条件的链接；分享内容不包含个人收藏。
 - **结果与证据导出**：便于后续研究、讨论和资料整理。
-- **单文件离线运行**：全部界面、样式、逻辑与数据封装在 `index.html` 中。
+- **结构化数据**：每个电池体系独立保存为 JSON，页面读取这些数据文件。
 
 ## 使用方法
 
@@ -38,7 +38,7 @@ Battery Atlas 不是按电池名称反向查材料的普通目录，而是把材
 
 ### 本地离线使用
 
-下载仓库后，直接用现代浏览器打开 `index.html`。项目不需要安装依赖，也不需要服务器或构建步骤。
+下载仓库后，在项目目录运行 `node scripts/serve-local.mjs`，再打开 `http://127.0.0.1:8000/`。浏览器一般不允许双击 `index.html` 后从 `file://` 读取 JSON 文件。无需安装第三方依赖。
 
 ## 数据与证据边界
 
@@ -59,11 +59,28 @@ Battery Atlas 不是按电池名称反向查材料的普通目录，而是把材
 - URL 状态分享
 - 可作为 GitHub Pages 静态网站发布
 
+## JSON 数据结构
+
+项目把 27 个体系拆分到 `data/systems/<体系 ID>.json`。每条记录包含体系简介、材料方案、所用材料、生产商、性能数据、文献更新及该体系引用的指标来源。`data/index.json` 提供体系清单，`data/shared.json` 保存元素表、指标定义、共用来源和暂未纳入方案的材料。
+
+页面现在通过 `fetch()` 读取这些 JSON。请用本地 HTTP 服务器打开，而不是双击 `index.html`（浏览器通常不允许 `file://` 页面读取 JSON）：
+
+```sh
+node scripts/serve-local.mjs
+```
+
+随后访问 `http://127.0.0.1:8000/`。运行 `node scripts/validate-systems.mjs` 可检查拆分后的记录与原始数据是否一致。
+
 ## 仓库结构
 
 ```text
 Battery-Atlas/
-├── index.html   # 完整应用、数据与交互逻辑
+├── index.html   # 页面与交互逻辑
+├── data/
+│   ├── index.json       # 体系清单
+│   ├── shared.json      # 共享定义与来源
+│   └── systems/         # 逐体系 JSON 记录
+├── scripts/             # 数据拆分、校验与本地预览工具
 ├── README.md    # 项目说明
 └── LICENSE      # MIT License
 ```
