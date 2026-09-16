@@ -76,7 +76,28 @@
 .compare-value .sources small{font-size:12px}
 @media(max-width:620px){.compare-recommendations,.compare-selectors,.compare-context{grid-template-columns:1fr}.compare-pair{gap:8px}.compare-metric{padding:10px}.compare-value{padding:8px}.compare-value>strong{font-size:18px}.compare-dialog{padding:14px}}
 @media(max-width:360px){.compare-pair{grid-template-columns:1fr}}
-</style><meta name="theme-color" content="#10221c"><style>@media(max-width:700px){body{min-width:0}.topbar{padding-inline:16px}.intro{padding:24px 0;gap:12px}.intro h1{font-size:32px}.lede{font-size:16px}.coverage{font-size:12px}.intro .eyebrow{font-size:12px}.slot{min-height:160px}.slot h3{font-size:20px}.slot-copy{margin:8px 0}.add-element,.primary,.close-button,.tab,.examples button,.text-button,.chip button{min-height:44px}.chip button,.close-button{min-width:44px}.chip{font-size:14px}.unrestricted,.logic-note,.scope-note,.result-notice,.profile-count,.catalog-id,.stage-tag,.maker-preview small,.maker-preview>span,.english-name{font-size:13px}.combination-row,.card-action,.material-option small{font-size:14px}.material-title{font-size:16px}.material-option code{font-size:14px}.picker-controls input,.picker-controls select,.search-results input{font-size:16px}.atlas-dialog{max-height:90vh;max-height:90dvh;width:calc(100% - 20px);padding:18px}.material-list{max-height:46vh;max-height:46dvh}.dialog-heading{position:sticky;top:-18px;background:var(--paper);z-index:2;padding-block:8px}.detail-dialog .dialog-heading{background:white}.detail-copy-grid p,.material-detail p{font-size:16px}.detail-section h3,.material-detail>span,.material-detail code,.sources,.detail-warning,.company-detail>small{font-size:14px}.sources small{font-size:12px}.company-detail p{font-size:16px}.dialog-foot{font-size:14px}.battery-result .card-action{font-size:14px;min-height:48px}footer{padding:20px;font-size:14px}.material-option{min-height:72px}.detail-dialog{overflow-wrap:anywhere}}</style></head>
+</style><meta name="theme-color" content="#10221c"><style>@media(max-width:700px){body{min-width:0}.topbar{padding-inline:16px}.intro{padding:24px 0;gap:12px}.intro h1{font-size:32px}.lede{font-size:16px}.coverage{font-size:12px}.intro .eyebrow{font-size:12px}.slot{min-height:160px}.slot h3{font-size:20px}.slot-copy{margin:8px 0}.add-element,.primary,.close-button,.tab,.examples button,.text-button,.chip button{min-height:44px}.chip button,.close-button{min-width:44px}.chip{font-size:14px}.unrestricted,.logic-note,.scope-note,.result-notice,.profile-count,.catalog-id,.stage-tag,.maker-preview small,.maker-preview>span,.english-name{font-size:13px}.combination-row,.card-action,.material-option small{font-size:14px}.material-title{font-size:16px}.material-option code{font-size:14px}.picker-controls input,.picker-controls select,.search-results input{font-size:16px}.atlas-dialog{max-height:90vh;max-height:90dvh;width:calc(100% - 20px);padding:18px}.material-list{max-height:46vh;max-height:46dvh}.dialog-heading{position:sticky;top:-18px;background:var(--paper);z-index:2;padding-block:8px}.detail-dialog .dialog-heading{background:white}.detail-copy-grid p,.material-detail p{font-size:16px}.detail-section h3,.material-detail>span,.material-detail code,.sources,.detail-warning,.company-detail>small{font-size:14px}.sources small{font-size:12px}.company-detail p{font-size:16px}.dialog-foot{font-size:14px}.battery-result .card-action{font-size:14px;min-height:48px}footer{padding:20px;font-size:14px}.material-option{min-height:72px}.detail-dialog{overflow-wrap:anywhere}}</style>
+<style>
+.card-coverage{margin:13px 0 4px}
+.coverage-bar{display:flex;height:6px;border-radius:999px;background:#e5eae6;overflow:hidden}
+.coverage-bar span{display:block;height:100%}
+.coverage-direct{background:var(--green)}
+.coverage-context{background:#e0a83e}
+.card-coverage p{font-size:11px;color:var(--muted);margin:7px 0 0;line-height:1.5;overflow-wrap:anywhere}
+.card-coverage strong{color:var(--ink)}
+.card-metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:8px;margin:14px 0}
+.mini-metric{background:#f6f8f4;border:1px solid #e3e8e3;border-radius:4px;padding:9px 10px;min-width:0}
+.mini-metric span{display:block;font-size:10px;color:var(--muted);line-height:1.4;margin-bottom:5px}
+.mini-metric strong{display:block;font-size:16px;line-height:1.2;color:var(--ink);overflow-wrap:anywhere}
+.mini-metric small{font-size:10px;color:var(--muted)}
+.metric-empty{font-size:11px;color:var(--muted);background:#f6f8f4;border:1px dashed var(--line);padding:10px;border-radius:4px;margin:14px 0}
+.card-facts{display:grid;gap:9px;margin:2px 0 14px}@media(min-width:700px){.card-facts{grid-template-columns:1fr 1fr}}
+.fact{border-left:3px solid var(--line);padding:2px 0 2px 10px}
+.fact span{display:block;font-size:10px;font-weight:800;letter-spacing:.06em;color:var(--green);margin-bottom:4px}
+.fact p{font-size:12px;line-height:1.65;color:#44584e;margin:0;overflow-wrap:anywhere}
+@media(max-width:420px){.card-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.mini-metric{padding:8px 9px}}
+</style>
+</head>
 <body>
 <header class="topbar"><a class="brand" href="#"><span class="brand-mark"><i></i><i></i><i></i></span><span>材料电池图谱 <small>BATTERY ATLAS / MATERIAL EDITION</small></span></a><div class="database-stat"><span></span><b id="systemCount">27</b> 个体系 · 核查 2026.09.09</div></header>
 <main>
@@ -328,6 +349,37 @@ function performanceData(id) {
   })
  };
 }
+function coverageBadge(id, perf) {
+  const total = perf.metrics.length;
+  const available = perf.metrics.filter(hasMetric);
+  const direct = perf.metrics.filter(m => ['reported','calculated'].includes(m.status));
+  const contextual = available.filter(m => !['reported','calculated'].includes(m.status));
+  const missing = total - available.length;
+  const allSources = new Set();
+  for (const m of available) for (const s of m.sources) if (s && s.url) allSources.add(s.url);
+  for (const p of profiles) if (p.family === id) for (const s of p.sources) if (s && s.url) allSources.add(s.url);
+  const maker = makers[id];
+  for (const s of maker.sources) if (s && s.url) allSources.add(s.url);
+  return '<div class="card-coverage" role="img" aria-label="数据完整度 '+available.length+'/'+total+'，直接证据 '+direct.length+' 项，参考或历史数据 '+contextual.length+' 项，证据来源 '+allSources.size+' 个"><div class="coverage-bar" aria-hidden="true"><span class="coverage-direct" style="width:'+((direct.length/total)*100).toFixed(1)+'%"></span><span class="coverage-context" style="width:'+((contextual.length/total)*100).toFixed(1)+'%"></span></div><p>数据完整度 <strong>'+available.length+'/'+total+'</strong> · 直接 '+direct.length+' · 参考/历史 '+contextual.length+' · 缺口 '+missing+' · 来源 '+allSources.size+'</p></div>';
+}
+
+function truncateText(value, length) {
+  const chars = Array.from(String(value || ''));
+  return chars.length > length ? chars.slice(0, length).join('') + '…' : chars.join('');
+}
+
+function metricChips(perf) {
+  const available = perf.metrics.filter(hasMetric);
+  const order = ['specificEnergy','energyDensity','cycleLife','temperature','discharge','charge','cost','capacity'];
+  const chosen = order.map(id => available.find(m => m.id === id)).filter(Boolean).slice(0, 3);
+  if (!chosen.length) return '<p class="metric-empty">关键指标尚未收录</p>';
+  return '<div class="card-metrics">'+chosen.map(m => '<div class="mini-metric"><span>'+esc(m.label)+'</span><strong>'+esc(m.value)+'</strong><small>'+esc(m.unit)+'</small></div>').join('')+'</div>';
+}
+
+function cardFacts(f) {
+  return '<div class="card-facts"><div class="fact"><span>适用方向</span><p>'+esc(truncateText(f.details[1], 78))+'</p></div><div class="fact"><span>主要限制</span><p>'+esc(truncateText(f.details[3], 78))+'</p></div></div>';
+}
+
 function renderPerformance(id) {
  const data=performanceData(id);
  const available=data.metrics.filter(m=>!['unavailable','not_applicable'].includes(m.status));
@@ -377,8 +429,9 @@ function render() {
  renderMatchExplanation(diagnostic,matched);renderEmptyDiagnosis(diagnostic);
  $('resultGrid').innerHTML=currentResults.map((f,i)=>{
   const maker=makers[f.id], p=f.matchedProfiles[0];
-  return '<article class="battery-result" style="--card-accent:'+esc(f.accent)+'"><div class="result-top"><span class="catalog-id">'+String(i+1).padStart(2,'0')+' / '+esc(f.id.toUpperCase())+'</span><span class="stage-tag">'+stages[f.status]+'</span></div><h3>'+esc(f.name)+'</h3><p class="english-name">'+esc(f.en)+'</p><div class="combination">'+rows(p)+'</div><p class="profile-count">'+esc(p.kind)+' · '+f.matchedProfiles.length+' 条匹配方案</p><details class="card-reason"><summary>为什么匹配</summary><p>'+esc(reasonForProfile(p))+'</p>'+(f.matchedProfiles.length>1?'<small>卡片展示第一条；详情中可查看全部 '+f.matchedProfiles.length+' 条命中方案。</small>':'')+'</details><div class="maker-preview"><small>行业代表 / 研发状态 · 非排名</small><strong>'+esc(maker.name)+'</strong><span>'+esc(maker.stage)+'</span></div><button class="card-action" data-detail="'+f.id+'" aria-label="查看'+esc(f.name)+'的材料、介绍与生产商">材料、介绍与生产商 <span>↗</span></button><div class="saved-actions">'+favoriteButton(f.id)+'</div></article>';
- }).join('');
+  const perf=performanceData(f.id);
+  return '<article class="battery-result" style="--card-accent:'+esc(f.accent)+'"><div class="result-top"><span class="catalog-id">'+String(i+1).padStart(2,'0')+' / '+esc(f.id.toUpperCase())+'</span><span class="stage-tag">'+stages[f.status]+'</span></div><h3>'+esc(f.name)+'</h3><p class="english-name">'+esc(f.en)+'</p><div class="combination">'+rows(p)+'</div><p class="profile-count">'+esc(p.kind)+' · '+f.matchedProfiles.length+' 条匹配方案</p>'+coverageBadge(f.id, perf)+metricChips(perf)+cardFacts(f)+'<details class="card-reason"><summary>为什么匹配</summary><p>'+esc(reasonForProfile(p))+'</p>'+(f.matchedProfiles.length>1?'<small>卡片展示第一条；详情中可查看全部 '+f.matchedProfiles.length+' 条命中方案。</small>':'')+'</details><div class="maker-preview"><small>行业代表 / 研发状态 · 非排名</small><strong>'+esc(maker.name)+'</strong><span>'+esc(maker.stage)+'</span></div><button class="card-action" data-detail="'+f.id+'" aria-label="查看'+esc(f.name)+'的材料、介绍与生产商">材料、介绍与生产商 <span>↗</span></button><div class="saved-actions">'+favoriteButton(f.id)+'</div></article>';
+  }).join('');
  document.querySelectorAll('[data-status]').forEach(b=>{b.classList.toggle('active',b.dataset.status===status);b.setAttribute('aria-pressed',String(b.dataset.status===status));});
 }
 function reset() {favoritesOnly=false;status='all';$('resultSearch').value='';applySelection({});}
