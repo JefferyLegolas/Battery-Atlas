@@ -262,5 +262,9 @@
       "citationUrl": "https://api.crossref.org/works/10.1021/cr100290v",
       "fullTextUrl": "https://www.pnnl.gov/sites/default/files/media/file/at/publications/333_926201145617.pdf"
     }
-  }
+  },
+  "mechanismType": [
+    "flow"
+  ],
+  "mechanismNote": "钒离子氧化还原对在外部储罐与电堆之间循环，通过膜隔离两侧电解液。"
 }

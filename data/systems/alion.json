@@ -168,5 +168,10 @@
       "date": "2015-04-06",
       "checkedAt": "2026-09-11"
     }
-  }
+  },
+  "mechanismType": [
+    "intercalation",
+    "alloy"
+  ],
+  "mechanismNote": "石墨泡沫中发生氯铝酸根插层；铝负极伴随金属沉积/溶解。"
 }

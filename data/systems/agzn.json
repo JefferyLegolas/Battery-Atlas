@@ -143,5 +143,9 @@
       "date": null,
       "checkedAt": "2026-09-11"
     }
-  }
+  },
+  "mechanismType": [
+    "alloy"
+  ],
+  "mechanismNote": "锌/银电极以溶解—沉积和氧化物转化为主；借用合金型模板表达相变与形貌风险。"
 }

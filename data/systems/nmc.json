@@ -228,5 +228,9 @@
       "citationUrl": "https://api.crossref.org/works/10.1109/JESTPE.2016.2566583",
       "fullTextUrl": "https://mplab.ee.columbia.edu/sites/mplab.ee.columbia.edu/files/content/Publications/Chemali2016.pdf"
     }
-  }
+  },
+  "mechanismType": [
+    "intercalation"
+  ],
+  "mechanismNote": "Li⁺ 在层状 NMC 与石墨之间嵌入/脱出。"
 }

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
-  <title id="title">LFP 磷酸铁锂充放电机制母版</title>
-  <desc id="desc">二维剖面示意图：放电时锂离子从磷酸铁锂正极脱出并嵌入石墨负极，充电时反向迁移；电子经外电路流动。</desc>
+  <title id="title">嵌入型电池机制模板</title>
+  <desc id="desc">二维剖面示意图：工作离子在正极和负极宿主结构之间嵌入与脱出，电子经外电路流动。</desc>
   <defs>
     <marker id="arrow-ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#10221c"/>
@@ -90,9 +90,9 @@
   </style>
   <rect width="1200" height="760" fill="var(--canvas)"/>
   <g transform="translate(60 48)">
-    <text class="tiny muted mono" x="0" y="14">LFP / LiFePO₄</text>
-    <text class="label-cn" x="0" y="52">锂离子嵌入 / 脱出机制</text>
-    <text class="muted tiny" x="0" y="78">LITHIUM IRON PHOSPHATE · INTERCALATION MASTER PLATE</text>
+    <text class="tiny muted mono" x="0" y="14">INTERCALATION / ROCKING CHAIR</text>
+    <text class="label-cn" x="0" y="52">工作离子嵌入 / 脱出机制</text>
+    <text class="muted tiny" x="0" y="78">HOST INSERTION · DEINSERTION · REVERSIBLE STORAGE</text>
     <rect x="1000" y="12" width="80" height="28" rx="14" fill="#e7f6dc" stroke="var(--green)" stroke-width="1.5"/>
     <circle cx="1018" cy="26" r="4" fill="var(--green)"/>
     <text class="tiny" x="1030" y="31" fill="var(--green)">5 s loop</text>
@@ -108,12 +108,12 @@
     <rect x="480" y="190" width="240" height="364" rx="8" class="electrolyte"/>
     <rect x="720" y="190" width="330" height="364" rx="8" class="anode"/>
 
-    <text class="label" x="184" y="232" fill="var(--orange)">正极 · LFP</text>
-    <text class="tiny muted mono" x="184" y="255">LiFePO₄</text>
-    <text class="label" x="754" y="232" fill="var(--blue)">负极 · 石墨</text>
-    <text class="tiny muted mono" x="754" y="255">C₆ / LiₓC₆</text>
+    <text class="label" x="184" y="232" fill="var(--orange)">正极 · 宿主材料</text>
+    <text class="tiny muted mono" x="184" y="255">HOST STRUCTURE</text>
+    <text class="label" x="754" y="232" fill="var(--blue)">负极 · 嵌入型负极</text>
+    <text class="tiny muted mono" x="754" y="255">HOST / INTERCALATED</text>
     <text class="label" x="510" y="232" fill="var(--green)">电解液 + 隔膜</text>
-    <text class="tiny muted mono" x="510" y="255">Li⁺ transport</text>
+    <text class="tiny muted mono" x="510" y="255">M⁺ transport</text>
 
     <g class="flow-line">
       <line x1="418" y1="355" x2="447" y2="355"/>
@@ -126,26 +126,26 @@
 
     <g class="discharge-flow">
       <g transform="translate(0 0)">
-        <circle class="ion" cx="300" cy="330" r="13"/><text class="ion-text" x="300" y="331">Li⁺</text>
-        <circle class="ion" cx="360" cy="390" r="13"/><text class="ion-text" x="360" y="391">Li⁺</text>
-        <circle class="ion" cx="420" cy="350" r="13"/><text class="ion-text" x="420" y="351">Li⁺</text>
+        <circle class="ion" cx="300" cy="330" r="13"/><text class="ion-text" x="300" y="331">M⁺</text>
+        <circle class="ion" cx="360" cy="390" r="13"/><text class="ion-text" x="360" y="391">M⁺</text>
+        <circle class="ion" cx="420" cy="350" r="13"/><text class="ion-text" x="420" y="351">M⁺</text>
       </g>
     </g>
     <g class="charge-flow">
       <g transform="translate(0 0)">
-        <circle class="ion" cx="720" cy="330" r="13"/><text class="ion-text" x="720" y="331">Li⁺</text>
-        <circle class="ion" cx="660" cy="390" r="13"/><text class="ion-text" x="660" y="391">Li⁺</text>
-        <circle class="ion" cx="600" cy="350" r="13"/><text class="ion-text" x="600" y="351">Li⁺</text>
+        <circle class="ion" cx="720" cy="330" r="13"/><text class="ion-text" x="720" y="331">M⁺</text>
+        <circle class="ion" cx="660" cy="390" r="13"/><text class="ion-text" x="660" y="391">M⁺</text>
+        <circle class="ion" cx="600" cy="350" r="13"/><text class="ion-text" x="600" y="351">M⁺</text>
       </g>
     </g>
 
     <g class="phase-discharge">
-      <text class="tiny" x="570" y="310" text-anchor="middle" fill="var(--ink)">放电：Li⁺ 脱出 → 石墨嵌入</text>
+      <text class="tiny" x="570" y="310" text-anchor="middle" fill="var(--ink)">放电：工作离子脱出 → 负极嵌入</text>
       <path d="M 250 486 L 930 486" class="stroke" marker-end="url(#arrow-blue)"/>
       <text class="tiny muted" x="590" y="514" text-anchor="middle">external circuit / e⁻</text>
     </g>
     <g class="phase-charge">
-      <text class="tiny" x="570" y="310" text-anchor="middle" fill="var(--ink)">充电：Li⁺ 脱出 → LFP 回嵌</text>
+      <text class="tiny" x="570" y="310" text-anchor="middle" fill="var(--ink)">充电：工作离子脱出 → 正极回嵌</text>
       <path d="M 930 486 L 250 486" class="stroke" marker-end="url(#arrow-ink)"/>
       <text class="tiny muted" x="590" y="514" text-anchor="middle">external circuit / e⁻</text>
     </g>
@@ -165,10 +165,10 @@
       <rect x="430" y="0" width="16" height="16" rx="4" fill="#edf1ff" stroke="var(--blue)" stroke-width="2"/>
       <text class="tiny" x="456" y="13">负极 / anode</text>
       <circle cx="650" cy="8" r="7" fill="var(--acid)" stroke="var(--ink)" stroke-width="2"/>
-      <text class="tiny" x="666" y="13">Li⁺ 离子</text>
+      <text class="tiny" x="666" y="13">工作离子 M⁺</text>
       <line x1="800" y1="8" x2="846" y2="8" stroke="var(--acid)" stroke-width="3" stroke-dasharray="8 8"/>
       <text class="tiny" x="858" y="13">e⁻ 电子</text>
     </g>
-    <text class="tiny muted" x="0" y="66">统一规则：2.5 px 结构线 · 圆形离子 · 虚线电子 · 橙=正极 · 绿=电解质 · 蓝=负极 · 5 秒循环</text>
+    <text class="tiny muted" x="0" y="66">统一规则：2.5 px 结构线 · 圆形工作离子 · 虚线电子 · 橙=正极 · 绿=电解质 · 蓝=负极 · 5 秒循环</text>
   </g>
 </svg>

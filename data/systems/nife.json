@@ -144,5 +144,10 @@
       "date": null,
       "checkedAt": "2026-09-11"
     }
-  }
+  },
+  "mechanismType": [
+    "intercalation",
+    "alloy"
+  ],
+  "mechanismNote": "NiOOH 中发生质子嵌入/脱出，铁电极伴随溶解—沉积和析氢。"
 }

@@ -61,7 +61,7 @@ Battery Atlas 不是按电池名称反向查材料的普通目录，而是把材
 
 ## JSON 数据结构
 
-项目把 27 个体系拆分到 `data/systems/<体系 ID>.json`。每条记录包含体系简介、材料方案、所用材料、生产商、性能数据、文献更新及该体系引用的指标来源。`data/index.json` 提供体系清单，`data/shared.json` 保存元素表、指标定义、共用来源和暂未纳入方案的材料。
+项目把 27 个体系拆分到 `data/systems/<体系 ID>.json`。每条记录包含体系简介、材料方案、所用材料、生产商、性能数据、文献更新、指标来源，以及用于选择动画模板的 `mechanismType` 和 `mechanismNote`。`data/index.json` 提供体系清单，`data/shared.json` 保存元素表、指标定义、共用来源和暂未纳入方案的材料。
 
 页面现在通过 `fetch()` 读取这些 JSON。请用本地 HTTP 服务器打开，而不是双击 `index.html`（浏览器通常不允许 `file://` 页面读取 JSON）：
 
@@ -73,7 +73,7 @@ node scripts/serve-local.mjs
 
 ## 机制图规范
 
-嵌入型、合金型、液流型和固态型四套机制模板位于 `assets/mechanisms/`，统一视角、色板、线宽、标签和动效速度记录在 `assets/mechanisms/README.md`。
+嵌入型、合金型、液流型和固态型四套机制模板位于 `assets/mechanisms/`。27 个体系通过 `mechanismType` 自动映射，不用逐个单独绘制；统一规则见 `assets/mechanisms/README.md`。
 
 ## 仓库结构
 
@@ -85,7 +85,7 @@ Battery-Atlas/
 │   ├── shared.json      # 共享定义与来源
 │   └── systems/         # 逐体系 JSON 记录
 ├── assets/mechanisms/   # 可复用的电池机制母版与视觉规范
-├── scripts/             # 数据拆分、校验与本地预览工具
+├── scripts/             # 数据拆分、mechanismType 映射、校验与本地预览工具
 ├── README.md    # 项目说明
 └── LICENSE      # MIT License
 ```

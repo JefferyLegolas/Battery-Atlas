@@ -254,5 +254,10 @@
       "citationUrl": "https://api.crossref.org/works/10.1109/JESTPE.2016.2566583",
       "fullTextUrl": "https://mplab.ee.columbia.edu/sites/mplab.ee.columbia.edu/files/content/Publications/Chemali2016.pdf"
     }
-  }
+  },
+  "mechanismType": [
+    "intercalation",
+    "alloy"
+  ],
+  "mechanismNote": "NiOOH 中发生质子嵌入/脱出，储氢合金伴随氢吸收/脱出。"
 }

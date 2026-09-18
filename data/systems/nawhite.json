@@ -208,5 +208,9 @@
       "date": null,
       "checkedAt": "2026-09-11"
     }
-  }
+  },
+  "mechanismType": [
+    "intercalation"
+  ],
+  "mechanismNote": "Na⁺ 在普鲁士白与硬碳之间嵌入/脱出。"
 }

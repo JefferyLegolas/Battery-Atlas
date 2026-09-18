@@ -25,11 +25,18 @@ for (const name of ['AtlasBase', 'AtlasMaterials', 'AtlasManufacturers', 'AtlasM
   assignments[name] = JSON.parse(match[1]);
 }
 
+const allowedMechanismTypes = new Set(['intercalation', 'alloy', 'flow', 'solid']);
 const dataDir = path.join(root, 'data');
 const manifest = JSON.parse(fs.readFileSync(path.join(dataDir, 'index.json'), 'utf8'));
 const shared = JSON.parse(fs.readFileSync(path.join(dataDir, 'shared.json'), 'utf8'));
 const systems = manifest.systems.map(item => JSON.parse(fs.readFileSync(path.join(dataDir, item.file), 'utf8')));
 if (systems.length !== manifest.count) throw new Error('System count mismatch');
+for (const system of systems) {
+  if (!Array.isArray(system.mechanismType) || !system.mechanismType.length) throw new Error(`Missing mechanismType: ${system.id}`);
+  if (system.mechanismType.some(type => !allowedMechanismTypes.has(type))) throw new Error(`Invalid mechanismType: ${system.id}`);
+  if (new Set(system.mechanismType).size !== system.mechanismType.length) throw new Error(`Duplicate mechanismType: ${system.id}`);
+  if (typeof system.mechanismNote !== 'string' || !system.mechanismNote.trim()) throw new Error(`Missing mechanismNote: ${system.id}`);
+}
 const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 const compare = (label, actual, expected) => { if (!same(actual, expected)) throw new Error(`${label} changed`); };
 compare('families', systems.map(s => s.family), assignments.AtlasBase.families);
@@ -38,6 +45,8 @@ compare('materials', [...new Set([...systems.flatMap(s => s.materials), ...share
 compare('manufacturers', systems.flatMap(s => s.manufacturers), assignments.AtlasManufacturers);
 compare('metric records', Object.fromEntries(systems.map(s => [s.id, s.performance])), assignments.AtlasMetrics.records);
 compare('loaded family IDs', Array.from(runtime.AtlasBase.families, item => item.id), assignments.AtlasBase.families.map(item => item.id));
+compare('mechanism types', systems.map(s => s.mechanismType), Array.from(runtime.AtlasBase.families, item => item.mechanismType));
+compare('mechanism notes', systems.map(s => s.mechanismNote), Array.from(runtime.AtlasBase.families, item => item.mechanismNote));
 compare('loaded profile IDs', Array.from(runtime.AtlasMaterials.profiles, item => item.id), assignments.AtlasMaterials.profiles.map(item => item.id));
 compare('loaded material IDs', Array.from(runtime.AtlasMaterials.materials, item => item.id), assignments.AtlasMaterials.materials.map(item => item.id));
 compare('literature additions', systems.flatMap(s => s.literatureUpdate).map(item => `${item.family}:${item.metric}:${item.source}`).sort(), assignments.AtlasMetrics.literatureUpdate.added.map(item => `${item.family}:${item.metric}:${item.source}`).sort());
@@ -49,4 +58,4 @@ for (const system of systems) {
     for (const role of ['cathode', 'anode', 'electrolyte']) if (!materialIds.has(profile[role])) throw new Error(`Missing material ${profile[role]}`);
   }
 }
-console.log(`Validated ${systems.length} system JSON files, ${assignments.AtlasMaterials.profiles.length} profiles, ${assignments.AtlasMaterials.materials.length} materials and ${scripts.length} inline scripts.`);
+console.log(`Validated ${systems.length} system JSON files, ${systems.length} mechanism mappings, ${assignments.AtlasMaterials.profiles.length} profiles, ${assignments.AtlasMaterials.materials.length} materials and ${scripts.length} inline scripts.`);

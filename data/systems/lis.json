@@ -172,5 +172,9 @@
       "citationUrl": "https://api.crossref.org/works/10.1109/JESTPE.2016.2566583",
       "fullTextUrl": "https://mplab.ee.columbia.edu/sites/mplab.ee.columbia.edu/files/content/Publications/Chemali2016.pdf"
     }
-  }
+  },
+  "mechanismType": [
+    "alloy"
+  ],
+  "mechanismNote": "硫的转化/溶解与锂金属沉积并存；借用合金型模板表达相变、体积和形貌风险。"
 }

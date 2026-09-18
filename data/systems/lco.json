@@ -244,5 +244,9 @@
       "citationUrl": "https://api.crossref.org/works/10.1021/cr100290v",
       "fullTextUrl": "https://www.pnnl.gov/sites/default/files/media/file/at/publications/333_926201145617.pdf"
     }
-  }
+  },
+  "mechanismType": [
+    "intercalation"
+  ],
+  "mechanismNote": "Li⁺ 在层状钴酸锂与石墨之间嵌入/脱出。"
 }

@@ -146,5 +146,9 @@
       "date": null,
       "checkedAt": "2026-09-11"
     }
-  }
+  },
+  "mechanismType": [
+    "alloy"
+  ],
+  "mechanismNote": "锌溶解/沉积与氧还原/析氧并存；借用合金型模板表达转化与形貌变化。"
 }

@@ -132,5 +132,9 @@
       "date": "2021-03-19",
       "checkedAt": "2026-09-11"
     }
-  }
+  },
+  "mechanismType": [
+    "flow"
+  ],
+  "mechanismNote": "铁离子氧化还原与铁沉积/溶解发生在外部电解液循环体系中。"
 }

@@ -181,5 +181,9 @@
       "citationCheckedAt": "2026-09-13",
       "citationUrl": "https://api.crossref.org/works/10.1021/acsenergylett.6b00145"
     }
-  }
+  },
+  "mechanismType": [
+    "alloy"
+  ],
+  "mechanismNote": "镁金属沉积/溶解和电极相变为主；借用合金型模板表达界面形貌变化。"
 }

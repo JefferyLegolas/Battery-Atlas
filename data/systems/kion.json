@@ -196,5 +196,9 @@
       "citationCheckedAt": "2026-09-13",
       "citationUrl": "https://api.crossref.org/works/10.1021/acsnano.0c02047"
     }
-  }
+  },
+  "mechanismType": [
+    "intercalation"
+  ],
+  "mechanismNote": "K⁺ 在普鲁士蓝和有机负极宿主中嵌入/脱出。"
 }

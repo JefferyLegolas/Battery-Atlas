@@ -172,5 +172,9 @@
       "citationCheckedAt": "2026-09-13",
       "citationUrl": "https://api.crossref.org/works/10.1021/acs.chemrev.9b00339"
     }
-  }
+  },
+  "mechanismType": [
+    "alloy"
+  ],
+  "mechanismNote": "钙锡负极为典型合金化过程，并伴随显著体积变化。"
 }

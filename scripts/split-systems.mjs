@@ -30,6 +30,9 @@ const profilesByFamily = Map.groupBy(materialsData.value.profiles, item => item.
 const manufacturersByFamily = Map.groupBy(manufacturers.value, item => item.family);
 
 const systems = base.value.families.map(family => {
+  let previous = {};
+  try { previous = JSON.parse(fs.readFileSync(path.join(systemsDir, `${family.id}.json`), 'utf8')); } catch {}
+
   const profiles = profilesByFamily.get(family.id) || [];
   const materialIds = [...new Set(profiles.flatMap(profile => [profile.cathode, profile.anode, profile.electrolyte]))];
   const records = metrics.value.records?.[family.id] || null;
@@ -54,7 +57,9 @@ const systems = base.value.families.map(family => {
     manufacturers: manufacturersByFamily.get(family.id) || [],
     performance: records,
     literatureUpdate: literatureEvidence,
-    metricSources: Object.fromEntries([...sourceIds].filter(id => metrics.value.sources[id]).map(id => [id, metrics.value.sources[id]]))
+    metricSources: Object.fromEntries([...sourceIds].filter(id => metrics.value.sources[id]).map(id => [id, metrics.value.sources[id]])),
+    mechanismType: previous.mechanismType || [],
+    mechanismNote: previous.mechanismNote || ''
   };
 });
 const assignedMaterialIds = new Set(systems.flatMap(system => system.materials.map(item => item.id)));

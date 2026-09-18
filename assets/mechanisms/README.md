@@ -1,11 +1,11 @@
 # 电池机制模板规范
 
-四个模板共享同一套视角、色板、线宽、标签和速度，基于 LFP 嵌入型母版扩展。
+四个模板共享同一套视角、色板、线宽、标签和速度。27 个电池体系通过 JSON 中的 `mechanismType` 字段映射到模板，不为单个体系重复绘制动画。
 
 | 模板 | 文件 | 适用范围 | 核心动效 |
 | --- | --- | --- | --- |
-| 嵌入型 | `lfp-master.svg` | LFP 与同类嵌入反应 | Li⁺ 在正负极宿主结构间嵌入/脱出 |
-| 合金型 | `alloy-template.svg` | 硅、锡等合金化负极 | 颗粒膨胀、收缩与裂纹 |
+| 嵌入型 | `intercalation-template.svg` | 摇椅式离子存储、质子嵌入类过程 | 工作离子在正负极宿主结构间嵌入/脱出 |
+| 合金型 | `alloy-template.svg` | 合金化、溶解—沉积与部分转化反应 | 颗粒膨胀、收缩与裂纹 |
 | 液流型 | `flow-template.svg` | 全钒、全铁、锌溴液流 | 电解液循环与跨膜离子迁移 |
 | 固态型 | `solid-state-template.svg` | 硫化物、氟化物与陶瓷电解质 | 晶界传导、界面阻抗、压力与枝晶风险 |
 
@@ -22,9 +22,8 @@
 
 ## 站点映射
 
-- 嵌入型：`lfp`
-- 合金型：`caion`；`solid` 同时展示合金型与固态型
-- 液流型：`vrfb`、`iron-flow`、`znbr`
-- 固态型：`solid`、`fion`、`nas`
+27 个体系都在 `data/systems/<id>.json` 中保存 `mechanismType` 和 `mechanismNote`。`mechanismType` 是数组，允许一个体系同时映射到多个模板，例如 `solid` 为 `["alloy","solid"]`。
+
+可使用 `node scripts/assign-mechanism-types.mjs` 重新应用或审查映射；`scripts/validate-systems.mjs` 会检查每个体系是否具备合法且非空的映射。
 
 详情页中的机制图右下角提供“放大查看”按钮；放大窗口沿用同一动画文件，并在手机端保持可横向滚动。

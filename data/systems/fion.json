@@ -194,5 +194,9 @@
       "citationCheckedAt": "2026-09-13",
       "citationUrl": "https://api.crossref.org/works/10.1021/acsaem.8b00864"
     }
-  }
+  },
+  "mechanismType": [
+    "solid"
+  ],
+  "mechanismNote": "氟离子通过固体氟化物电解质传输，界面与晶界是关键限制。"
 }

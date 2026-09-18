@@ -151,5 +151,10 @@
       "date": "2021-09",
       "checkedAt": "2026-09-11"
     }
-  }
+  },
+  "mechanismType": [
+    "alloy",
+    "solid"
+  ],
+  "mechanismNote": "硅负极发生合金化体积变化，硫化物固体电解质负责离子传导。"
 }

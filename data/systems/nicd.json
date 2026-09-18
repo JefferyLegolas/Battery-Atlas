@@ -255,5 +255,10 @@
       "citationUrl": "https://api.crossref.org/works/10.1021/cr100290v",
       "fullTextUrl": "https://www.pnnl.gov/sites/default/files/media/file/at/publications/333_926201145617.pdf"
     }
-  }
+  },
+  "mechanismType": [
+    "intercalation",
+    "alloy"
+  ],
+  "mechanismNote": "NiOOH 中发生质子嵌入/脱出，镉电极伴随溶解—沉积转化。"
 }

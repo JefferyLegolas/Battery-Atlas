@@ -216,5 +216,9 @@
       "citationUrl": "https://api.crossref.org/works/10.1021/cr100290v",
       "fullTextUrl": "https://www.pnnl.gov/sites/default/files/media/file/at/publications/333_926201145617.pdf"
     }
-  }
+  },
+  "mechanismType": [
+    "solid"
+  ],
+  "mechanismNote": "熔融电极与 β-氧化铝陶瓷隔膜组成高温体系；借用固态型模板表达陶瓷界面和离子通道。"
 }

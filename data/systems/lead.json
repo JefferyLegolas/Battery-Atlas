@@ -279,5 +279,9 @@
       "citationUrl": "https://api.crossref.org/works/10.1021/cr100290v",
       "fullTextUrl": "https://www.pnnl.gov/sites/default/files/media/file/at/publications/333_926201145617.pdf"
     }
-  }
+  },
+  "mechanismType": [
+    "alloy"
+  ],
+  "mechanismNote": "铅和二氧化铅电极以溶解—沉积反应为主；借用合金型模板表达相变与形貌演化。"
 }

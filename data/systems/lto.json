@@ -265,5 +265,9 @@
       "citationUrl": "https://api.crossref.org/works/10.1021/cr100290v",
       "fullTextUrl": "https://www.pnnl.gov/sites/default/files/media/file/at/publications/333_926201145617.pdf"
     }
-  }
+  },
+  "mechanismType": [
+    "intercalation"
+  ],
+  "mechanismNote": "Li⁺ 在锰酸锂与钛酸锂之间嵌入/脱出，具有典型零应变特征。"
 }

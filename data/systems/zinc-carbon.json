@@ -149,5 +149,9 @@
       "date": null,
       "checkedAt": "2026-09-11"
     }
-  }
+  },
+  "mechanismType": [
+    "alloy"
+  ],
+  "mechanismNote": "锌溶解与二氧化锰转化反应为主；借用合金型模板表达相变。"
 }
