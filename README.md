@@ -73,7 +73,7 @@ node scripts/serve-local.mjs
 
 ## 机制图规范
 
-嵌入型、合金型、液流型和固态型四套机制模板位于 `assets/mechanisms/`。27 个体系通过 `mechanismType` 自动映射，不用逐个单独绘制；统一规则见 `assets/mechanisms/README.md`。
+嵌入型、合金型、液流型和固态型四套机制模板位于 `assets/mechanisms/`。27 个体系通过 `mechanismType` 自动映射；卡片使用静态 poster，详情页按需加载动画。统一规则见 `assets/mechanisms/README.md`。
 
 ## 仓库结构
 
@@ -85,7 +85,7 @@ Battery-Atlas/
 │   ├── shared.json      # 共享定义与来源
 │   └── systems/         # 逐体系 JSON 记录
 ├── assets/mechanisms/   # 可复用的电池机制母版与视觉规范
-├── scripts/             # 数据拆分、mechanismType 映射、校验与本地预览工具
+├── scripts/             # 数据拆分、mechanismType 映射、poster 生成与校验工具
 ├── README.md    # 项目说明
 └── LICENSE      # MIT License
 ```

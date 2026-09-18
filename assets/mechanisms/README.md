@@ -1,13 +1,13 @@
 # 电池机制模板规范
 
-四个模板共享同一套视角、色板、线宽、标签和速度。27 个电池体系通过 JSON 中的 `mechanismType` 字段映射到模板，不为单个体系重复绘制动画。
+四个模板共享同一套视角、色板、线宽、标签和速度。27 个电池体系通过 JSON 中的 `mechanismType` 字段映射到模板，不为单个体系重复绘制动画。卡片使用静态 poster，详情页才按需加载动画。
 
-| 模板 | 文件 | 适用范围 | 核心动效 |
-| --- | --- | --- | --- |
-| 嵌入型 | `intercalation-template.svg` | 摇椅式离子存储、质子嵌入类过程 | 工作离子在正负极宿主结构间嵌入/脱出 |
-| 合金型 | `alloy-template.svg` | 合金化、溶解—沉积与部分转化反应 | 颗粒膨胀、收缩与裂纹 |
-| 液流型 | `flow-template.svg` | 全钒、全铁、锌溴液流 | 电解液循环与跨膜离子迁移 |
-| 固态型 | `solid-state-template.svg` | 硫化物、氟化物与陶瓷电解质 | 晶界传导、界面阻抗、压力与枝晶风险 |
+| 模板 | 动画文件 | 卡片 poster | 适用范围 | 核心动效 |
+| --- | --- | --- | --- | --- |
+| 嵌入型 | `intercalation-template.svg` | `intercalation-poster.svg` | 摇椅式离子存储、质子嵌入类过程 | 工作离子在正负极宿主结构间嵌入/脱出 |
+| 合金型 | `alloy-template.svg` | `alloy-poster.svg` | 合金化、溶解—沉积与部分转化反应 | 颗粒膨胀、收缩与裂纹 |
+| 液流型 | `flow-template.svg` | `flow-poster.svg` | 全钒、全铁、锌溴液流 | 电解液循环与跨膜离子迁移 |
+| 固态型 | `solid-state-template.svg` | `solid-state-poster.svg` | 硫化物、氟化物与陶瓷电解质 | 晶界传导、界面阻抗、压力与枝晶风险 |
 
 ## 统一规范
 
@@ -26,4 +26,9 @@
 
 可使用 `node scripts/assign-mechanism-types.mjs` 重新应用或审查映射；`scripts/validate-systems.mjs` 会检查每个体系是否具备合法且非空的映射。
 
-详情页中的机制图右下角提供“放大查看”按钮；放大窗口沿用同一动画文件，并在手机端保持可横向滚动。
+## 加载策略
+
+- 卡片读取 `*-poster.svg`，只显示静态关键帧，不播放动画。
+- 详情页读取 `*-template.svg`，使用 `loading="lazy"`，只在打开详情并进入机制区域时加载。
+- 机制图右下角提供“放大查看”按钮；放大窗口沿用同一个动画文件，并在手机端保持可横向滚动。
+- 修改动画模板后运行 `node scripts/generate-mechanism-posters.mjs` 重新生成四张 poster。

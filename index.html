@@ -78,6 +78,13 @@
 @media(max-width:360px){.compare-pair{grid-template-columns:1fr}}
 </style><meta name="theme-color" content="#10221c"><style>@media(max-width:700px){body{min-width:0}.topbar{padding-inline:16px}.intro{padding:24px 0;gap:12px}.intro h1{font-size:32px}.lede{font-size:16px}.coverage{font-size:12px}.intro .eyebrow{font-size:12px}.slot{min-height:160px}.slot h3{font-size:20px}.slot-copy{margin:8px 0}.add-element,.primary,.close-button,.tab,.examples button,.text-button,.chip button{min-height:44px}.chip button,.close-button{min-width:44px}.chip{font-size:14px}.unrestricted,.logic-note,.scope-note,.result-notice,.profile-count,.catalog-id,.stage-tag,.maker-preview small,.maker-preview>span,.english-name{font-size:13px}.combination-row,.card-action,.material-option small{font-size:14px}.material-title{font-size:16px}.material-option code{font-size:14px}.picker-controls input,.picker-controls select,.search-results input{font-size:16px}.atlas-dialog{max-height:90vh;max-height:90dvh;width:calc(100% - 20px);padding:18px}.material-list{max-height:46vh;max-height:46dvh}.dialog-heading{position:sticky;top:-18px;background:var(--paper);z-index:2;padding-block:8px}.detail-dialog .dialog-heading{background:white}.detail-copy-grid p,.material-detail p{font-size:16px}.detail-section h3,.material-detail>span,.material-detail code,.sources,.detail-warning,.company-detail>small{font-size:14px}.sources small{font-size:12px}.company-detail p{font-size:16px}.dialog-foot{font-size:14px}.battery-result .card-action{font-size:14px;min-height:48px}footer{padding:20px;font-size:14px}.material-option{min-height:72px}.detail-dialog{overflow-wrap:anywhere}}</style>
 <style>
+.card-mechanism{position:relative;margin:13px 0 12px;background:#eef3ed;border:1px solid #e1e7e1;border-radius:5px;overflow:hidden}
+.card-mechanism img{display:block;width:100%;height:148px;object-fit:cover;object-position:center;background:var(--paper)}
+.card-mechanism figcaption{position:absolute;right:10px;bottom:9px;left:10px;display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:10px;color:var(--muted)}
+.card-mechanism figcaption span{background:rgba(255,255,255,.9);padding:3px 6px;border-radius:3px}
+.card-mechanism figcaption span:first-child{color:var(--green);font-weight:800}
+.card-mechanism figcaption span:last-child{background:rgba(16,34,28,.86);color:white}
+@media(max-width:620px){.card-mechanism img{height:128px}}
 .card-coverage{margin:13px 0 4px}
 .coverage-bar{display:flex;height:6px;border-radius:999px;background:#e5eae6;overflow:hidden}
 .coverage-bar span{display:block;height:100%}
@@ -394,23 +401,31 @@ function cardFacts(f) {
   return '<div class="card-facts"><div class="fact"><span>适用方向</span><p>'+esc(truncateText(f.details[1], 78))+'</p></div><div class="fact"><span>主要限制</span><p>'+esc(truncateText(f.details[3], 78))+'</p></div></div>';
 }
 
-function mechanismFigure(family) {
-  const templates={
-    intercalation:{src:'assets/mechanisms/intercalation-template.svg',title:'机制模板 / 嵌入型',alt:'嵌入型电池机制示意：工作离子在正极和负极宿主结构之间嵌入与脱出，电子经外电路流动',caption:'统一模板示意：工作离子在正负极宿主结构之间嵌入/脱出。适用于摇椅式离子存储与质子嵌入类过程；不代表具体粒径、配方或尺寸。'},
-    alloy:{src:'assets/mechanisms/alloy-template.svg',title:'机制模板 / 合金型',alt:'合金或转化型电极机制示意：工作离子进入电极颗粒后引发体积膨胀，脱出时收缩并可能形成裂纹',caption:'统一模板示意：合金化、溶解—沉积和部分转化反应共享体积变化与形貌失效的视觉表达。裂纹、粉化和界面损失会加速容量衰减；不代表具体颗粒尺寸或循环条件。'},
-    flow:{src:'assets/mechanisms/flow-template.svg',title:'机制模板 / 液流型',alt:'液流电池机制示意：正负极电解液通过泵在储罐和电堆之间循环，离子穿过离子交换膜，电子经外电路流动',caption:'统一模板示意：正负极电解液分别储存在外部储罐中，由泵循环进入电堆；离子穿过隔膜，电子经外电路流动。不代表具体流量、密封或系统尺度。'},
-    solid:{src:'assets/mechanisms/solid-state-template.svg',title:'机制模板 / 固态型',alt:'固态电池机制示意：离子通过固体电解质和晶界传输，界面阻抗、压力和枝晶风险影响循环',caption:'统一模板示意：固体电解质中的离子路径、晶界和电极界面决定阻抗与循环稳定性；压力、接触损失和枝晶风险必须单独评估。不代表具体材料体系或制造尺度。'}
-  };
+const mechanismCatalog={
+  intercalation:{animatedSrc:'assets/mechanisms/intercalation-template.svg',posterSrc:'assets/mechanisms/intercalation-poster.svg',title:'机制模板 / 嵌入型',posterTitle:'嵌入型 · 静态 poster',alt:'嵌入型电池机制示意：工作离子在正极和负极宿主结构之间嵌入与脱出，电子经外电路流动',caption:'统一模板示意：工作离子在正负极宿主结构之间嵌入/脱出。适用于摇椅式离子存储与质子嵌入类过程；不代表具体粒径、配方或尺寸。'},
+  alloy:{animatedSrc:'assets/mechanisms/alloy-template.svg',posterSrc:'assets/mechanisms/alloy-poster.svg',title:'机制模板 / 合金型',posterTitle:'合金型 · 静态 poster',alt:'合金或转化型电极机制示意：工作离子进入电极颗粒后引发体积膨胀，脱出时收缩并可能形成裂纹',caption:'统一模板示意：合金化、溶解—沉积和部分转化反应共享体积变化与形貌失效的视觉表达。裂纹、粉化和界面损失会加速容量衰减；不代表具体颗粒尺寸或循环条件。'},
+  flow:{animatedSrc:'assets/mechanisms/flow-template.svg',posterSrc:'assets/mechanisms/flow-poster.svg',title:'机制模板 / 液流型',posterTitle:'液流型 · 静态 poster',alt:'液流电池机制示意：正负极电解液通过泵在储罐和电堆之间循环，离子穿过离子交换膜，电子经外电路流动',caption:'统一模板示意：正负极电解液分别储存在外部储罐中，由泵循环进入电堆；离子穿过隔膜，电子经外电路流动。不代表具体流量、密封或系统尺度。'},
+  solid:{animatedSrc:'assets/mechanisms/solid-state-template.svg',posterSrc:'assets/mechanisms/solid-state-poster.svg',title:'机制模板 / 固态型',posterTitle:'固态型 · 静态 poster',alt:'固态电池机制示意：离子通过固体电解质和晶界传输，界面阻抗、压力和枝晶风险影响循环',caption:'统一模板示意：固体电解质中的离子路径、晶界和电极界面决定阻抗与循环稳定性；压力、接触损失和枝晶风险必须单独评估。不代表具体材料体系或制造尺度。'}
+};
+function mechanismKeys(family){
   const values=Array.isArray(family.mechanismType)?family.mechanismType:[family.mechanismType].filter(Boolean);
-  const keys=values.filter((key,index)=>templates[key]&&values.indexOf(key)===index);
+  return values.filter((key,index)=>mechanismCatalog[key]&&values.indexOf(key)===index);
+}
+function cardMechanismPoster(family){
+  const key=mechanismKeys(family)[0];
+  if(!key)return '';
+  const item=mechanismCatalog[key];
+  return '<figure class="card-mechanism"><img src="'+item.posterSrc+'" alt="'+esc(family.name+'：'+item.posterTitle)+'" loading="lazy" decoding="async"><figcaption><span>'+esc(item.posterTitle)+'</span><span>静态</span></figcaption></figure>';
+}
+function mechanismFigure(family) {
+  const keys=mechanismKeys(family);
   if(!keys.length)return '';
   const note=family.mechanismNote?'<p class="mechanism-map-note">'+esc(family.mechanismNote)+'</p>':'';
   return keys.map((key,index)=>{
-    const item=templates[key],titleId='mechanismTitle-'+family.id+'-'+key;
-    return '<section class="detail-section mechanism-section" aria-labelledby="'+titleId+'"><div class="performance-heading"><h3 id="'+titleId+'">'+esc(item.title)+'</h3><span>5 秒循环 · 二维剖面</span></div>'+(index===0?note:'')+'<figure class="mechanism-figure" data-mechanism-title="'+esc(item.title)+'"><div class="mechanism-canvas-shell"><div class="mechanism-canvas"><img src="'+item.src+'" alt="'+esc(item.alt)+'" loading="lazy" decoding="async"></div><button type="button" class="mechanism-zoom" data-mechanism-zoom="1" aria-label="放大查看'+esc(item.title)+'">↗ 放大查看</button></div><figcaption>'+esc(item.caption)+'</figcaption></figure></section>';
+    const item=mechanismCatalog[key],titleId='mechanismTitle-'+family.id+'-'+key;
+    return '<section class="detail-section mechanism-section" aria-labelledby="'+titleId+'"><div class="performance-heading"><h3 id="'+titleId+'">'+esc(item.title)+'</h3><span>动画按需加载 · 5 秒循环</span></div>'+(index===0?note:'')+'<figure class="mechanism-figure" data-mechanism-title="'+esc(item.title)+'"><div class="mechanism-canvas-shell"><div class="mechanism-canvas"><img src="'+item.animatedSrc+'" alt="'+esc(item.alt)+'" loading="lazy" decoding="async"></div><button type="button" class="mechanism-zoom" data-mechanism-zoom="1" aria-label="放大查看'+esc(item.title)+'">↗ 放大查看</button></div><figcaption>'+esc(item.caption)+'</figcaption></figure></section>';
   }).join('');
 }
-
 function openMechanismZoom(button) {
   const figure=button.closest('.mechanism-figure');
   if(!figure)return;
@@ -473,7 +488,7 @@ function render() {
  $('resultGrid').innerHTML=currentResults.map((f,i)=>{
   const maker=makers[f.id], p=f.matchedProfiles[0];
   const perf=performanceData(f.id);
-  return '<article class="battery-result" style="--card-accent:'+esc(f.accent)+'"><div class="result-top"><span class="catalog-id">'+String(i+1).padStart(2,'0')+' / '+esc(f.id.toUpperCase())+'</span><span class="stage-tag">'+stages[f.status]+'</span></div><h3>'+esc(f.name)+'</h3><p class="english-name">'+esc(f.en)+'</p><div class="combination">'+rows(p)+'</div><p class="profile-count">'+esc(p.kind)+' · '+f.matchedProfiles.length+' 条匹配方案</p>'+coverageBadge(f.id, perf)+metricChips(perf)+cardFacts(f)+'<details class="card-reason"><summary>为什么匹配</summary><p>'+esc(reasonForProfile(p))+'</p>'+(f.matchedProfiles.length>1?'<small>卡片展示第一条；详情中可查看全部 '+f.matchedProfiles.length+' 条命中方案。</small>':'')+'</details><div class="maker-preview"><small>行业代表 / 研发状态 · 非排名</small><strong>'+esc(maker.name)+'</strong><span>'+esc(maker.stage)+'</span></div><button class="card-action" data-detail="'+f.id+'" aria-label="查看'+esc(f.name)+'的材料、介绍与生产商">材料、介绍与生产商 <span>↗</span></button><div class="saved-actions">'+favoriteButton(f.id)+'</div></article>';
+  return '<article class="battery-result" style="--card-accent:'+esc(f.accent)+'"><div class="result-top"><span class="catalog-id">'+String(i+1).padStart(2,'0')+' / '+esc(f.id.toUpperCase())+'</span><span class="stage-tag">'+stages[f.status]+'</span></div><h3>'+esc(f.name)+'</h3><p class="english-name">'+esc(f.en)+'</p><div class="combination">'+rows(p)+'</div><p class="profile-count">'+esc(p.kind)+' · '+f.matchedProfiles.length+' 条匹配方案</p>'+cardMechanismPoster(f)+coverageBadge(f.id, perf)+metricChips(perf)+cardFacts(f)+'<details class="card-reason"><summary>为什么匹配</summary><p>'+esc(reasonForProfile(p))+'</p>'+(f.matchedProfiles.length>1?'<small>卡片展示第一条；详情中可查看全部 '+f.matchedProfiles.length+' 条命中方案。</small>':'')+'</details><div class="maker-preview"><small>行业代表 / 研发状态 · 非排名</small><strong>'+esc(maker.name)+'</strong><span>'+esc(maker.stage)+'</span></div><button class="card-action" data-detail="'+f.id+'" aria-label="查看'+esc(f.name)+'的材料、介绍与生产商">材料、介绍与生产商 <span>↗</span></button><div class="saved-actions">'+favoriteButton(f.id)+'</div></article>';
   }).join('');
  document.querySelectorAll('[data-status]').forEach(b=>{b.classList.toggle('active',b.dataset.status===status);b.setAttribute('aria-pressed',String(b.dataset.status===status));});
 }
