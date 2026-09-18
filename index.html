@@ -96,6 +96,10 @@
 .fact span{display:block;font-size:10px;font-weight:800;letter-spacing:.06em;color:var(--green);margin-bottom:4px}
 .fact p{font-size:12px;line-height:1.65;color:#44584e;margin:0;overflow-wrap:anywhere}
 @media(max-width:420px){.card-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.mini-metric{padding:8px 9px}}
+.mechanism-section{margin-top:10px}
+.mechanism-figure{margin:0;padding:14px;background:#eef3ed;border:1px solid var(--line);border-radius:6px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.mechanism-figure img{display:block;width:100%;height:auto;border-radius:4px;background:var(--paper)}
+.mechanism-figure figcaption{font-size:12px;line-height:1.7;color:var(--muted);margin-top:10px}@media(max-width:700px){.mechanism-figure{padding:10px}.mechanism-figure img{min-width:720px}.mechanism-figure figcaption{min-width:0}}
 </style>
 </head>
 <body>
@@ -380,6 +384,11 @@ function cardFacts(f) {
   return '<div class="card-facts"><div class="fact"><span>适用方向</span><p>'+esc(truncateText(f.details[1], 78))+'</p></div><div class="fact"><span>主要限制</span><p>'+esc(truncateText(f.details[3], 78))+'</p></div></div>';
 }
 
+function mechanismFigure(id) {
+  if (id !== 'lfp') return '';
+  return '<section class="detail-section mechanism-section" aria-labelledby="mechanismTitle"><div class="performance-heading"><h3 id="mechanismTitle">机制母版 / LFP 充放电</h3><span>5 秒循环 · 二维剖面</span></div><figure class="mechanism-figure"><img src="assets/mechanisms/lfp-master.svg" alt="磷酸铁锂电池充放电示意图：锂离子在磷酸铁锂正极和石墨负极之间嵌入与脱出，电子经外电路流动" loading="lazy" decoding="async"><figcaption>统一母版示意：Li⁺ 在 LFP 与石墨之间嵌入/脱出；橙色表示正极、绿色表示电解质、蓝色表示负极。示意图不代表具体粒径、配方或尺寸；手机可横向滑动查看完整标注。</figcaption></figure></section>';
+}
+
 function renderPerformance(id) {
  const data=performanceData(id);
  const available=data.metrics.filter(m=>!['unavailable','not_applicable'].includes(m.status));
@@ -448,7 +457,7 @@ function openDetail(id) {
  const f=currentResults.find(f=>f.id===id);if(!f)return;
  const maker=makers[id];
  $('detailContent').innerHTML='<h2 id="detailTitle">'+esc(f.name)+'</h2><p class="english-name">'+esc(f.en)+'</p><p class="detail-summary">'+esc(f.details[0])+'</p><div class="detail-badges"><span>'+stages[f.status]+'</span><span>'+esc(f.recharge)+'</span><span>电压：'+esc(f.voltage)+'（体系参考）</span></div><div class="detail-copy-grid">'+['应用方向','特点','限制'].map((label,i)=>'<div><span>'+label+'</span><p>'+esc(f.details[i+1])+'</p></div>').join('')+'</div><section class="detail-section"><h3>01 / 当前条件命中的完整材料方案</h3><p class="result-notice">下列每块是一条独立方案。元素是材料检索标签，不包含未披露的全部辅料。</p>'+f.matchedProfiles.map(p=>'<article class="profile-detail"><div class="profile-kind">'+esc(p.kind)+'</div>'+AtlasMatcher.roles.map(r=>{const m=material[p[r]];return '<div class="material-detail"><span>'+labels[r]+'</span><h4>'+esc(m.name)+'</h4><code>'+esc(m.formula)+'</code>'+(m.components.length?'<p>'+m.components.map(esc).join(' / ')+'</p>':'')+'<p>'+esc(m.note)+'</p></div>';}).join('')+'<p class="detail-warning">'+esc(p.note)+'</p>'+sourceLinks(p.sources)+'</article>').join('')+'</section><section class="detail-section"><h3>02 / 行业代表与生产状态</h3><div class="company-detail"><h4>'+esc(maker.name)+'</h4><span class="stage-tag">'+esc(maker.stage)+'</span><p>'+esc(maker.basis)+'</p>'+sourceLinks(maker.sources)+'<small>资料核查：'+esc(maker.reviewedAt)+' · '+esc(maker.ranking)+'</small></div><p class="detail-warning">企业关联到电池体系，而非对上方材料处方背书。没有可比的细分市场证据时不标注“全球第一”；厂商自述与原型展示不能替代独立量产核验。</p></section>';
- $('detailContent').innerHTML = $('detailContent').innerHTML.replace('<section class="detail-section"><h3>01 /',renderPerformance(id)+'<section class="detail-section"><h3>01 /');
+ $('detailContent').innerHTML = $('detailContent').innerHTML.replace('<section class="detail-section"><h3>01 /',mechanismFigure(id)+renderPerformance(id)+'<section class="detail-section"><h3>01 /');
  $('detailContent').innerHTML='<div id="detailActions" class="saved-actions" data-battery="'+id+'">'+favoriteButton(id)+'</div>'+$('detailContent').innerHTML;
  $('detailDialog').showModal();
  $('detailDialog').scrollTop=0;

@@ -71,6 +71,10 @@ node scripts/serve-local.mjs
 
 随后访问 `http://127.0.0.1:8000/`。运行 `node scripts/validate-systems.mjs` 可检查拆分后的记录与原始数据是否一致。
 
+## 机制图规范
+
+LFP 机制母版位于 ssets/mechanisms/lfp-master.svg，统一视角、色板、线宽、标签和动效速度记录在 ssets/mechanisms/README.md。
+
 ## 仓库结构
 
 ```text
@@ -80,6 +84,7 @@ Battery-Atlas/
 │   ├── index.json       # 体系清单
 │   ├── shared.json      # 共享定义与来源
 │   └── systems/         # 逐体系 JSON 记录
+├── assets/mechanisms/   # 可复用的电池机制母版与视觉规范
 ├── scripts/             # 数据拆分、校验与本地预览工具
 ├── README.md    # 项目说明
 └── LICENSE      # MIT License
