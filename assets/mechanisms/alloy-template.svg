@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">合金型电极机制模板</title>
+  <desc id="desc">示意锂离子进入合金型负极后引起颗粒体积膨胀，脱锂时收缩并可能形成裂纹。</desc>
+  <defs>
+    <marker id="arrow-ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#10221c"/></marker>
+    <marker id="arrow-acid" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d7ff43"/></marker>
+    <clipPath id="diagram-clip"><rect x="70" y="122" width="1060" height="500" rx="18"/></clipPath>
+  </defs>
+  <style>
+    :root{--ink:#10221c;--muted:#69766f;--line:#d8ded9;--paper:#fff;--canvas:#f4f5f1;--acid:#d7ff43;--green:#137547;--orange:#ff6b35;--blue:#2156ff;--red:#c83d2f}
+    text{font-family:"Segoe UI","Microsoft YaHei",system-ui,sans-serif;fill:var(--ink)}.mono{font-family:ui-monospace,Consolas,monospace}.muted{fill:var(--muted)}.tiny{font-size:13px}.label{font-size:15px;font-weight:700}.label-cn{font-size:18px;font-weight:800}
+    .frame{fill:var(--paper);stroke:var(--line);stroke-width:1.5;vector-effect:non-scaling-stroke}.structure{fill:none;stroke:var(--ink);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}.hairline{fill:none;stroke:var(--line);stroke-width:1.5;vector-effect:non-scaling-stroke}
+    .electrolyte{fill:#f4fae0;stroke:var(--green);stroke-width:2.5;vector-effect:non-scaling-stroke}.collector{fill:var(--ink);stroke:var(--ink);stroke-width:2.5;vector-effect:non-scaling-stroke}.ion{fill:var(--acid);stroke:var(--ink);stroke-width:2.5;vector-effect:non-scaling-stroke}.ion-text{font-size:11px;font-weight:800;text-anchor:middle;dominant-baseline:middle}
+    .base-particle{fill:#edf1ff;stroke:var(--blue);stroke-width:2.5;vector-effect:non-scaling-stroke}.expanded-particle{fill:#fff0e9;stroke:var(--orange);stroke-width:2.5;vector-effect:non-scaling-stroke;transform-origin:570px 390px;animation:expand 5s ease-in-out infinite}.crack{fill:none;stroke:var(--red);stroke-width:2.5;stroke-linecap:round;vector-effect:non-scaling-stroke;animation:crack 5s ease-in-out infinite}
+    .lithiation{animation:lithiation 5s linear infinite}.delithiation{animation:delithiation 5s linear infinite}.ions-in{animation:ionsIn 5s ease-in-out infinite}.ions-out{animation:ionsOut 5s ease-in-out infinite}.gauge-fill{fill:var(--orange);transform-origin:990px 560px;animation:gauge 5s ease-in-out infinite}
+    @keyframes expand{0%,12%{transform:scale(1);fill:#edf1ff;stroke:#2156ff}45%,55%{transform:scale(1.22);fill:#fff0e9;stroke:#ff6b35}88%,100%{transform:scale(1)}}@keyframes crack{0%,18%,82%,100%{opacity:0}45%,60%{opacity:1}}@keyframes lithiation{0%,42%{opacity:1}50%,100%{opacity:0}}@keyframes delithiation{0%,48%{opacity:0}55%,92%{opacity:1}100%{opacity:0}}@keyframes ionsIn{0%,8%{opacity:0;transform:translateX(0)}14%,42%{opacity:1;transform:translateX(245px)}48%,100%{opacity:0;transform:translateX(245px)}}@keyframes ionsOut{0%,50%{opacity:0;transform:translateX(0)}58%,84%{opacity:1;transform:translateX(-245px)}92%,100%{opacity:0;transform:translateX(-245px)}}@keyframes gauge{0%,12%{transform:scaleY(.25)}48%,55%{transform:scaleY(1)}88%,100%{transform:scaleY(.25)}}
+    @media(prefers-reduced-motion:reduce){.expanded-particle,.crack,.lithiation,.delithiation,.ions-in,.ions-out,.gauge-fill{animation:none!important}.delithiation,.ions-out{opacity:0}.lithiation,.ions-in{opacity:1}.expanded-particle{transform:scale(1.22);fill:#fff0e9;stroke:#ff6b35}.crack{opacity:1}.gauge-fill{transform:scaleY(1)}}
+  </style>
+  <rect width="1200" height="760" fill="var(--canvas)"/>
+  <g transform="translate(60 48)"><text class="tiny muted mono" x="0" y="14">ALLOY ANODE / Si–LiₓSi</text><text class="label-cn" x="0" y="52">合金型电极机制模板</text><text class="muted tiny" x="0" y="78">VOLUME CHANGE · CRACKING · REVERSIBILITY</text><rect x="1000" y="12" width="80" height="28" rx="14" fill="#e7f6dc" stroke="var(--green)" stroke-width="1.5"/><circle cx="1018" cy="26" r="4" fill="var(--green)"/><text class="tiny" x="1030" y="31" fill="var(--green)">5 s loop</text></g>
+  <rect x="70" y="122" width="1060" height="500" rx="18" class="frame"/>
+  <g clip-path="url(#diagram-clip)">
+    <rect x="128" y="190" width="250" height="364" rx="8" class="electrolyte"/><text class="label" x="160" y="232" fill="var(--green)">电解液 / SEI</text><text class="tiny muted mono" x="160" y="255">Li⁺ transport</text>
+    <rect x="978" y="190" width="24" height="364" rx="4" class="collector"/><text class="label" x="940" y="232" fill="var(--ink)">集流体</text><text class="tiny muted" x="940" y="255">current collector</text>
+    <ellipse cx="570" cy="390" rx="130" ry="112" class="base-particle"/><ellipse cx="570" cy="390" rx="130" ry="112" class="expanded-particle"/>
+    <text class="label" x="520" y="384">Si 颗粒</text><text class="tiny muted mono" x="510" y="408">Si → LiₓSi</text>
+    <path d="M520 330 L555 370 L530 394 L570 430 L548 460" class="crack"/><path d="M610 320 L585 360 L625 390 L600 430" class="crack"/>
+    <g class="lithiation"><text class="tiny" x="585" y="300" text-anchor="middle">嵌锂：Li⁺ 进入合金颗粒</text></g><g class="delithiation"><text class="tiny" x="585" y="300" text-anchor="middle">脱锂：颗粒收缩并可能开裂</text></g>
+    <g class="ions-in"><circle class="ion" cx="255" cy="350" r="13"/><text class="ion-text" x="255" y="351">Li⁺</text><circle class="ion" cx="255" cy="420" r="13"/><text class="ion-text" x="255" y="421">Li⁺</text></g>
+    <g class="ions-out"><circle class="ion" cx="470" cy="350" r="13"/><text class="ion-text" x="470" y="351">Li⁺</text><circle class="ion" cx="470" cy="420" r="13"/><text class="ion-text" x="470" y="421">Li⁺</text></g>
+    <path d="M400 480 L740 480" class="structure" marker-end="url(#arrow-ink)"/><text class="tiny muted" x="570" y="510" text-anchor="middle">charge / discharge · 体积变化</text>
+    <rect x="930" y="300" width="60" height="260" rx="10" class="hairline"/><rect x="936" y="556" width="48" height="4" rx="2" fill="var(--line)"/><rect x="936" y="306" width="48" height="254" rx="6" class="gauge-fill"/>
+    <text class="tiny muted" x="960" y="288" text-anchor="middle">体积</text>
+  </g>
+  <g transform="translate(70 650)"><text class="tiny muted mono" x="0" y="0">VISUAL LANGUAGE</text><g transform="translate(0 22)"><rect x="0" y="0" width="16" height="16" rx="4" fill="#edf1ff" stroke="var(--blue)" stroke-width="2"/><text class="tiny" x="26" y="13">初始合金颗粒</text><circle cx="200" cy="8" r="7" fill="var(--acid)" stroke="var(--ink)" stroke-width="2"/><text class="tiny" x="216" y="13">Li⁺ 离子</text><path d="M390 8 L436 8" stroke="var(--red)" stroke-width="3"/><text class="tiny" x="448" y="13">裂纹 / 粉化风险</text><rect x="620" y="0" width="16" height="16" rx="4" fill="#fff0e9" stroke="var(--orange)" stroke-width="2"/><text class="tiny" x="646" y="13">膨胀后颗粒</text></g><text class="tiny muted" x="0" y="66">统一规则：合金颗粒轮廓 · 离子进入/脱出 · 体积变化指示 · 红=不可逆风险 · 5 秒循环</text></g>
+</svg>

@@ -73,7 +73,7 @@ node scripts/serve-local.mjs
 
 ## 机制图规范
 
-LFP 机制母版位于 ssets/mechanisms/lfp-master.svg，统一视角、色板、线宽、标签和动效速度记录在 ssets/mechanisms/README.md。
+嵌入型、合金型、液流型和固态型四套机制模板位于 `assets/mechanisms/`，统一视角、色板、线宽、标签和动效速度记录在 `assets/mechanisms/README.md`。
 
 ## 仓库结构
 

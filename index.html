@@ -97,9 +97,18 @@
 .fact p{font-size:12px;line-height:1.65;color:#44584e;margin:0;overflow-wrap:anywhere}
 @media(max-width:420px){.card-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.mini-metric{padding:8px 9px}}
 .mechanism-section{margin-top:10px}
-.mechanism-figure{margin:0;padding:14px;background:#eef3ed;border:1px solid var(--line);border-radius:6px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.mechanism-figure{margin:0}
+.mechanism-canvas-shell{position:relative;background:#eef3ed;border:1px solid var(--line);border-radius:6px;padding:14px}
+.mechanism-canvas{overflow-x:auto;-webkit-overflow-scrolling:touch}
 .mechanism-figure img{display:block;width:100%;height:auto;border-radius:4px;background:var(--paper)}
-.mechanism-figure figcaption{font-size:12px;line-height:1.7;color:var(--muted);margin-top:10px}@media(max-width:700px){.mechanism-figure{padding:10px}.mechanism-figure img{min-width:720px}.mechanism-figure figcaption{min-width:0}}
+.mechanism-figure figcaption{font-size:12px;line-height:1.7;color:var(--muted);margin-top:10px}
+.mechanism-zoom{position:absolute;right:12px;bottom:12px;min-height:40px;padding:8px 12px;border:1px solid rgba(255,255,255,.24);border-radius:999px;background:rgba(16,34,28,.92);color:#fff;font-size:12px;font-weight:700;cursor:pointer;box-shadow:0 8px 24px rgba(16,34,28,.2)}
+.mechanism-zoom:hover{background:var(--green)}
+.mechanism-dialog{width:min(1180px,96vw);background:white}
+.mechanism-zoom-stage{overflow:auto;max-height:72dvh;background:#eef3ed;border:1px solid var(--line);border-radius:6px;padding:14px}
+.mechanism-zoom-stage img{display:block;width:100%;min-width:0;height:auto;background:var(--paper);border-radius:4px}
+.mechanism-zoom-caption{font-size:12px;line-height:1.7;color:var(--muted);margin:12px 0 0}
+@media(max-width:700px){.mechanism-canvas-shell{padding:10px}.mechanism-canvas img{min-width:720px}.mechanism-zoom{right:10px;bottom:10px;min-height:44px}.mechanism-zoom-stage{padding:10px}.mechanism-zoom-stage img{min-width:720px}}
 </style>
 </head>
 <body>
@@ -113,7 +122,7 @@
 <section class="results-section"><div class="saved-toolbar"><button id="favoritesOnly" aria-pressed="false">☆ 只看收藏</button><button id="shareResults">分享当前筛选</button><span>收藏仅存于当前浏览器，清除网站数据会删除收藏。</span></div><p id="saveStatus" role="status" aria-live="polite"></p><div class="results-head"><div><span class="section-index">02</span><h2>匹配的电池体系</h2></div><div class="results-meta"><strong id="matchCount">0</strong><span>RESULTS</span></div></div><div class="filter-row"><div class="tabs" aria-label="体系成熟度筛选"><button class="tab active" data-status="all" aria-pressed="true">全部</button><button class="tab " data-status="commercial" aria-pressed="false">商业化体系</button><button class="tab " data-status="pilot" aria-pressed="false">示范 / 早期</button><button class="tab " data-status="research" aria-pressed="false">研究中</button></div><label class="search-results"><input id="resultSearch" type="search" aria-label="搜索体系、材料或企业" placeholder="搜索体系、材料或企业"></label></div><p class="result-notice">企业标签区分量产、研发与历史记录；“代表性生产商”不代表统一市场排名。</p><div id="matchExplanation" class="match-explanation" aria-live="polite"></div><div id="resultGrid" class="result-grid"></div><div class="empty-state" id="emptyState" hidden><span>∅</span><h3>未找到已收录的完整方案</h3><div id="emptyDiagnosis"></div><button id="resetEmpty">重置筛选</button></div><p id="liveStatus" class="sr-only" aria-live="polite"></p></section>
 </main><footer><p>资料用于检索与学习，不替代电化学验证、安全评估或采购尽调。数据不会自动实时更新。</p><button id="exportJson">导出结果与证据 ↓</button></footer>
 <dialog id="materialDialog" class="atlas-dialog" aria-labelledby="pickerTitle"><div class="dialog-heading"><div><p class="eyebrow">MATERIAL SELECTOR</p><h2 id="pickerTitle">选择材料</h2></div><button class="close-button" data-close="materialDialog" aria-label="关闭材料选择器">×</button></div><p class="result-notice">元素仅用于查找材料；例如选 C 可找到石墨和硬碳，但不会把两者合并。</p><div class="picker-controls"><input id="materialSearch" type="search" aria-label="搜索材料" placeholder="材料名、化学式或别名，如 LFP、石墨"></div><details class="periodic-panel" open><summary>通过元素周期表查找材料</summary><p class="result-notice">点击元素筛选，再次点击取消。淡色且标记“·”表示此位置尚未收录相关材料，不代表不能用于电池。手机可左右滑动周期表。</p><div class="periodic-toolbar"><span id="elementStatus" aria-live="polite">所有元素</span><button type="button" data-element-clear="true">清除元素筛选</button></div><div class="periodic-scroll" tabindex="0" role="region" aria-label="元素周期表，可横向滚动"><div id="periodicTable" class="periodic-table"></div></div><p class="periodic-legend"><span>绿色：主表</span><span>蓝色：镧系</span><span>紫色：锕系</span><span>✓ 当前元素</span></p></details><div id="materialList" class="material-list"></div><div class="dialog-foot"><span id="pickerCount"></span><button class="primary" data-close="materialDialog">完成选择</button></div></dialog>
-<dialog id="detailDialog" class="atlas-dialog detail-dialog" aria-labelledby="detailTitle"><div class="dialog-heading"><span class="eyebrow">BATTERY DOSSIER</span><button class="close-button" data-close="detailDialog" aria-label="关闭电池介绍">×</button></div><div id="detailContent"></div></dialog>
+<dialog id="detailDialog" class="atlas-dialog detail-dialog" aria-labelledby="detailTitle"><div class="dialog-heading"><span class="eyebrow">BATTERY DOSSIER</span><button class="close-button" data-close="detailDialog" aria-label="关闭电池介绍">×</button></div><div id="detailContent"></div></dialog><dialog id="mechanismDialog" class="atlas-dialog mechanism-dialog" aria-labelledby="mechanismZoomTitle"><div class="dialog-heading"><div><p class="eyebrow">MECHANISM VIEWER</p><h2 id="mechanismZoomTitle">机制图放大</h2></div><button class="close-button" data-close="mechanismDialog" aria-label="关闭机制图放大">×</button></div><div class="mechanism-zoom-stage"><img id="mechanismZoomImage" alt=""></div><p id="mechanismZoomCaption" class="mechanism-zoom-caption"></p></dialog>
 <dialog id="shareDialog" class="atlas-dialog" aria-labelledby="shareTitle"><div class="dialog-heading"><h2 id="shareTitle">分享链接</h2><button class="close-button" data-close="shareDialog" aria-label="关闭分享">×</button></div><p>链接包含所选电池或材料筛选条件，不包含你的收藏。任何获得链接的人都可以浏览网站。</p><label for="shareUrl">可复制的链接</label><textarea id="shareUrl" readonly rows="4"></textarea><div class="saved-toolbar"><button id="copyShare">复制链接</button><button id="nativeShare">系统分享</button></div><p id="shareStatus" role="status" aria-live="polite"></p></dialog><dialog id="compareDialog" class="atlas-dialog compare-dialog" aria-labelledby="compareTitle"><div class="dialog-heading"><div><p class="eyebrow">PERFORMANCE COMPARISON</p><h2 id="compareTitle">电池性能对比</h2></div><button class="close-button" data-close="compareDialog" aria-label="关闭电池对比">×</button></div><div class="compare-selectors"><label>A · 第一种电池<select id="compareFirst"></select></label><label>B · 第二种电池<select id="compareSecond"></select></label></div><p id="compareStatus" role="status" aria-live="polite"></p><div id="compareSuggestions"></div><div id="compareContent"></div></dialog><noscript><p>请启用 JavaScript 以使用材料检索。</p></noscript><script>globalThis.AtlasReady = (async () => {
   const [manifestResponse, sharedResponse] = await Promise.all([fetch('data/index.json'), fetch('data/shared.json')]);
   if (!manifestResponse.ok || !sharedResponse.ok) throw new Error('无法加载 Battery Atlas 数据索引');
@@ -385,10 +394,32 @@ function cardFacts(f) {
 }
 
 function mechanismFigure(id) {
-  if (id !== 'lfp') return '';
-  return '<section class="detail-section mechanism-section" aria-labelledby="mechanismTitle"><div class="performance-heading"><h3 id="mechanismTitle">机制母版 / LFP 充放电</h3><span>5 秒循环 · 二维剖面</span></div><figure class="mechanism-figure"><img src="assets/mechanisms/lfp-master.svg" alt="磷酸铁锂电池充放电示意图：锂离子在磷酸铁锂正极和石墨负极之间嵌入与脱出，电子经外电路流动" loading="lazy" decoding="async"><figcaption>统一母版示意：Li⁺ 在 LFP 与石墨之间嵌入/脱出；橙色表示正极、绿色表示电解质、蓝色表示负极。示意图不代表具体粒径、配方或尺寸；手机可横向滑动查看完整标注。</figcaption></figure></section>';
+  const templates={
+    intercalation:{src:'assets/mechanisms/lfp-master.svg',title:'机制模板 / 嵌入型（LFP 示例）',alt:'嵌入型电池机制示意：锂离子在正极和负极之间嵌入与脱出，电子经外电路流动',caption:'统一模板示意：Li⁺ 在正负极宿主结构之间嵌入/脱出；橙色表示正极、绿色表示电解质、蓝色表示负极。LFP 作为嵌入型基准示例，不代表具体粒径、配方或尺寸；手机可横向滑动查看完整标注。'},
+    alloy:{src:'assets/mechanisms/alloy-template.svg',title:'机制模板 / 合金型',alt:'合金型负极机制示意：锂离子进入合金颗粒后引发体积膨胀，脱锂时收缩并可能形成裂纹',caption:'统一模板示意：合金型负极在嵌锂/脱锂过程中发生体积变化；裂纹、粉化和界面损失会加速容量衰减。示意图不代表具体颗粒尺寸、配方或循环条件。'},
+    flow:{src:'assets/mechanisms/flow-template.svg',title:'机制模板 / 液流型',alt:'液流电池机制示意：正负极电解液通过泵在储罐和电堆之间循环，离子穿过离子交换膜，电子经外电路流动',caption:'统一模板示意：正负极电解液分别储存在外部储罐中，由泵循环进入电堆；离子穿过隔膜，电子经外电路流动。示意图不代表具体流量、密封或系统尺度。'},
+    solid:{src:'assets/mechanisms/solid-state-template.svg',title:'机制模板 / 固态型',alt:'固态电池机制示意：离子通过固体电解质和晶界传输，界面阻抗、压力和枝晶风险影响循环',caption:'统一模板示意：固体电解质中的离子路径、晶界和电极界面决定阻抗与循环稳定性；压力、接触损失和枝晶风险必须单独评估。示意图不代表具体材料体系或制造尺度。'}
+  };
+  const mapping={lfp:['intercalation'],caion:['alloy'],'iron-flow':['flow'],vrfb:['flow'],znbr:['flow'],solid:['alloy','solid'],fion:['solid'],nas:['solid']};
+  const keys=mapping[id]||[];
+  return keys.map(key=>{
+    const item=templates[key],titleId='mechanismTitle-'+id+'-'+key;
+    return '<section class="detail-section mechanism-section" aria-labelledby="'+titleId+'"><div class="performance-heading"><h3 id="'+titleId+'">'+esc(item.title)+'</h3><span>5 秒循环 · 二维剖面</span></div><figure class="mechanism-figure" data-mechanism-title="'+esc(item.title)+'"><div class="mechanism-canvas-shell"><div class="mechanism-canvas"><img src="'+item.src+'" alt="'+esc(item.alt)+'" loading="lazy" decoding="async"></div><button type="button" class="mechanism-zoom" data-mechanism-zoom="1" aria-label="放大查看'+esc(item.title)+'">↗ 放大查看</button></div><figcaption>'+esc(item.caption)+'</figcaption></figure></section>';
+  }).join('');
 }
 
+function openMechanismZoom(button) {
+  const figure=button.closest('.mechanism-figure');
+  if(!figure)return;
+  const image=figure.querySelector('img'),caption=figure.querySelector('figcaption');
+  $('mechanismZoomTitle').textContent=figure.dataset.mechanismTitle||'机制图放大';
+  $('mechanismZoomImage').src=image.currentSrc||image.src;
+  $('mechanismZoomImage').alt=image.alt;
+  $('mechanismZoomCaption').textContent=caption?caption.textContent:'';
+  $('mechanismDialog').showModal();
+  $('mechanismDialog').scrollTop=0;
+  $('mechanismDialog').querySelector('.close-button')?.focus();
+}
 function renderPerformance(id) {
  const data=performanceData(id);
  const available=data.metrics.filter(m=>!['unavailable','not_applicable'].includes(m.status));
@@ -482,6 +513,7 @@ document.addEventListener('click',event=>{
  if(b.dataset.material){const id=b.dataset.material,values=selection[pickerRole];applySelection({...selection,[pickerRole]:values.includes(id)?values.filter(x=>x!==id):[...values,id]});renderPicker();const active=$('materialList').querySelector('[data-material="'+id+'"]');active?.focus();}
  if(b.dataset.status){status=b.dataset.status;render();}
  if(b.dataset.detail)openDetail(b.dataset.detail);
+  if(b.dataset.mechanismZoom)openMechanismZoom(b);
  if(b.dataset.example){status='all';$('resultSearch').value='';applySelection(({lfp:{cathode:['lfp'],anode:['graphite']},sodium:{anode:['hard-carbon']},solid:{anode:['silicon'],electrolyte:['lpscl']}})[b.dataset.example]);}
 });
 $('clearAll').addEventListener('click',reset);$('resetEmpty').addEventListener('click',reset);
