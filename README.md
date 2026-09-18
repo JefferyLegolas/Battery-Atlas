@@ -73,7 +73,7 @@ node scripts/serve-local.mjs
 
 ## 机制图规范
 
-嵌入型、合金型、液流型和固态型四套机制模板位于 `assets/mechanisms/`。27 个体系通过 `mechanismType` 自动映射；卡片使用静态 poster，详情页按需加载动画。统一规则见 `assets/mechanisms/README.md`。
+嵌入型、合金型、液流型三类视觉母版和固态锂型、固态氟离子型、熔融陶瓷型三个固态变体位于 `assets/mechanisms/`。27 个体系通过 `mechanismType` 自动映射；卡片使用静态 poster，详情页按需加载动画。统一规则见 `assets/mechanisms/README.md`。
 
 ## 仓库结构
 

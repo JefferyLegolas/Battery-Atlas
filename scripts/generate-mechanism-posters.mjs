@@ -31,13 +31,33 @@ const configs = {
     *{animation:none!important}
     .cycle{opacity:1!important}`
   },
-  solid: {
-    source: 'solid-state-template.svg',
-    poster: 'solid-state-poster.svg',
+  'solid-lithium': {
+    source: 'solid-lithium-template.svg',
+    poster: 'solid-lithium-poster.svg',
     staticCss: `
     *{animation:none!important}
     .ions{opacity:1!important;transform:translateX(180px)!important}
     .dendrite,.pressure{opacity:1!important}`
+  },
+  'fluoride-solid': {
+    source: 'fluoride-solid-template.svg',
+    poster: 'fluoride-solid-poster.svg',
+    staticCss: `
+    *{animation:none!important}
+    .phase-discharge,.ions-discharge{opacity:1!important}
+    .phase-charge,.ions-charge{opacity:0!important}
+    .ions-discharge{transform:translateX(155px)!important}
+    .volume{transform:scale(1.08)!important}`
+  },
+  'molten-ceramic': {
+    source: 'molten-ceramic-template.svg',
+    poster: 'molten-ceramic-poster.svg',
+    staticCss: `
+    *{animation:none!important}
+    .phase-discharge,.ions-discharge{opacity:1!important}
+    .phase-charge,.ions-charge{opacity:0!important}
+    .ions-discharge{transform:translateX(145px)!important}
+    .heat{opacity:1!important}`
   }
 };
 

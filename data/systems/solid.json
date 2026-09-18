@@ -153,8 +153,8 @@
     }
   },
   "mechanismType": [
-    "alloy",
-    "solid"
+    "solid-lithium",
+    "alloy"
   ],
-  "mechanismNote": "硅负极发生合金化体积变化，硫化物固体电解质负责离子传导。"
+  "mechanismNote": "硫化物固体电解质负责 Li⁺ 传导；硅负极同时存在合金化体积变化。"
 }

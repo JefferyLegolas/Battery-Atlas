@@ -218,7 +218,7 @@
     }
   },
   "mechanismType": [
-    "solid"
+    "molten-ceramic"
   ],
-  "mechanismNote": "熔融电极与 β-氧化铝陶瓷隔膜组成高温体系；借用固态型模板表达陶瓷界面和离子通道。"
+  "mechanismNote": "熔融 Na 与熔融 S/多硫化物通过 β-氧化铝陶瓷隔膜传输 Na⁺，工作温度约 300–350 °C，密封和腐蚀是核心约束。"
 }

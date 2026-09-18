@@ -1,13 +1,15 @@
 # 电池机制模板规范
 
-四个模板共享同一套视角、色板、线宽、标签和速度。27 个电池体系通过 JSON 中的 `mechanismType` 字段映射到模板，不为单个体系重复绘制动画。卡片使用静态 poster，详情页才按需加载动画。
+四类视觉母版及固态类三个变体共享同一套视角、色板、线宽、标签和速度。27 个电池体系通过 JSON 中的 `mechanismType` 字段映射到模板，不为单个体系重复绘制动画。卡片使用静态 poster，详情页才按需加载动画。
 
 | 模板 | 动画文件 | 卡片 poster | 适用范围 | 核心动效 |
 | --- | --- | --- | --- | --- |
 | 嵌入型 | `intercalation-template.svg` | `intercalation-poster.svg` | 摇椅式离子存储、质子嵌入类过程 | 工作离子在正负极宿主结构间嵌入/脱出 |
 | 合金型 | `alloy-template.svg` | `alloy-poster.svg` | 合金化、溶解—沉积与部分转化反应 | 颗粒膨胀、收缩与裂纹 |
 | 液流型 | `flow-template.svg` | `flow-poster.svg` | 全钒、全铁、锌溴液流 | 电解液循环与跨膜离子迁移 |
-| 固态型 | `solid-state-template.svg` | `solid-state-poster.svg` | 硫化物、氟化物与陶瓷电解质 | 晶界传导、界面阻抗、压力与枝晶风险 |
+| 固态锂型 | `solid-lithium-template.svg` | `solid-lithium-poster.svg` | 硫化物等固态锂离子体系 | Li⁺ 传导、界面阻抗、压力与锂枝晶风险 |
+| 固态氟离子型 | `fluoride-solid-template.svg` | `fluoride-solid-poster.svg` | 氟离子固态电池 | F⁻ 迁移、金属氟化物界面和体积变化 |
+| 熔融陶瓷型 | `molten-ceramic-template.svg` | `molten-ceramic-poster.svg` | 高温钠硫等熔融电极体系 | Na⁺ 穿过 β-氧化铝、高温和密封约束 |
 
 ## 统一规范
 
@@ -22,7 +24,9 @@
 
 ## 站点映射
 
-27 个体系都在 `data/systems/<id>.json` 中保存 `mechanismType` 和 `mechanismNote`。`mechanismType` 是数组，允许一个体系同时映射到多个模板，例如 `solid` 为 `["alloy","solid"]`。
+27 个体系都在 `data/systems/<id>.json` 中保存 `mechanismType` 和 `mechanismNote`。`mechanismType` 是数组，允许一个体系同时映射到多个模板，例如 `solid` 为 `["solid-lithium","alloy"]`。
+
+当前关键变体：`fion → fluoride-solid`、`nas → molten-ceramic`、`solid → solid-lithium + alloy`。
 
 可使用 `node scripts/assign-mechanism-types.mjs` 重新应用或审查映射；`scripts/validate-systems.mjs` 会检查每个体系是否具备合法且非空的映射。
 

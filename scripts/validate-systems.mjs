@@ -25,7 +25,7 @@ for (const name of ['AtlasBase', 'AtlasMaterials', 'AtlasManufacturers', 'AtlasM
   assignments[name] = JSON.parse(match[1]);
 }
 
-const allowedMechanismTypes = new Set(['intercalation', 'alloy', 'flow', 'solid']);
+const allowedMechanismTypes = new Set(['intercalation', 'alloy', 'flow', 'solid-lithium', 'fluoride-solid', 'molten-ceramic']);
 const dataDir = path.join(root, 'data');
 const manifest = JSON.parse(fs.readFileSync(path.join(dataDir, 'index.json'), 'utf8'));
 const shared = JSON.parse(fs.readFileSync(path.join(dataDir, 'shared.json'), 'utf8'));

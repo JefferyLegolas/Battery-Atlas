@@ -196,7 +196,7 @@
     }
   },
   "mechanismType": [
-    "solid"
+    "fluoride-solid"
   ],
-  "mechanismNote": "氟离子通过固体氟化物电解质传输，界面与晶界是关键限制。"
+  "mechanismNote": "F⁻ 在金属氟化物与金属负极之间迁移，固态氟化物导体、界面反应和体积变化是关键限制。"
 }
