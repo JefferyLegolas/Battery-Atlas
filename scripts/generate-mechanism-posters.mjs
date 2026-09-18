@@ -36,7 +36,9 @@ const configs = {
     poster: 'solid-lithium-poster.svg',
     staticCss: `
     *{animation:none!important}
-    .ions{opacity:1!important;transform:translateX(180px)!important}
+    .phase-discharge,.ions-discharge{opacity:1!important}
+    .phase-charge,.ions-charge{opacity:0!important}
+    .ions-discharge{transform:translateX(-155px)!important}
     .dendrite,.pressure{opacity:1!important}`
   },
   'fluoride-solid': {
