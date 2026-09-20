@@ -93,3 +93,7 @@ Battery-Atlas/
 ## License
 
 本项目采用 [MIT License](LICENSE)。
+
+## 材料探索实验室
+
+打开 `explore.html` 体验三个文献支持的定性实验：石墨与硅、石墨与钛酸锂、硫化物固态硅负极有／无碳添加剂。支持条件切换、手动进度、播放／暂停、思考题及状态分享。证据定位和解释范围见 `docs/exploration-evidence.md`。运行 `node scripts/test-explorations.mjs` 验证实验状态、图示以及原图谱脚本和动画保持不变。
