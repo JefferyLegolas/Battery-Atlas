@@ -61,7 +61,7 @@ Battery Atlas 不是按电池名称反向查材料的普通目录，而是把材
 
 ## JSON 数据结构
 
-项目把 27 个体系拆分到 `data/systems/<体系 ID>.json`。每条记录包含体系简介、材料方案、所用材料、生产商、性能数据、文献更新、指标来源，以及历史模板字段 `mechanismType` 和 `mechanismNote`（不再用于页面配图）。`data/index.json` 提供体系清单，`data/shared.json` 保存元素表、指标定义、共用来源和暂未纳入方案的材料。
+项目把 27 个体系拆分到 `data/systems/<体系 ID>.json`。每条记录包含体系简介、材料方案、所用材料、生产商、性能数据、文献更新、指标来源，以及用于选择动画模板的 `mechanismType` 和 `mechanismNote`。`data/index.json` 提供体系清单，`data/shared.json` 保存元素表、指标定义、共用来源和暂未纳入方案的材料。
 
 页面现在通过 `fetch()` 读取这些 JSON。请用本地 HTTP 服务器打开，而不是双击 `index.html`（浏览器通常不允许 `file://` 页面读取 JSON）：
 
@@ -73,7 +73,7 @@ node scripts/serve-local.mjs
 
 ## 机制图规范
 
-页面按当前命中的完整材料方案生成材料构成示意，并显示“非反应机理图”。详情为每条命中方案分别列出材料和来源。旧机制模板及映射仅保留为历史资源，不再加载；恢复机理图前须逐体系核对物种、反应方向、电极材料和证据。详见 `assets/mechanisms/README.md`。
+嵌入型、合金型、液流型三类视觉母版和固态锂型、固态氟离子型、熔融陶瓷型三个固态变体位于 `assets/mechanisms/`。27 个体系通过 `mechanismType` 自动映射；卡片使用静态 poster，详情页按需加载动画。统一规则见 `assets/mechanisms/README.md`。
 
 ## 仓库结构
 
